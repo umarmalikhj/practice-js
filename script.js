@@ -30,13 +30,42 @@
 
 // console.log(sum)
 
-let n = Number(prompt("Enter A Number"));
-let sum = 0;
+// let n = Number(prompt("Enter A Number"));
+// let sum = 0;
 
-for (let i=1; i<=n; i++){
-    if(i % 3 === 0 || i % 5 === 0){
-        sum += i;
-    }
+// for (let i=1; i<=n; i++){
+//     if(i % 3 === 0 || i % 5 === 0){
+//         sum += i;
+//     }
+// }
+
+// console.log(sum)
+
+// n = 10;
+
+// for (i=n; i>=1; i--){
+//     console.log(i)
+// }
+
+// let a = 50;
+// let b = 10;
+// let c = 60;
+
+// if (a > b && a > c){
+//     console.log(a)
+// }
+
+// else if (b > a && b > c){
+//     console.log(b)
+// }
+
+// else if (c > a && c > b){
+//     console.log(c)
+// }
+
+let n = String(prompt("Enter The Number: "));
+
+for(let i=[0]; i = length.n; i++){
+    let sum = i + n;
+    console.log(sum)
 }
-
-console.log(sum)
