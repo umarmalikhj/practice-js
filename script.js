@@ -106,10 +106,34 @@
 //     console.log(`${n} x ${i} = ${sum}`)
 // }
 
-let x = Number(prompt("Enter The Number: "));
-let fact = 1;
+// let x = Number(prompt("Enter The Number: "));
+// let fact = 1;
 
-for(let i=1; i<=x; i++){
-    fact *= i;
-}
-console.log(fact)
+// for(let i=1; i<=x; i++){
+//     fact *= i;
+// }
+// console.log(fact)
+
+// let x = Number(prompt("Enter The Number: "));
+
+// for(let i=1; i<=x; i++){
+//     if(x % i === 0){
+//         console.log(i)
+//     }
+// }
+
+// let x = Number(prompt("Enter A Number: "));
+// let isPrime = true;
+
+// for(let i=2; i<x; i++){
+//     if(x % i === 0){
+//         isPrime = false;
+//         break;
+//     }
+// }
+// if(isPrime){
+//     console.log("This Is Prime Number")
+// }
+// else{
+//     console.log("This is Not Prime Number")
+// }
