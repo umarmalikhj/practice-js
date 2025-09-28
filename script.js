@@ -77,13 +77,31 @@
 //     console.log(`${n} x ${i} = ${sum}`);
 // }
 
-let n = Number(prompt("Enter A Number"));
-let sum = 0;
+// let n = Number(prompt("Enter A Number"));
+// let sum = 0;
 
-for (let i=1; i<=n; i++){
-    sum += i; 
+// for (let i=1; i<=n; i++){
+//     sum += i; 
+// }
+// console.log(sum)
+
+// let x = sum/n;
+// console.log(x)
+
+// let n = Number(prompt("Enter Number:"));
+
+// for(let i=1; i<=n; i++){
+//     let row ="";
+//     for(let j=1; j<=i; j++){
+//         row += "*";
+//     }
+//     console.log(row)
+// }
+
+let n = Number(prompt("Enter The Number: "));
+let limit = Number(prompt("Enter The Limit: "));
+
+for(let i=1; i<=limit; i++){
+    let sum = n * i;
+    console.log(`${n} x ${i} = ${sum}`)
 }
-console.log(sum)
-
-let x = sum/n;
-console.log(x)
