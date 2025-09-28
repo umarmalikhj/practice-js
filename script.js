@@ -63,9 +63,27 @@
 //     console.log(c)
 // }
 
-let n = String(prompt("Enter The Number: "));
+// let n = String(prompt("Enter The Number: "));
 
-for(let i=[0]; i = length.n; i++){
-    let sum = i + n;
-    console.log(sum)
+// for(let i=[0]; i = length.n; i++){
+//     let sum = i + n;
+//     console.log(sum)
+// }
+
+// let n = Number(prompt("Enter A Number: "));
+ 
+// for (let i=1; i<=n; i++){
+//     let sum = n * i;
+//     console.log(`${n} x ${i} = ${sum}`);
+// }
+
+let n = Number(prompt("Enter A Number"));
+let sum = 0;
+
+for (let i=1; i<=n; i++){
+    sum += i; 
 }
+console.log(sum)
+
+let x = sum/n;
+console.log(x)
