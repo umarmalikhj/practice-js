@@ -98,10 +98,18 @@
 //     console.log(row)
 // }
 
-let n = Number(prompt("Enter The Number: "));
-let limit = Number(prompt("Enter The Limit: "));
+// let n = Number(prompt("Enter The Number: "));
+// let limit = Number(prompt("Enter The Limit: "));
 
-for(let i=1; i<=limit; i++){
-    let sum = n * i;
-    console.log(`${n} x ${i} = ${sum}`)
+// for(let i=1; i<=limit; i++){
+//     let sum = n * i;
+//     console.log(`${n} x ${i} = ${sum}`)
+// }
+
+let x = Number(prompt("Enter The Number: "));
+let fact = 1;
+
+for(let i=1; i<=x; i++){
+    fact *= i;
 }
+console.log(fact)
