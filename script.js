@@ -137,3 +137,12 @@
 // else{
 //     console.log("This is Not Prime Number")
 // }
+
+let x = Number(prompt("Enter A Number: "))
+let limit = Number(prompt("Enter A limit: "));
+
+for(let i=1; i<=limit; i++){
+    if(i % x === 0){
+        console.log(i)
+    }
+}
