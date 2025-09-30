@@ -138,11 +138,29 @@
 //     console.log("This is Not Prime Number")
 // }
 
-let x = Number(prompt("Enter A Number: "))
-let limit = Number(prompt("Enter A limit: "));
+// let x = Number(prompt("Enter A Number: "))
+// let limit = Number(prompt("Enter A limit: "));
 
-for(let i=1; i<=limit; i++){
-    if(i % x === 0){
-        console.log(i)
-    }
+// for(let i=1; i<=limit; i++){
+//     if(i % x === 0){
+//         console.log(i)
+//     }
+// }
+
+// let x = Number(prompt("Enter The Number"));
+// let sum = 1;
+
+// for(let i=1; i<=x; i++){
+//     sum *= i;
+// }
+
+// console.log(sum);
+
+let x =Number(prompt("Enter The Number"));
+let sum=0;
+
+for(let i=1; i<=x; i++){
+    sum += i;
 }
+
+console.log(sum)
