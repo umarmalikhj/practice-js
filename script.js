@@ -156,11 +156,26 @@
 
 // console.log(sum);
 
-let x =Number(prompt("Enter The Number"));
-let sum=0;
+// let x =Number(prompt("Enter The Number"));
+// let sum=0;
+
+// for(let i=1; i<=x; i++){
+//     sum += i;
+// }
+
+// console.log(sum)
+
+// let x = Number(prompt("Enter The Number: "));
+
+// for (let i=1; i<=x; i++){
+//     console.log(i)
+// }
+
+let x = Number(prompt("Enter The Number: "));
+let sum = 0;
 
 for(let i=1; i<=x; i++){
     sum += i;
 }
 
-console.log(sum)
+console.log(sum);
