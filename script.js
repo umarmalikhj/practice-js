@@ -205,10 +205,39 @@
 //     }
 // }
 
-let n = Number(prompt("Enter The Number: "));
-let limit = Number(prompt("Enter Limit: "));
+// let n = Number(prompt("Enter The Number: "));
+// let limit = Number(prompt("Enter Limit: "));
 
-while(n <= limit){
-    console.log(n);
-    n++;
+// while(n <= limit){
+//     console.log(n);
+//     n++;
+// }
+
+// let n = Number (prompt("Enter The Number:"));
+// let i = 2;
+
+// while(i<=n){
+//     console.log(i);
+//     i+=2;
+// }
+
+let n = Number(prompt("Enter The Number: "));
+let i = 1;
+
+while(i <= n){
+    if(i % 3 === 0 && i % 5 === 0){
+        console.log("FizzBuzz")
+    }
+    else if(i % 3 === 0){
+        console.log("Fizz")
+    }
+    else if(i % 5 === 0){
+        console.log("Buzz")
+    }
+    else{
+        console.log(i)
+    }
+    
+    i++;
+    
 }
