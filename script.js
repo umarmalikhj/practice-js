@@ -188,19 +188,27 @@
 //     }
 // }
 
-let n = Number(prompt("Enter the Number: "));
+// let n = Number(prompt("Enter the Number: "));
 
-for(let i=1; i<=n; i++){
-    if(i % 3 === 0 && i % 5 === 0){
-        console.log("FizzBuzz")
-    }
-    else if(i % 3 === 0){
-        console.log("Fizz")
-    }
-    else if(i % 5 === 0){
-        console.log("Buzz")
-    }
-    else{
-        console.log(i)
-    }
+// for(let i=1; i<=n; i++){
+//     if(i % 3 === 0 && i % 5 === 0){
+//         console.log("FizzBuzz")
+//     }
+//     else if(i % 3 === 0){
+//         console.log("Fizz")
+//     }
+//     else if(i % 5 === 0){
+//         console.log("Buzz")
+//     }
+//     else{
+//         console.log(i)
+//     }
+// }
+
+let n = Number(prompt("Enter The Number: "));
+let limit = Number(prompt("Enter Limit: "));
+
+while(n <= limit){
+    console.log(n);
+    n++;
 }
