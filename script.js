@@ -243,21 +243,41 @@
 // let x = reverseNumber(10);
 // console.log(x);
 
-let n = Number(prompt("Enter Number: "));
+// let n = Number(prompt("Enter Number: "));
 
 // while(n >= 1){
 //     console.log(n);
 //     n--;
 // }
 
-function reverseNumber(n){
+// function reverseNumber(n){
+//     let result = [];
+//     while(n >= 1){
+//         result.push(n);
+//         n--;
+//     }
+//     return result;
+// }
+
+// result = reverseNumber(n);
+// console.log(result)
+
+let n = Number(prompt("Enter The Number: "));
+
+// while(i <= n){
+//     console.log(i);
+//     i++;
+// }
+
+function printingArray(x){
     let result = [];
-    while(n >= 1){
-        result.push(n);
-        n--;
+    let i = 2;
+    while(i <= x){
+        result.push(i);
+        i += 2;
     }
     return result;
 }
 
-result = reverseNumber(n);
-console.log(result)
+let result = printingArray(n);
+console.log(result);
