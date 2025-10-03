@@ -262,22 +262,43 @@
 // result = reverseNumber(n);
 // console.log(result)
 
-let n = Number(prompt("Enter The Number: "));
-
 // while(i <= n){
 //     console.log(i);
 //     i++;
 // }
 
-function printingArray(x){
-    let result = [];
-    let i = 2;
+// function printingArray(x){
+//     let result = [];
+//     let i = 2;
+//     while(i <= x){
+//         result.push(i);
+//         i += 2;
+//     }
+//     return result;
+// }
+
+// let result = printingArray(n);
+// console.log(result);
+
+let n = Number(prompt("Enter The Number: "));
+// let result = 1;
+// let i = 1;
+// while(i <= n){
+//     result *= i;
+//     i++;
+// }
+
+// console.log(result);
+
+function factorial(x){
+    let result = 1;
+    let i = 1;
     while(i <= x){
-        result.push(i);
-        i += 2;
+        result *= i;
+        i++;
     }
     return result;
 }
 
-let result = printingArray(n);
-console.log(result);
+let res = factorial(n);
+console.log(res)
