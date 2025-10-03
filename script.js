@@ -280,25 +280,61 @@
 // let result = printingArray(n);
 // console.log(result);
 
-let n = Number(prompt("Enter The Number: "));
 // let result = 1;
 // let i = 1;
 // while(i <= n){
-//     result *= i;
-//     i++;
+    //     result *= i;
+    //     i++;
+    // }
+    
+    // console.log(result);
+    
+    // function factorial(x){
+        //     let result = 1;
+        //     let i = 1;
+        //     while(i <= x){
+            //         result *= i;
+            //         i++;
+            //     }
+            //     return result;
+            // }
+            
+            // let res = factorial(n);
+            // console.log(res)
+
+
+// let x = Number(prompt("Enter The Number: "));
+// let i = 1;
+
+// while(i<=n){
+//     console.log(n);
+//     n--;
 // }
 
-// console.log(result);
+// function countDown(n){
+//     let result = [];
+//     while(n > 0){
+//         result.push(n);
+//         n--;
+//     }
+//     return result;
+// }
 
-function factorial(x){
-    let result = 1;
-    let i = 1;
-    while(i <= x){
-        result *= i;
-        i++;
+// let res = countDown(x);
+// console.log(res);
+
+let p = Number(prompt("Enter The Number"));
+
+function sumOfNumber(n){
+    let x = 0;
+    let sum = 0;
+    while(n > 0){
+        x = n % 10;
+        sum = sum + x;
+        n = Math.floor(n / 10);
     }
-    return result;
+    return sum;
 }
 
-let res = factorial(n);
-console.log(res)
+let result = sumOfNumber(p);
+console.log(result);
