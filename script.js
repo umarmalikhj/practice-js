@@ -221,23 +221,43 @@
 //     i+=2;
 // }
 
-let n = Number(prompt("Enter The Number: "));
-let i = 1;
+// let n = Number(prompt("Enter The Number: "));
+// let i = 1;
 
-while(i <= n){
-    if(i % 3 === 0 && i % 5 === 0){
-        console.log("FizzBuzz")
+// while(i <= n){
+//     if(i % 3 === 0 && i % 5 === 0){
+//         console.log("FizzBuzz")
+//     }
+//     else if(i % 3 === 0){
+//         console.log("Fizz")
+//     }
+//     else if(i % 5 === 0){
+//         console.log("Buzz")
+//     }
+//     else{
+//         console.log(i)
+//     }
+//     i++;
+// }
+
+// let x = reverseNumber(10);
+// console.log(x);
+
+let n = Number(prompt("Enter Number: "));
+
+// while(n >= 1){
+//     console.log(n);
+//     n--;
+// }
+
+function reverseNumber(n){
+    let result = [];
+    while(n >= 1){
+        result.push(n);
+        n--;
     }
-    else if(i % 3 === 0){
-        console.log("Fizz")
-    }
-    else if(i % 5 === 0){
-        console.log("Buzz")
-    }
-    else{
-        console.log(i)
-    }
-    
-    i++;
-    
+    return result;
 }
+
+result = reverseNumber(n);
+console.log(result)
