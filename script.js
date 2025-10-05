@@ -353,13 +353,55 @@
 // result = swapNumbers (p , q);
 // console.log(result)
 
-let numbers = [1, 2, 3, 4];
-let x = 5;
+// let numbers = [1, 2, 3, 4];
+// let x = 5;
 
-function addNumber(arr, num){
+// function addNumber(arr, num){
+//     arr.push(num);
+//     return arr;
+// }
+
+// let result = addNumber(numbers, x);
+// console.log(result);
+
+let response = prompt("Enter Operation to be Performed: \n 1 For Add \n 2 For Remove \n 3 For Length Of Array");
+let num;
+let arr = [];
+
+if(response == 1){
+    arr = prompt("Enter The Array: ").split(",");
+    num = prompt("Enter The Number: ");
+    arr = addinginArray(arr,num);
+    console.log(arr);
+}
+
+else if(response == 2){
+    arr = prompt("Enter The Array: ").split(",");
+    arr = removingfromArray (arr);
+    console.log(arr);
+}
+
+else if(response == 3){
+    arr = prompt("Enter The Array: ").split(",");
+    arr = lengthofArray(arr);
+    console.log(arr);
+}
+
+else{
+    console.error("Please Enter The Correct Value");
+}
+
+function addinginArray (arr, num){
     arr.push(num);
     return arr;
 }
 
-let result = addNumber(numbers, x);
-console.log(result);
+function removingfromArray (arr){
+    arr.pop();
+    return arr;
+}
+
+function lengthofArray (arr){
+    let result = arr.length;
+    return result;
+}
