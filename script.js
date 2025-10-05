@@ -339,16 +339,27 @@
 // let result = sumOfNumber(p);
 // console.log(result);
 
-let p = Number(prompt("Enter Number 1: "));
-let q = Number(prompt("Enter Number 2: "));
+// let p = Number(prompt("Enter Number 1: "));
+// let q = Number(prompt("Enter Number 2: "));
 
-function swapNumbers (a,b){
-    let temp = a;
-    a = b;
-    b = temp;
-    return [a,b];
+// function swapNumbers (a,b){
+//     let temp = a;
+//     a = b;
+//     b = temp;
+//     return [a,b];
+// }
+
+// let result = [];
+// result = swapNumbers (p , q);
+// console.log(result)
+
+let numbers = [1, 2, 3, 4];
+let x = 5;
+
+function addNumber(arr, num){
+    arr.push(num);
+    return arr;
 }
 
-let result = [];
-result = swapNumbers (p , q);
-console.log(result)
+let result = addNumber(numbers, x);
+console.log(result);
