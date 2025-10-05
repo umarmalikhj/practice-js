@@ -364,7 +364,7 @@
 // let result = addNumber(numbers, x);
 // console.log(result);
 
-let response = prompt("Enter Operation to be Performed: \n 1 For Add \n 2 For Remove \n 3 For Length Of Array");
+let response = Number(prompt("Enter Operation to be Performed: \n 1 For Add \n 2 For Remove \n 3 For Length Of Array \n 4 For Searching"));
 let num;
 let arr = [];
 
@@ -372,19 +372,30 @@ if(response == 1){
     arr = prompt("Enter The Array: ").split(",");
     num = prompt("Enter The Number: ");
     arr = addinginArray(arr,num);
-    console.log(arr);
+    console.log("Updated Array:", arr);
 }
 
 else if(response == 2){
     arr = prompt("Enter The Array: ").split(",");
     arr = removingfromArray (arr);
-    console.log(arr);
+    console.log("Updated Array:", arr);
 }
 
 else if(response == 3){
     arr = prompt("Enter The Array: ").split(",");
     arr = lengthofArray(arr);
-    console.log(arr);
+    console.log("Updated Array:", arr);
+}
+
+else if(response == 4){
+    arr = prompt("Enter The Array").split(",");
+    num = prompt("Enter The Number To Find");
+    if (arr.includes(num)){
+        console.log("The Number Is Present | The Position Of Number Is-" , arr.indexOf(num));
+    }
+    else{
+        console.log("Element Not Found");
+    }
 }
 
 else{
