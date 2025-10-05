@@ -323,18 +323,32 @@
 // let res = countDown(x);
 // console.log(res);
 
-let p = Number(prompt("Enter The Number"));
+// let p = Number(prompt("Enter The Number"));
 
-function sumOfNumber(n){
-    let x = 0;
-    let sum = 0;
-    while(n > 0){
-        x = n % 10;
-        sum = sum + x;
-        n = Math.floor(n / 10);
-    }
-    return sum;
+// function sumOfNumber(n){
+//     let x = 0;
+//     let sum = 0;
+//     while(n > 0){
+//         x = n % 10;
+//         sum = sum + x;
+//         n = Math.floor(n / 10);
+//     }
+//     return sum;
+// }
+
+// let result = sumOfNumber(p);
+// console.log(result);
+
+let p = Number(prompt("Enter Number 1: "));
+let q = Number(prompt("Enter Number 2: "));
+
+function swapNumbers (a,b){
+    let temp = a;
+    a = b;
+    b = temp;
+    return [a,b];
 }
 
-let result = sumOfNumber(p);
-console.log(result);
+let result = [];
+result = swapNumbers (p , q);
+console.log(result)
