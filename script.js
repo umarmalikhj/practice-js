@@ -364,35 +364,69 @@
 // let result = addNumber(numbers, x);
 // console.log(result);
 
-console.log("Objects");
+// console.log("Objects");
 
-let student = {
-    name : "HJ",
-    age : 22,
-    course : "Web Development",
-    grade : 8.8,
-    college : "BNU"
-}
-console.log(student);
-console.log(".");
-console.log("Before Updation: ", student.name);
-console.log("Before Updation: ", student.course);
+// let student = {
+//     name : "HJ",
+//     age : 22,
+//     course : "Web Development",
+//     grade : 8.8,
+//     college : "BNU"
+// }
+// console.log(student);
+// console.log(".");
+// console.log("Before Updation: ", student.name);
+// console.log("Before Updation: ", student.course);
 
-student.name = "H";
-student.course = "Full Stack Development";
+// student.name = "H";
+// student.course = "Full Stack Development";
 
-console.log("After Updation: ", student.name);
-console.log("After Updation: ", student.course);
+// console.log("After Updation: ", student.name);
+// console.log("After Updation: ", student.course);
 
-console.log(student);
+// console.log(student);
 
-student.isEnrolled = true;
-student.skills = "HTML, CSS, JS";
-delete student.college;
-delete student.grade;
+// student.isEnrolled = true;
+// student.skills = "HTML, CSS, JS";
+// delete student.college;
+// delete student.grade;
 
-console.log(student);
+// console.log(student);
 
-for(let key in student){
-    console.log(key + ":", student[key])
-}
+// for(let key in student){
+//     console.log(key + ":", student[key])
+// }
+
+// let car = {
+//     brand : "Tesla",
+//     model : "Model 3",
+//     year : 2023,
+//     color : "red"
+// }
+
+// for(let key in car){
+//     console.log(key + ":", car[key]);
+// }
+
+// let scores = {
+//     H : 80,
+//     Sara : 90,
+//     Ali : 92
+// }
+
+// for (let key in scores){
+//     scores[key] += 5;
+//     console.log(key + ":", scores[key])
+// }
+
+// let students = [
+//     {name : "H", age : 22},
+//     {name : "Ali", age : 21},
+//     {name : "Sara", age : 23}
+// ]
+
+// students.obj ["Course"] = "Web Dev"; 
+
+// for (let key in students){
+//     console.log(key + ":" , students[key]);
+// }
