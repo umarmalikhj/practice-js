@@ -82,7 +82,6 @@ body {
     align-items: stretch;
 }
 
-/* left panel: column of rows, each row stretches equally */
 .leftpanel {
     flex: 3;
     display: flex;
@@ -90,14 +89,12 @@ body {
     gap: 12px;
 }
 
-/* each row stretches equally (flex:1) ensuring equal heights */
 .leftpanel .row {
     display: flex;
     gap: 12px;
     flex: 1;
 }
 
-/* buttons inside rows stretch to fill their column */
 .leftpanel button {
     flex: 1;
     border: none;
@@ -110,7 +107,6 @@ body {
     justify-content: center;
 }
 
-/* right panel contains single big = button that fills full height */
 .rightpanel {
     flex: 1;
     display: flex;
