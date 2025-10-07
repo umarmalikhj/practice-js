@@ -59,3 +59,8 @@ function division(a,b){
     sum = a / b;
     return sum;
 }
+
+function mod(a,b){
+    sum = a % b;
+    return sum;
+}
