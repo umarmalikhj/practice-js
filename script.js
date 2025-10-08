@@ -431,12 +431,27 @@
 //     console.log(key + ":" , students[key]);
 // }
 
-const student = {
-    name : "Hj",
-    class : 12,
-    age : 20,
-    address: {
-        city : "Bangalore",
-        pin : 560045
+// const student = {
+//     name : "Hj",
+//     class : 12,
+//     age : 20,
+//     address: {
+//         city : "Bangalore",
+//         pin : 560045
+//     }
+// }
+
+const mobile = {
+    brand : "Apple iPhone ",
+    model : "17 Pro Max",
+    price : 100000,
+    features : [
+        "Power Camera", "Long Lasting Battery", "Sleek Design"
+    ],
+    showDetails(){
+        console.log("New Release Of The Week Is: \n" + mobile.brand + mobile.model + 
+            "\n Its Been Trending All Week, Because Of Its Features - " + mobile.features + " And Its Available At Our Store At Just " + mobile.price);
     }
 }
+
+mobile.showDetails();
