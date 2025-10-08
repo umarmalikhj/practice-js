@@ -441,17 +441,34 @@
 //     }
 // }
 
-const mobile = {
-    brand : "Apple iPhone ",
-    model : "17 Pro Max",
-    price : 100000,
-    features : [
-        "Power Camera", "Long Lasting Battery", "Sleek Design"
-    ],
-    showDetails(){
-        console.log("New Release Of The Week Is: \n" + mobile.brand + mobile.model + 
-            "\n Its Been Trending All Week, Because Of Its Features - " + mobile.features + " And Its Available At Our Store At Just " + mobile.price);
+// const mobile = {
+//     brand : "Apple iPhone ",
+//     model : "17 Pro Max",
+//     price : 100000,
+//     features : [
+//         "Power Camera", "Long Lasting Battery", "Sleek Design"
+//     ],
+//     showDetails(){
+//         console.log("New Release Of The Week Is: \n" + mobile.brand + mobile.model + 
+//             "\n Its Been Trending All Week, Because Of Its Features - " + mobile.features + " And Its Available At Our Store At Just " + mobile.price);
+//     }
+// }
+
+// mobile.showDetails();
+
+let students = [];
+
+while(true){
+    let student = {
+        name : prompt("Enter Your Name: "),
+        age : Number(prompt("Enter Your Age: "))
+    }
+    students.push(student);
+    
+    let choice = prompt("Add Another? (yes/no):");
+    if (choice.toLowerCase() !== "yes"){
+        break;
     }
 }
 
-mobile.showDetails();
+console.log(students);
