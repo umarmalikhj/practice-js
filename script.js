@@ -430,3 +430,13 @@
 // for (let key in students){
 //     console.log(key + ":" , students[key]);
 // }
+
+const student = {
+    name : "Hj",
+    class : 12,
+    age : 20,
+    address: {
+        city : "Bangalore",
+        pin : 560045
+    }
+}
