@@ -71,7 +71,7 @@
 // }
 
 // let n = Number(prompt("Enter A Number: "));
- 
+
 // for (let i=1; i<=n; i++){
 //     let sum = n * i;
 //     console.log(`${n} x ${i} = ${sum}`);
@@ -283,24 +283,24 @@
 // let result = 1;
 // let i = 1;
 // while(i <= n){
-    //     result *= i;
-    //     i++;
-    // }
-    
-    // console.log(result);
-    
-    // function factorial(x){
-        //     let result = 1;
-        //     let i = 1;
-        //     while(i <= x){
-            //         result *= i;
-            //         i++;
-            //     }
-            //     return result;
-            // }
-            
-            // let res = factorial(n);
-            // console.log(res)
+//     result *= i;
+//     i++;
+// }
+
+// console.log(result);
+
+// function factorial(x){
+//     let result = 1;
+//     let i = 1;
+//     while(i <= x){
+//         result *= i;
+//         i++;
+//     }
+//     return result;
+// }
+
+// let res = factorial(n);
+// console.log(res)
 
 
 // let x = Number(prompt("Enter The Number: "));
@@ -456,26 +456,81 @@
 
 // mobile.showDetails();
 
-let students = [];
+// let students = [];
 
-while(true){
-    let student = {
-        name : prompt("Enter Your Name: "),
-        age : Number(prompt("Enter Your Age: ")),
-    }
-    
-    students.push(student);
+// while(true){
+//     let student = {
+//         name : prompt("Enter Your Name: "),
+//         age : Number(prompt("Enter Your Age: ")),
+//     }
 
-    let choice = prompt("Add Another? (yes/no):");
-    if (choice.toLowerCase() !== "yes"){
-        break;
-    }
+//     students.push(student);
+
+//     let choice = prompt("Add Another? (yes/no):");
+//     if (choice.toLowerCase() !== "yes"){
+//         break;
+//     }
+// }
+
+// function showDetails(student){
+//     console.log("Name: " + student.name + " | Age: " + student.age);
+// }
+
+// for (let i = 0; i < students.length; i++){
+//     showDetails(students[i]);
+// }
+
+// Employee Database Program
+
+let employees = [
+    { "id": 101, "name": "Ayaan Khan", "age": 28, "department": "HR", "salary": 52000, "city": "Bangalore" },
+    { "id": 102, "name": "Zoya Shaikh", "age": 26, "department": "IT", "salary": 68000, "city": "Mumbai" },
+    { "id": 103, "name": "Arjun Patel", "age": 32, "department": "Finance", "salary": 75000, "city": "Delhi" },
+    { "id": 104, "name": "Fatima Noor", "age": 29, "department": "IT", "salary": 72000, "city": "Hyderabad" },
+    { "id": 105, "name": "Kabir Ali", "age": 35, "department": "Sales", "salary": 61000, "city": "Pune" },
+    { "id": 106, "name": "Meera Joseph", "age": 27, "department": "HR", "salary": 54000, "city": "Chennai" },
+    { "id": 107, "name": "Ravi Kumar", "age": 31, "department": "IT", "salary": 80000, "city": "Bangalore" },
+    { "id": 108, "name": "Sana Sheikh", "age": 30, "department": "Finance", "salary": 70000, "city": "Delhi" },
+    { "id": 109, "name": "Ishaan Verma", "age": 25, "department": "Sales", "salary": 56000, "city": "Mumbai" },
+    { "id": 110, "name": "Aarav Nair", "age": 33, "department": "Operations", "salary": 65000, "city": "Kolkata" }
+]
+
+// while(true){
+//     let employee = {
+//         name : prompt("Enter Name: "),
+//         position : prompt("Enter Position: "),
+//         salary : Number(prompt("Enter Salary: "))
+//     }
+
+//     employees.push(employee);
+
+//     let choice = prompt("Add Another? (yes/no)");
+//     if (choice.toLowerCase() !== "yes"){
+//         break;
+//     }
+// }
+
+// function showDetails(employee){
+//     console.log("Name : " + employee.name + 
+//                 "\nAge: " + employee.age + 
+//                 "\nDepartment: " + employee.department +
+//                 "\nSalary : " + employee.salary +
+//                 "\nCity: " + employee.city
+//             ) 
+// }
+
+// for (let i = 0; i < employees.length; i++){
+//     showDetails(employees[i])
+// }
+
+let salary = [];
+ 
+for ( let  i = 0; i < employees.length; i++){
+    let x = employees[i].salary;
+    salary.push(x);
 }
 
-function showDetails(student){
-    console.log("Name: " + student.name + " | Age: " + student.age);
-}
+salary.sort();
 
-for (let i = 0; i < students.length; i++){
-    showDetails(students[i]);
-}
+console.log("Highest Salary: " + salary[salary.length-1])
+console.log("Lowest Salary: " + salary[0]);
