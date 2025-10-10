@@ -461,7 +461,10 @@ let students = [];
 while(true){
     let student = {
         name : prompt("Enter Your Name: "),
-        age : Number(prompt("Enter Your Age: "))
+        age : Number(prompt("Enter Your Age: ")),
+        showDetails(){
+            console.log("Name: " + this.name + " | Age: " + this.age)
+        }
     }
     students.push(student);
     
@@ -471,4 +474,6 @@ while(true){
     }
 }
 
-console.log(students);
+for (let i = 1; i < students.length; i++){
+    students[i].showDetails();
+}
