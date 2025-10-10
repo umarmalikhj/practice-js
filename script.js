@@ -462,18 +462,20 @@ while(true){
     let student = {
         name : prompt("Enter Your Name: "),
         age : Number(prompt("Enter Your Age: ")),
-        showDetails(){
-            console.log("Name: " + this.name + " | Age: " + this.age)
-        }
     }
-    students.push(student);
     
+    students.push(student);
+
     let choice = prompt("Add Another? (yes/no):");
     if (choice.toLowerCase() !== "yes"){
         break;
     }
 }
 
-for (let i = 1; i < students.length; i++){
-    students[i].showDetails();
+function showDetails(student){
+    console.log("Name: " + student.name + " | Age: " + student.age);
+}
+
+for (let i = 0; i < students.length; i++){
+    showDetails(students[i]);
 }
