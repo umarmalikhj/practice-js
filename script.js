@@ -482,18 +482,18 @@
 
 // Employee Database Program
 
-let employees = [
-    { "id": 101, "name": "Ayaan Khan", "age": 28, "department": "HR", "salary": 52000, "city": "Bangalore" },
-    { "id": 102, "name": "Zoya Shaikh", "age": 26, "department": "IT", "salary": 68000, "city": "Mumbai" },
-    { "id": 103, "name": "Arjun Patel", "age": 32, "department": "Finance", "salary": 75000, "city": "Delhi" },
-    { "id": 104, "name": "Fatima Noor", "age": 29, "department": "IT", "salary": 72000, "city": "Hyderabad" },
-    { "id": 105, "name": "Kabir Ali", "age": 35, "department": "Sales", "salary": 61000, "city": "Pune" },
-    { "id": 106, "name": "Meera Joseph", "age": 27, "department": "HR", "salary": 54000, "city": "Chennai" },
-    { "id": 107, "name": "Ravi Kumar", "age": 31, "department": "IT", "salary": 80000, "city": "Bangalore" },
-    { "id": 108, "name": "Sana Sheikh", "age": 30, "department": "Finance", "salary": 70000, "city": "Delhi" },
-    { "id": 109, "name": "Ishaan Verma", "age": 25, "department": "Sales", "salary": 56000, "city": "Mumbai" },
-    { "id": 110, "name": "Aarav Nair", "age": 33, "department": "Operations", "salary": 65000, "city": "Kolkata" }
-]
+// let employees = [
+//     { "id": 101, "name": "Ayaan Khan", "age": 28, "department": "HR", "salary": 52000, "city": "Bangalore" },
+//     { "id": 102, "name": "Zoya Shaikh", "age": 26, "department": "IT", "salary": 68000, "city": "Mumbai" },
+//     { "id": 103, "name": "Arjun Patel", "age": 32, "department": "Finance", "salary": 75000, "city": "Delhi" },
+//     { "id": 104, "name": "Fatima Noor", "age": 29, "department": "IT", "salary": 72000, "city": "Hyderabad" },
+//     { "id": 105, "name": "Kabir Ali", "age": 35, "department": "Sales", "salary": 61000, "city": "Pune" },
+//     { "id": 106, "name": "Meera Joseph", "age": 27, "department": "HR", "salary": 54000, "city": "Chennai" },
+//     { "id": 107, "name": "Ravi Kumar", "age": 31, "department": "IT", "salary": 80000, "city": "Bangalore" },
+//     { "id": 108, "name": "Sana Sheikh", "age": 30, "department": "Finance", "salary": 70000, "city": "Delhi" },
+//     { "id": 109, "name": "Ishaan Verma", "age": 25, "department": "Sales", "salary": 56000, "city": "Mumbai" },
+//     { "id": 110, "name": "Aarav Nair", "age": 33, "department": "Operations", "salary": 65000, "city": "Kolkata" }
+// ]
 
 // while(true){
 //     let employee = {
@@ -523,14 +523,34 @@ let employees = [
 //     showDetails(employees[i])
 // }
 
-let salary = [];
+// let salary = [];
  
-for ( let  i = 0; i < employees.length; i++){
-    let x = employees[i].salary;
-    salary.push(x);
+// for ( let  i = 0; i < employees.length; i++){
+//     let x = employees[i].salary;
+//     salary.push(x);
+// }
+
+// salary.sort();
+
+// console.log("Highest Salary: " + salary[salary.length-1])
+// console.log("Lowest Salary: " + salary[0]);
+
+// const age = Number(prompt("Enter Age: "));
+
+// if (age >= 18){
+//     console.log("You Are Eligible For DL");
+// }
+
+// else{
+//     console.log("Go Home and Sleep Kid!");
+// }
+
+const x = Number(prompt("Enter Number: "));
+
+if (x % 2 === 0){
+    console.log("Even Number");
 }
 
-salary.sort();
-
-console.log("Highest Salary: " + salary[salary.length-1])
-console.log("Lowest Salary: " + salary[0]);
+else{
+    console.log("Odd Number");
+}
