@@ -573,37 +573,60 @@
 //     console.log("Fail");
 // }
 
-const day = Number(prompt("Enter A Day (1 - 7)"));
+// const day = Number(prompt("Enter A Day (1 - 7)"));
 
-switch (day){
-    case 1 :
-        console.log("Monday");
-        break;
+// switch (day){
+//     case 1 :
+//         console.log("Monday");
+//         break;
     
-    case 2 :
-        console.log("Tuesday");
-        break;
+//     case 2 :
+//         console.log("Tuesday");
+//         break;
 
-    case 3 : 
-        console.log("Wednesday");
-        break;
+//     case 3 : 
+//         console.log("Wednesday");
+//         break;
 
-    case 4 : 
-        console.log("Thursday");
-        break;
+//     case 4 : 
+//         console.log("Thursday");
+//         break;
 
-    case 5 : 
-        console.log("Friday");
-        break;
+//     case 5 : 
+//         console.log("Friday");
+//         break;
 
-    case 6 : 
-        console.log("Saturday");
-        break;
+//     case 6 : 
+//         console.log("Saturday");
+//         break;
 
-    case 7 :
-        console.log("Sunday");
-        break;
+//     case 7 :
+//         console.log("Sunday");
+//         break;
 
-    default : 
-        console.log("You've Entered Wrong One!")
-}
+//     default : 
+//         console.log("You've Entered Wrong One!")
+// }
+
+// for (let i = 2; i <= 20; i+=2){
+//     console.log(i);
+// }
+
+// let n = Number(prompt("Enter A Number: "));
+
+// while(n >= 1){
+//     console.log(n);
+//     n--;
+// }
+
+// let num = [];
+// let n;
+
+// do {
+//     n = Number(prompt("Enter A Number: "));
+//     num.push(n);
+// }
+
+// while(n > 0)
+
+// console.log(num)
