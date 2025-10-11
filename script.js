@@ -545,12 +545,30 @@
 //     console.log("Go Home and Sleep Kid!");
 // }
 
-const x = Number(prompt("Enter Number: "));
+// const x = Number(prompt("Enter Number: "));
 
-if (x % 2 === 0){
-    console.log("Even Number");
+// if (x % 2 === 0){
+//     console.log("Even Number");
+// }
+
+// else{
+//     console.log("Odd Number");
+// }
+
+const marks = Number(prompt("Enter Your Marks: "));
+
+if (marks >= 90){
+    console.log("A");
+}
+
+else if (marks >= 75){
+    console.log("B");
+}
+
+else if (marks >= 50){
+    console.log("C");
 }
 
 else{
-    console.log("Odd Number");
+    console.log("Fail");
 }
