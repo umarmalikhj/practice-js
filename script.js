@@ -630,3 +630,14 @@
 // while(n > 0)
 
 // console.log(num)
+
+// let a = Number(prompt("Enter Number 1 : "));
+// let b = Number(prompt("Enter Number 2 : "));
+
+// function averageNumber (x,y){
+//     let sum = (x + y)/2;
+//     return sum;
+// }
+
+// let num = averageNumber (a,b);
+// console.log(num);
