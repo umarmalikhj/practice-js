@@ -710,3 +710,5 @@ button.addEventListener("click", function() {
     heading.textContent = "You Clicked The Button";
     paragraph.style.color = "Red";
 });
+
+let sum;
