@@ -641,3 +641,59 @@
 
 // let num = averageNumber (a,b);
 // console.log(num);
+
+let a = Number(prompt("Enter Number 1: "));
+let b = Number(prompt("Enter Number 2: "));
+let operator = prompt("Enter Operation to be Performed: \n + For Addition \n - For Subtraction \n * For Multiplication \n /  For Division");
+
+function calculate(x, y, opr){
+    let sum;
+    if(opr === "+"){
+        sum = addition(x, y);
+        return sum;
+    }
+
+    else if(opr === "-"){
+        sum = subtraction(x, y);
+        return sum;
+    }
+
+    else if(opr === "*"){
+        sum = multiplication(x, y);
+        return sum;
+    }
+
+    else if(opr === "/"){
+        sum = division(x, y);
+        return sum;
+    }
+}
+
+let calc = calculate(a, b, operator);
+alert(calc);
+
+
+function addition(x, y){
+    let sum = x + y;
+    return sum;
+}
+
+function subtraction(x, y){
+    let sum = x - y;
+    return sum;
+}
+
+function multiplication(x,y){
+    let sum = x * y;
+    return sum;
+}
+
+function division(x, y){
+    if (y === 0){
+        return undefined;
+    }
+    else {
+        let sum = x / y;
+        return sum
+    }
+}
