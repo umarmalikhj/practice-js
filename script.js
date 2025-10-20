@@ -698,17 +698,15 @@
 //     }
 // }
 
-const heading = document.getElementById("myHeading");
-const paragraph = document.querySelector("para");
-const button = document.getElementById("myBtn");
+// const heading = document.getElementById("myHeading");
+// const paragraph = document.querySelector(".para");
+// const button = document.getElementById("myBtn");
 
-console.log(heading);
-console.log(paragraph);
-console.log(button);
+// console.log(heading);
+// console.log(paragraph);
+// console.log(button);
 
-button.addEventListener("click", function() {
-    heading.textContent = "You Clicked The Button";
-    paragraph.style.color = "Red";
-});
-
-let sum;
+//  button.addEventListener("click", function() {
+//         heading.style.color = "blue";
+//         paragraph.style.color = "green";
+//     });
