@@ -727,9 +727,32 @@ console.log(heading);
 // button.style.border = "none";
 // button.style.padding = "10px 20px";
 
+// button.addEventListener("click", function(){
+//     heading.innerText = "Umar Malik HJ";
+//     paragraph.style.color = "blue";
+//     button.innerText = "Clicked";
+//     document.body.style.backgroundColor = "lightblue";
+// })
+
 button.addEventListener("click", function(){
-    heading.innerText = "Umar Malik HJ";
-    paragraph.style.color = "blue";
-    button.innerText = "Clicked";
-    document.body.style.backgroundColor = "lightblue";
-})
+    console.log("Button Clicked");
+    alert("Button Clicked");
+});
+
+heading.addEventListener("mouseover", function(){
+    heading.style.backgroundColor = "Crimson";
+    heading.style.color = "White";
+    heading.style.transition = "0.5s"
+});
+
+heading.addEventListener("mouseout", function(){
+    heading.style.backgroundColor = "white";
+    heading.style.color = "black";
+});
+
+paragraph.addEventListener("mouseover", function(){
+    paragraph.style.backgroundColor = "Blue";
+    paragraph.style.color = "White";
+    paragraph.style.transition = "0.5s"
+});
+
