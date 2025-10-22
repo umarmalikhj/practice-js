@@ -711,13 +711,13 @@
 //         paragraph.style.color = "green";
 //     });
 
-console.log("DOM CONNECTED");
+// console.log("DOM CONNECTED");
 
-let heading = document.getElementById("myHeading");
-let paragraph = document.querySelector(".para");
-let button = document.getElementById("myBtn");
+// let heading = document.getElementById("myHeading");
+// let paragraph = document.querySelector(".para");
+// let button = document.getElementById("myBtn");
 
-console.log(heading);
+// console.log(heading);
 
 // heading.innerText = "Hello!!!";
 // heading.style.color = "crimson";
@@ -734,25 +734,82 @@ console.log(heading);
 //     document.body.style.backgroundColor = "lightblue";
 // })
 
-button.addEventListener("click", function(){
-    console.log("Button Clicked");
-    alert("Button Clicked");
+// button.addEventListener("click", function(){
+//     console.log("Button Clicked");
+//     alert("Button Clicked");
+// });
+
+// heading.addEventListener("mouseover", function(){
+//     heading.style.backgroundColor = "Crimson";
+//     heading.style.color = "White";
+//     heading.style.transition = "0.5s"
+// });
+
+// heading.addEventListener("mouseout", function(){
+//     heading.style.backgroundColor = "white";
+//     heading.style.color = "black";
+// });
+
+// paragraph.addEventListener("mouseover", function(){
+//     paragraph.style.backgroundColor = "Blue";
+//     paragraph.style.color = "White";
+//     paragraph.style.transition = "0.5s"
+// });
+
+console.log("DOM Connected");
+
+const moods = {
+    Happy : {
+        text : "Happy",
+        color : "Red"
+    },
+    Sad : {
+        text : "Sad",
+        color : "Grey"
+    },
+    Angry : {
+        text : "Angry",
+        color : "Red"
+    }
+};
+
+function updateMood(type){
+    const selectedMood = moods[type];
+    moods.innerText = selectedMood.text;
+    document.body.style.backgroundColor = selectedMood.color;
+    mood.style.transition = "0.75s";
+    document.body.style.transition = "0.75s";
+}
+
+happy.addEventListener("click", function(){
+    updateMood("Happy");
 });
 
-heading.addEventListener("mouseover", function(){
-    heading.style.backgroundColor = "Crimson";
-    heading.style.color = "White";
-    heading.style.transition = "0.5s"
+sad.addEventListener("click", function(){
+    updateMood("Sad");
 });
 
-heading.addEventListener("mouseout", function(){
-    heading.style.backgroundColor = "white";
-    heading.style.color = "black";
+angry.addEventListener("click", function(){
+    updateMood("Angry");
 });
 
-paragraph.addEventListener("mouseover", function(){
-    paragraph.style.backgroundColor = "Blue";
-    paragraph.style.color = "White";
-    paragraph.style.transition = "0.5s"
-});
+// happy.addEventListener("click", function(){
+//     mood.innerText = "Happy";
+//     mood.style.transition = "0.8s";
+//     document.body.style.backgroundColor = "yellow";
+//     document.body.style.transition = "0.8s";
+// });
 
+// sad.addEventListener("click", function(){
+//     mood.innerText = "Sad";
+//     mood.style.transition = "0.8s";
+//     document.body.style.backgroundColor = "grey";
+//     document.body.style.transition = "0.8s";
+// });
+
+// angry.addEventListener("click", function(){
+//     mood.innerText = "Angry";
+//     mood.style.transition = "0.8s";
+//     document.body.style.backgroundColor = "red";
+//     document.body.style.transition = "0.8s";
+// });
