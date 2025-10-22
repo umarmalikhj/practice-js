@@ -710,3 +710,15 @@
 //         heading.style.color = "blue";
 //         paragraph.style.color = "green";
 //     });
+
+console.log("DOM CONNECTED");
+
+let heading = document.getElementById("myHeading");
+let paragraph = document.querySelector(".para");
+let button = document.getElementById("myBtn ");
+
+console.log(heading);
+
+heading.innerText = "Hello!!!";
+heading.style.color = "crimson";
+heading.style.paddingTop = "20px";
