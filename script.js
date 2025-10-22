@@ -761,7 +761,7 @@ console.log("DOM Connected");
 const moods = {
     Happy : {
         text : "Happy",
-        color : "Red"
+        color : "Yellow"
     },
     Sad : {
         text : "Sad",
@@ -775,7 +775,7 @@ const moods = {
 
 function updateMood(type){
     const selectedMood = moods[type];
-    moods.innerText = selectedMood.text;
+    mood.innerText = selectedMood.text;
     document.body.style.backgroundColor = selectedMood.color;
     mood.style.transition = "0.75s";
     document.body.style.transition = "0.75s";
