@@ -715,10 +715,21 @@ console.log("DOM CONNECTED");
 
 let heading = document.getElementById("myHeading");
 let paragraph = document.querySelector(".para");
-let button = document.getElementById("myBtn ");
+let button = document.getElementById("myBtn");
 
 console.log(heading);
 
-heading.innerText = "Hello!!!";
-heading.style.color = "crimson";
-heading.style.paddingTop = "20px";
+// heading.innerText = "Hello!!!";
+// heading.style.color = "crimson";
+// heading.style.paddingTop = "20px";
+// button.style.backgroundColor = "black";
+// button.style.color = "White";
+// button.style.border = "none";
+// button.style.padding = "10px 20px";
+
+button.addEventListener("click", function(){
+    heading.innerText = "Umar Malik HJ";
+    paragraph.style.color = "blue";
+    button.innerText = "Clicked";
+    document.body.style.backgroundColor = "lightblue";
+})
