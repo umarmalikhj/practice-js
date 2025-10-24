@@ -524,7 +524,7 @@
 // }
 
 // let salary = [];
- 
+
 // for ( let  i = 0; i < employees.length; i++){
 //     let x = employees[i].salary;
 //     salary.push(x);
@@ -579,7 +579,7 @@
 //     case 1 :
 //         console.log("Monday");
 //         break;
-    
+
 //     case 2 :
 //         console.log("Tuesday");
 //         break;
@@ -758,40 +758,40 @@
 
 console.log("DOM Connected");
 
-const moods = {
-    Happy : {
-        text : "Happy",
-        color : "Yellow"
-    },
-    Sad : {
-        text : "Sad",
-        color : "Grey"
-    },
-    Angry : {
-        text : "Angry",
-        color : "Red"
-    }
-};
+// const moods = {
+//     Happy : {
+//         text : "Happy",
+//         color : "Yellow"
+//     },
+//     Sad : {
+//         text : "Sad",
+//         color : "Grey"
+//     },
+//     Angry : {
+//         text : "Angry",
+//         color : "Red"
+//     }
+// };
 
-function updateMood(type){
-    const selectedMood = moods[type];
-    mood.innerText = selectedMood.text;
-    document.body.style.backgroundColor = selectedMood.color;
-    mood.style.transition = "0.75s";
-    document.body.style.transition = "0.75s";
-}
+// function updateMood(type){
+//     const selectedMood = moods[type];
+//     mood.innerText = selectedMood.text;
+//     document.body.style.backgroundColor = selectedMood.color;
+//     mood.style.transition = "0.75s";
+//     document.body.style.transition = "0.75s";
+// }
 
-happy.addEventListener("click", function(){
-    updateMood("Happy");
-});
+// happy.addEventListener("click", function(){
+//     updateMood("Happy");
+// });
 
-sad.addEventListener("click", function(){
-    updateMood("Sad");
-});
+// sad.addEventListener("click", function(){
+//     updateMood("Sad");
+// });
 
-angry.addEventListener("click", function(){
-    updateMood("Angry");
-});
+// angry.addEventListener("click", function(){
+//     updateMood("Angry");
+// });
 
 // happy.addEventListener("click", function(){
 //     mood.innerText = "Happy";
@@ -813,3 +813,16 @@ angry.addEventListener("click", function(){
 //     document.body.style.backgroundColor = "red";
 //     document.body.style.transition = "0.8s";
 // });
+
+let cyan = document.getElementById("cyan");
+let purple = document.getElementById("purple");
+let lime = document.getElementById("lime");
+let olive = document.getElementById("olive");
+let fuchsia = document.getElementById("fuchsia");
+let heading = document.getElementById("heading");
+
+cyan.addEventListener("click", function () {
+    heading.style.color = "cyan";
+    cyan.style.color = "cyan";
+    cyan.style.border = "2px solid cyan";
+});
