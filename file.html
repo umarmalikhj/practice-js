@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .moodmeter {
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 3%;
+        }
+
+        .moodbtn button {
+            padding: 10px 20px;
+            background-color: blanchedalmond;
+            border: 2px solid brown;
+            border-radius: 7px;
+            font-size: 1rem;
+        }
+    </style>
+    <title>JS Practice</title>
+</head>
+
+<body>
+    <div class="moodmeter">
+        <h1 id="heading">Your Mood: <span id="mood">Neutral</span></h1>
+        <div class="moodbtn">
+            <button id="happy">Happy</button>
+            <button id="sad">Sad</button>
+            <button id="angry">Angry</button>
+        </div>
+    </div>
+
+    <script>
+        "use strict";
+        console.log("DOM Connected");
+        const moods = { 
+            Happy: { 
+                text: "Happy", 
+                color: "Yellow" 
+            }, 
+            Sad: { 
+                text: "Sad", 
+                color: "Grey" 
+            }, 
+            Angry: { 
+                text: "Angry", 
+                color: "Red" 
+            } 
+        }; 
+        
+        function updateMood(type) { 
+            const selectedMood = moods[type]; 
+            mood.innerText = selectedMood.text; 
+            document.body.style.backgroundColor = selectedMood.color; 
+            mood.style.transition = "0.75s"; 
+            document.body.style.transition = "0.75s"; 
+        } 
+        
+        happy.addEventListener("click", function () { 
+            updateMood("Happy"); 
+        }); 
+        
+        sad.addEventListener("click", function () { 
+            updateMood("Sad"); 
+        }); 
+        
+        angry.addEventListener("click", function () { 
+            updateMood("Angry"); 
+        });
+    </script>
+</body>
+
+</html>
