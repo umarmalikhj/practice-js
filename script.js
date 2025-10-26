@@ -822,7 +822,20 @@ let fuchsia = document.getElementById("fuchsia");
 let heading = document.getElementById("heading");
 
 cyan.addEventListener("click", function () {
-    heading.style.color = "cyan";
-    cyan.style.color = "cyan";
-    cyan.style.border = "2px solid cyan";
+    // heading.style.color = "cyan";
+    // heading.style.transition = "0.75s";
+    // cyan.style.color = "cyan";
+    // cyan.style.transition = "0.75s";
+    // cyan.style.border = "2px solid cyan";
+    colorPicker("cyan");
 });
+
+function colorPicker(type){
+    const selectedColor = type;
+    heading.style.color = selectedColor;
+    heading.style.transition = "0.75s";
+    button.style.color = selectedColor;
+    button.style.transition = "0.75s";
+    button.style.border = `2px solid ${selectedColor}`;
+};
+
