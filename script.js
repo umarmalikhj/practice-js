@@ -821,16 +821,33 @@ let olive = document.getElementById("olive");
 let fuchsia = document.getElementById("fuchsia");
 let heading = document.getElementById("heading");
 
-cyan.addEventListener("click", function () {
-    // heading.style.color = "cyan";
-    // heading.style.transition = "0.75s";
-    // cyan.style.color = "cyan";
-    // cyan.style.transition = "0.75s";
-    // cyan.style.border = "2px solid cyan";
-    colorPicker("cyan");
+cyan.addEventListener("click", function(){
+    colorPicker(this , "cyan");
 });
 
-function colorPicker(type){
+purple.addEventListener("click", function(){
+    colorPicker(this, "purple");
+});
+
+lime.addEventListener("click", function(){
+    colorPicker(this, "lime");
+});
+
+olive.addEventListener("click", function(){
+    colorPicker(this, "olive");
+});
+
+fuchsia.addEventListener("click", function(){
+    colorPicker(this, "fuchsia");
+});
+
+function colorPicker(button, type){
+    document.querySelectorAll(".colorBtn button").forEach(btn => {
+        btn.style.border = "2px solid white";
+        btn.style.color = "white";
+        btn.style.transition = "0.75s";
+    });
+
     const selectedColor = type;
     heading.style.color = selectedColor;
     heading.style.transition = "0.75s";
