@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+            background-color: black;
+        }
+
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 5rem;
+        }
+
+        .colorBtn button{
+            padding: 1rem 2.5rem;
+            border-radius: 40px;
+            border: 2px solid white;
+            background-color: black;
+        }
+    </style>
+    <title>JS Practice</title>
+</head>
+<body>
+    <div class="colorPicker">
+        <h1 id="heading">Pick A Color</h1>
+    </div>
+    <div class="colorBtn">
+        <button id="cyan">Cyan</button>
+        <button id="purple">Purple</button>
+        <button id="lime">Lime</button>
+        <button id="olive">Olive</button>
+        <button id="fuchsia">Fuchsia</button>
+    </div>
+
+
+    <script>
+        let cyan = document.getElementById("cyan");
+        let purple = document.getElementById("purple");
+        let lime = document.getElementById("lime");
+        let olive = document.getElementById("olive");
+        let fuchsia = document.getElementById("fuchsia");
+        let heading = document.getElementById("heading");
+
+        cyan.addEventListener("click", function(){
+            colorPicker(this , "cyan");
+        });
+
+        purple.addEventListener("click", function(){
+            colorPicker(this, "purple");
+        });
+
+        lime.addEventListener("click", function(){
+            colorPicker(this, "lime");
+        });
+
+        olive.addEventListener("click", function(){
+            colorPicker(this, "olive");
+        });
+
+        fuchsia.addEventListener("click", function(){
+            colorPicker(this, "fuchsia");
+        });
+
+        function colorPicker(button, type){
+            document.querySelectorAll(".colorBtn button").forEach(btn => {
+                btn.style.border = "2px solid white";
+                btn.style.color = "white";
+                btn.style.transition = "0.75s";
+            });
+
+            const selectedColor = type;
+            heading.style.color = selectedColor;
+            heading.style.transition = "0.75s";
+            button.style.color = selectedColor;
+            button.style.transition = "0.75s";
+            button.style.border = `2px solid ${selectedColor}`;
+        };
+    </script>
+</body>
+</html>
