@@ -856,24 +856,30 @@ console.log("DOM Connected");
 //     button.style.border = `2px solid ${selectedColor}`;
 // };
 
-let small = document.getElementById("small");
-let medium = document.getElementById("medium");
-let large = document.getElementById("large");
-let huge = document.getElementById("huge");
-let heading = document.getElementById("font1");
+// let small = document.getElementById("small");
+// let medium = document.getElementById("medium");
+// let large = document.getElementById("large");
+// let huge = document.getElementById("huge");
+// let heading = document.getElementById("font1");
 
-small.addEventListener("click", function(){
-    heading.style.fontSize = "10px";
-});
+// small.addEventListener("click", function(){
+//     heading.style.fontSize = "10px";
+// });
 
-medium.addEventListener("click", function(){
-    heading.style.fontSize = "20px";
-});
+// medium.addEventListener("click", function(){
+//     heading.style.fontSize = "20px";
+// });
 
-large.addEventListener("click", function(){
-    heading.style.fontSize = "30px";
-});
+// large.addEventListener("click", function(){
+//     heading.style.fontSize = "30px";
+// });
 
-huge.addEventListener("click", function(){
-    heading.style.fontSize = "75px";
+// huge.addEventListener("click", function(){
+//     heading.style.fontSize = "75px";
+// });
+
+const fruits = ["apple", "mango", "banana"];
+
+fruits.forEach((fruit, i) => {
+    console.log(i, fruit)
 });

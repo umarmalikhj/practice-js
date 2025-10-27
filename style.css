@@ -4,29 +4,3 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
-
-body{
-    height: 100vh;
-    background-color: chocolate;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-}
-
-.fontDisplay{
-    background-color: white;
-    width: 40%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fontButtons button{
-    padding: 10px 25px;
-    font-size: 1em;
-    border: 2px solid black;
-    border-radius: 20px;
-}
