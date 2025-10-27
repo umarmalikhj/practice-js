@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+
+        body{
+            height: 100vh;
+            background-color: chocolate;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10%;
+        }
+
+        .fontDisplay{
+            background-color: white;
+            width: 40%;
+            height: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fontButtons button {
+            padding: 10px 25px;
+            font-size: 1em;
+            border: 2px solid black;
+            border-radius: 20px;
+            transition: 0.4s;
+            background-color: white;
+        }
+
+        .fontButtons button:active {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+    <title>JS Practice</title>
+</head>
+<body>
+    <div class="fontDisplay">
+        <h1 id="font1">Hello World!</h1>
+    </div>
+    <div class="fontButtons">
+        <button id="small">Small</button>
+        <button id="medium">Medium</button>
+        <button id="large">Large</button>
+        <button id="huge">Huge</button>
+    </div>
+
+    <script>
+        const heading = document.getElementById("font1");
+        const buttons = document.querySelectorAll(".fontButtons button");
+
+        buttons.forEach(btn =>{
+            btn.addEventListener("click", function(){
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                switch(btn.id){
+                    case "small":
+                        heading.style.fontSize = "12px";
+                        break;
+                    
+                    case "medium":
+                        heading.style.fontSize = "24px";
+                        break;
+                    case "large":
+                        heading.style.fontSize = "36px";
+                        break;
+                    case "huge": 
+                        heading.style.fontSize = "80px"
+                        break;
+                }
+                heading.style.transition = "0.4s";
+            });
+        });
+    </script>
+</body>
+</html>
