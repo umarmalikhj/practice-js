@@ -878,8 +878,19 @@ console.log("DOM Connected");
 //     heading.style.fontSize = "75px";
 // });
 
-const fruits = ["apple", "mango", "banana"];
+// const fruits = ["apple", "mango", "banana"];
 
-fruits.forEach((fruit, i) => {
-    console.log(i, fruit)
-});
+// fruits.forEach((fruit, i) => {
+//     console.log("This is " + fruit)
+// });
+
+// let name1 = "umar";
+// let name2 = 34;
+// var spices = "chili";
+// const preference = "Veg";
+
+// console.log(name1);
+// console.log(name2);
+// console.log(spices);
+// console.log(preference);
+
