@@ -894,3 +894,11 @@ console.log("DOM Connected");
 // console.log(spices);
 // console.log(preference);
 
+function tempConvertor(celsius){
+    let farenHeit;
+    farenHeit = (celsius * 9/5) + 32;
+    return farenHeit;
+}
+
+let out = tempConvertor(99);
+console.log(out);
