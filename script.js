@@ -756,7 +756,7 @@
 //     paragraph.style.transition = "0.5s"
 // });
 
-console.log("DOM Connected");
+// console.log("DOM Connected");
 
 // const moods = {
 //     Happy : {
@@ -912,9 +912,12 @@ console.log("DOM Connected");
 //     return result;
 // };
 
-let n = Number(prompt("Enter The Numhber: "));
-let result = isEven(n);
-console.log(result);
+let w = Number(prompt("Enter Your Weight (In Kgs): "));
+let h = Number(prompt("Enter Your Height (In Feet): "))
+let result = calculateBMI(w, h);
+console.log("Your BMI Is: " + result);
+let category = bmiCategory(result);
+console.log(category);
 
 function isEven(x){
     if(x % 2 === 0){
@@ -924,3 +927,41 @@ function isEven(x){
         return false;
     }
 };
+
+function calculateBMI(weight, heightInFeet){
+    const heightInMeters = heightInFeet * 0.3048;
+    const bmi = weight / (heightInMeters ** 2);
+    return bmi.toFixed(2);
+};
+
+function bmiCategory(bmi){
+    if(bmi >=40){
+        console.log("Category: Morbidly Obese (Class III");
+        console.log("Health Status: Severe Risk; Needs Medical Attention");
+    }
+    
+    else if(bmi >= 35 && bmi <= 39.9){
+        console.log("Catergory: Obese (Class II) ");
+        console.log("Health Status: High Risk of Chronic Diseases");
+    }
+
+    else if(bmi >= 30 && bmi <= 34.9){
+        console.log("Category: Obese (Class III");
+        console.log("Health Status: Increased Risk of Health Issues");
+    }
+
+    else if(bmi >= 25 && bmi <= 29.2){
+        console.log("Category: Overweight");
+        console.log("Health Status: Slightly Above Healthy Range");
+    }
+
+    else if(bmi >= 18.5 && bmi <= 24.9){
+        console.log("Category: Normal Weight");
+        console.log("Health Status: Healthy, Ideal Range");
+    }
+
+    else if(bmi <= 18.5){
+        console.log("Category: Underweight");
+        console.log("Health Status: May Indicate Malnutrition or Weakness");
+    }
+}
