@@ -894,11 +894,33 @@ console.log("DOM Connected");
 // console.log(spices);
 // console.log(preference);
 
-function tempConvertor(celsius){
-    let farenHeit;
-    farenHeit = (celsius * 9/5) + 32;
-    return farenHeit;
-}
+// function tempConvertor(celsius){
+//     let farenHeit;
+//     farenHeit = (celsius * 9/5) + 32;
+//     return farenHeit;
+// }
 
-let out = tempConvertor(99);
-console.log(out);
+// let out = tempConvertor(99);
+// console.log(out);
+
+
+// let result = square(n);
+// console.log(result);
+
+// function square(x){
+//     let result = x * x;
+//     return result;
+// };
+
+let n = Number(prompt("Enter The Numhber: "));
+let result = isEven(n);
+console.log(result);
+
+function isEven(x){
+    if(x % 2 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+};
