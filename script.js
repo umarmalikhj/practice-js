@@ -912,8 +912,8 @@
 //     return result;
 // };
 
-let w = Number(prompt("Enter Your Weight (In Kgs): "));
-let h = Number(prompt("Enter Your Height (In Feet): "))
+// let w = Number(prompt("Enter Your Weight (In Kgs): "));
+// let h = Number(prompt("Enter Your Height (In Feet): "));
 let result = calculateBMI(w, h);
 console.log("Your BMI Is: " + result);
 let category = bmiCategory(result);
