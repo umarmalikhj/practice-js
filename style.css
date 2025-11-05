@@ -5,16 +5,35 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 
-.outer{
+body{
+    background-color: burlywood;
     display: flex;
-    height: 100vh;
-    gap: 3%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+.outer{
+    display: flex;
+    background-color: white;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    border-radius: 30px;
 }
 
 .outer h1{
     font-size: 3em;
+    padding-bottom: 0.75em;
 }
 
+input{
+    padding: 0.25em 0.5em;
+}
+
+button{
+    padding: 0.25em 0.5em;
+}

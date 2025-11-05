@@ -966,3 +966,26 @@
 //     }
 // }
 
+document.getElementById("checkPinCode").addEventListener("click", function(){
+    const pinCode = document.getElementById("pincode").value;
+    const heading = document.getElementById("head");
+    const content = document.getElementById("content");
+    
+    if(!/^\d{6}$/.test(pinCode)){
+        alert("Enter Valid Pincode");
+        return;
+    }
+    
+    else if(pinCode <= 560500){
+        alert("Delivery Available With COD");
+    }
+
+    else if(pinCode <= 560900){
+        alert("Delivery Available Without COD");
+    }
+
+    else{
+        alert("Delivery Not Available")
+    }
+
+});
