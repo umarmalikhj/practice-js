@@ -985,7 +985,6 @@ document.getElementById("checkPinCode").addEventListener("click", function(){
     }
 
     else{
-        alert("Delivery Not Available")
+        alert("Delivery Not Available");
     }
-
 });
