@@ -967,7 +967,7 @@
 // }
 
 document.getElementById("checkPinCode").addEventListener("click", function(){
-    const pinCode = document.getElementById("pincode").value;
+    const pinCode = Number(document.getElementById("pincode").value);
     const heading = document.getElementById("head");
     const content = document.getElementById("content");
     
