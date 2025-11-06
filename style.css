@@ -60,4 +60,16 @@ button{
     width: 75%;
     border-radius: 30px;
     background-color: black;
+    animation: blackline 1.8s infinite;
+    position: relative;
+}
+
+@keyframes blackline {
+    from{
+        width: 30%;
+    }
+
+    to{
+        width: 75%;
+    }
 }
