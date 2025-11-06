@@ -15,17 +15,14 @@ body{
 }
 
 .inputContent{
-    display: none;
+    display: none
 }
 
 .outer{
-    display: flex;
     background-color: white;
+    z-index: 0;
     height: 40vh;
     width: 40vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 3em;
     border-radius: 30px;
 }
@@ -48,4 +45,19 @@ input{
 
 button{
     padding: 0.25em 0.5em;
+}
+
+.resultContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.blackLine{
+    height: 5px;
+    width: 75%;
+    border-radius: 30px;
+    background-color: black;
 }
