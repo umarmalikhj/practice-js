@@ -968,23 +968,29 @@
 
 document.getElementById("checkPinCode").addEventListener("click", function(){
     const pinCode = Number(document.getElementById("pincode").value);
-    const heading = document.getElementById("head");
-    const content = document.getElementById("content");
+    let inputContent = document.querySelector(".inputContent")
+    let deliveryWithCOD = document.querySelector(".deliveryWithCOD");
+    let deliveryWithoutCOD = document.querySelector(".deliveryWithoutCOD");
+    let noDelivery = document.querySelector(".noDelivery");
+    let error = document.querySelector(".error");
     
     if(!/^\d{6}$/.test(pinCode)){
-        alert("Enter Valid Pincode");
-        return;
+        inputContent.style.display = "none";
+        error.style.display = "block";
     }
     
     else if(pinCode <= 560500){
-        alert("Delivery Available With COD");
+        inputContent.style.display = "none";
+        deliveryWithCOD.style.display = "block";
     }
 
     else if(pinCode <= 560900){
-        alert("Delivery Available Without COD");
+        inputContent.style.display = "none";
+        deliveryWithoutCOD.style.display = "block";
     }
 
     else{
-        alert("Delivery Not Available");
+        inputContent.style.display = "none";
+        noDelivery.style.display = "block";
     }
 });
