@@ -14,10 +14,6 @@ body{
     height: 100vh;
 }
 
-.inputContent{
-    display: none
-}
-
 .outer{
     background-color: white;
     z-index: 0;
@@ -55,6 +51,10 @@ button{
     height: 100%;
 }
 
+.del{
+    text-align: center;
+}
+
 .deliveryWithCOD{
     display: none;
 }
@@ -63,9 +63,13 @@ button{
     display: none;
 }
 
-/* .noDelivery{
+.noDelivery{
     display: none;
-} */
+}
+
+.error{
+    display: none;
+}
 
 .icon i{
     font-size: 4.5em;
