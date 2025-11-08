@@ -939,7 +939,7 @@
 //         console.log("Category: Morbidly Obese (Class III");
 //         console.log("Health Status: Severe Risk; Needs Medical Attention");
 //     }
-
+    
 //     else if(bmi >= 35 && bmi <= 39.9){
 //         console.log("Catergory: Obese (Class II) ");
 //         console.log("Health Status: High Risk of Chronic Diseases");
@@ -966,39 +966,31 @@
 //     }
 // }
 
-document.getElementById("checkPinCode").addEventListener("click", function () {
+document.getElementById("checkPinCode").addEventListener("click", function(){
     const pinCode = Number(document.getElementById("pincode").value);
     let inputContent = document.querySelector(".inputContent")
     let deliveryWithCOD = document.querySelector(".deliveryWithCOD");
     let deliveryWithoutCOD = document.querySelector(".deliveryWithoutCOD");
     let noDelivery = document.querySelector(".noDelivery");
     let error = document.querySelector(".error");
-
-    if (!/^\d{6}$/.test(pinCode)) {
-        showCOD();
-        error.classList.add("active");
-    }
-
-    else if (pinCode <= 560500) {
-        showCOD();
-        error.classList.add("active");
-    }
-
-    else if (pinCode <= 560900) {
-        showCOD();
-        error.classList.add("active");
-    }
-
-    else {
-        showCOD();
-        error.classList.add("active");
-    }
-
-    function showCOD() {
-        document.querySelectorAll(".del").forEach(el => {
-            el.classList.remove("active");
-        });
+    
+    if(!/^\d{6}$/.test(pinCode)){
+        inputContent.style.display = "none";
+        error.style.display = "block";
     }
     
+    else if(pinCode <= 560500){
+        inputContent.style.display = "none";
+        deliveryWithCOD.style.display = "block";
+    }
 
+    else if(pinCode <= 560900){
+        inputContent.style.display = "none";
+        deliveryWithoutCOD.style.display = "block";
+    }
+
+    else{
+        inputContent.style.display = "none";
+        noDelivery.style.display = "block";
+    }
 });
