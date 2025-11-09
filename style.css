@@ -10,23 +10,26 @@ body {
     margin: 0;
     background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
     backdrop-filter: blur(3px);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.intro{
+.intro {
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
-.intro h1{
+.intro h1 {
     font-size: 4em;
     color: #e8f6ff;
 }
 
-.intro p{
+.intro p {
     font-size: 1.15em;
     margin-bottom: 1em;
     color: #e8f6ff;
@@ -40,15 +43,74 @@ body {
     cursor: pointer;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.20);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     color: #e8f6ff;
     letter-spacing: .5px;
     transition: .2s ease-in-out;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #checkPassword:hover {
     background: rgba(255, 255, 255, 0.28);
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+    margin-top: 2rem;
+    width: 500px;
+    height: 500px;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.inputSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputSection label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #e8f6ff;
+    letter-spacing: 0.5px;
+}
+
+.inputSection input[type="password"] {
+    padding: 12px 14px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #eaf7ff;
+    font-size: 1em;
+    transition: 0.2s;
+    width: 100%;
+    padding-right: 48px;
+}
+
+.inputPassword{
+    position: relative;
+}
+
+.inputPassword i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#showP{
+    display: none;
 }
