@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Password Checker</title>
 </head>
 <body>
@@ -13,6 +14,17 @@
         <button id="checkPassword">Check Your Password</button>
     </div>
     
+    <div class="card">
+        <div class="inputSection">
+            <label for="password">Enter Your Password</label>
+            <div class="inputPassword">
+                <input type="password" name="password" id="password">
+                <i class="fa-solid fa-eye" id="showP"></i>
+                <i class="fa-solid fa-eye-slash" id="hideP"></i>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
