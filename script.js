@@ -1002,4 +1002,4 @@ document.querySelectorAll(".checkAgain").forEach(btn => {
         inputContent.style.display = "flex";
         document.getElementById("pincode").value = "";
     })
-})
+});
