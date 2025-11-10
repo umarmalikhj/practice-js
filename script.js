@@ -1013,3 +1013,8 @@ eyeIcon.addEventListener("click", () => {
     eyeIcon.classList.toggle("fa-eye");
     eyeIcon.classList.toggle("fa-eye-slash");
 });
+
+// function passwordChecker(password){
+//     let len = password.length;
+//     if(len > )
+// }
