@@ -1004,3 +1004,12 @@
 //     })
 // });
 
+const passwordInput = document.getElementById("password");
+const eyeIcon = document.getElementById("eyeIcon");
+
+eyeIcon.addEventListener("click", () => {
+    const isPassword = passwordInput.type === "password";
+    passwordInput.type = isPassword ? "text" : "password";
+    eyeIcon.classList.toggle("fa-eye");
+    eyeIcon.classList.toggle("fa-eye-slash");
+});
