@@ -86,13 +86,13 @@ body {
     letter-spacing: 0.5px;
 }
 
-.inputSection input[type="password"] {
+#password{
     padding: 12px 14px;
     border: none;
     outline: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     color: #eaf7ff;
     font-size: 1em;
     transition: 0.2s;
@@ -113,4 +113,16 @@ body {
 
 #showP{
     display: none;
+}
+
+.line{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -0px;
+    height: 2px;
+    width: 100%;
+    background: red;
+    border-radius: 4px;
+    transition: 0.3s ease;
 }
