@@ -1014,7 +1014,26 @@ eyeIcon.addEventListener("click", () => {
     eyeIcon.classList.toggle("fa-eye-slash");
 });
 
-// function passwordChecker(password){
-//     let len = password.length;
-//     if(len > )
-// }
+
+let pass = "Welcome120";
+let result = passwordChecker(pass);
+console.log(result);
+
+function passwordChecker(password){
+    let len = password.length;
+    if(len <= 6){
+        console.log("Bad af");
+    }
+    
+    else if(len <= 10 || len === len.toLowerCase ){
+        console.log("Okay Okay");
+    }
+
+    // else if(len <= 14){
+    //     console.log("Strong");
+    // }
+
+    // else if(len > 14){
+    //     console.log("Very Strong");
+    // }
+}
