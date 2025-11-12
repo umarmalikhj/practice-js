@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    /* display: none; */
 }
 
 .intro h1 {
@@ -36,24 +36,29 @@ body {
 }
 
 #checkPassword {
-    padding: 14px 32px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.20);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    color: #e8f6ff;
-    letter-spacing: .5px;
-    transition: .2s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    padding: 0.9em 2em;
+    border-radius: 2rem;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 #checkPassword:hover {
-    background: rgba(255, 255, 255, 0.28);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(0, 225, 255, 0.3), rgba(132, 56, 255, 0.4));
+    box-shadow: 0 0 25px rgba(0, 225, 255, 0.6), 0 0 35px rgba(132, 56, 255, 0.6);
+    transform: scale(1.05);
+}
+
+#checkPassword:active{
+    transform: scale(0.98);
+    box-shadow: 0 0 15px rgba(0, 225, 255, 0.5);
 }
 
 .card {
@@ -69,7 +74,7 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
-    align-items: start;
+    display: none;
 }
 
 .inputSection {
@@ -111,18 +116,31 @@ body {
     transform: translateY(-50%);
 }
 
-#showP{
-    display: none;
+button[type="submit"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    padding: 0.9em 2em;
+    border-radius: 2rem;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 25px;
+    width: 90%;
 }
 
-.line{
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: -0px;
-    height: 2px;
-    width: 100%;
-    background: red;
-    border-radius: 4px;
-    transition: 0.3s ease;
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, rgba(0, 225, 255, 0.3), rgba(132, 56, 255, 0.4));
+    box-shadow: 0 0 25px rgba(0, 225, 255, 0.6), 0 0 35px rgba(132, 56, 255, 0.6);
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 15px rgba(0, 225, 255, 0.5);
 }
