@@ -1004,15 +1004,15 @@
 //     })
 // });
 
-const passwordInput = document.getElementById("password");
-const eyeIcon = document.getElementById("eyeIcon");
+// const passwordInput = document.getElementById("password");
+// const eyeIcon = document.getElementById("eyeIcon");
 
-eyeIcon.addEventListener("click", () => {
-    const isPassword = passwordInput.type === "password";
-    passwordInput.type = isPassword ? "text" : "password";
-    eyeIcon.classList.toggle("fa-eye");
-    eyeIcon.classList.toggle("fa-eye-slash");
-});
+// eyeIcon.addEventListener("click", () => {
+//     const isPassword = passwordInput.type === "password";
+//     passwordInput.type = isPassword ? "text" : "password";
+//     eyeIcon.classList.toggle("fa-eye");
+//     eyeIcon.classList.toggle("fa-eye-slash");
+// });
 
 
 // let pass = "Welcome120";
@@ -1024,7 +1024,7 @@ eyeIcon.addEventListener("click", () => {
 //     if(len <= 6){
 //         console.log("Bad af");
 //     }
-    
+
 //     else if(len <= 10){
 //         if(len == len.toLoweCase() || len.toUpperCase()){
 //             console.log("Okay Okay");
@@ -1040,11 +1040,33 @@ eyeIcon.addEventListener("click", () => {
 //     // }
 // }
 
-let checkPassword = document.getElementById("checkPassword");
+// let checkPassword = document.getElementById("checkPassword");
 
-checkPassword.addEventListener("click", function(){
-    let card = document.querySelector(".card");
+// checkPassword.addEventListener("click", function(){
+//     let card = document.querySelector(".card");
+//     // card.style.display = "flex"; 
+//     let intro = document.querySelector(".intro");
+//     // intro.style.visiblilty = "hidden";
+//     // intro.style.transform = "scaleY(0)"
+// })
+
+const intro = document.querySelector('.intro');
+const card = document.querySelector('.card');
+const checkPasswordBtn = document.querySelector('#checkPassword');
+const passwordInput = document.querySelector('#password');
+const eyeIcon = document.querySelector('#eyeIcon');
+
+// Screen transition
+checkPasswordBtn.addEventListener('click', () => {
+    intro.classList.add('hidden');
     card.style.display = "flex";
-    let intro = document.querySelector(".intro");
-    intro.style.opacity = "0";
-})
+    card.classList.add('active');
+});
+
+// Toggle password visibility
+eyeIcon.addEventListener('click', () => {
+    const isHidden = passwordInput.type === 'password';
+    passwordInput.type = isHidden ? 'text' : 'password';
+    eyeIcon.classList.toggle('fa-eye');
+    eyeIcon.classList.toggle('fa-eye-slash');
+});
