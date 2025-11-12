@@ -1015,25 +1015,36 @@ eyeIcon.addEventListener("click", () => {
 });
 
 
-let pass = "Welcome120";
-let result = passwordChecker(pass);
-console.log(result);
+// let pass = "Welcome120";
+// let result = passwordChecker(pass);
+// console.log(result);
 
-function passwordChecker(password){
-    let len = password.length;
-    if(len <= 6){
-        console.log("Bad af");
-    }
+// function passwordChecker(password){
+//     let len = password.length;
+//     if(len <= 6){
+//         console.log("Bad af");
+//     }
     
-    else if(len <= 10 || len === len.toLowerCase ){
-        console.log("Okay Okay");
-    }
+//     else if(len <= 10){
+//         if(len == len.toLoweCase() || len.toUpperCase()){
+//             console.log("Okay Okay");
+//         }
+//     }
 
-    // else if(len <= 14){
-    //     console.log("Strong");
-    // }
+//     // else if(len <= 14){
+//     //     console.log("Strong");
+//     // }
 
-    // else if(len > 14){
-    //     console.log("Very Strong");
-    // }
-}
+//     // else if(len > 14){
+//     //     console.log("Very Strong");
+//     // }
+// }
+
+let checkPassword = document.getElementById("checkPassword");
+
+checkPassword.addEventListener("click", function(){
+    let card = document.querySelector(".card");
+    card.style.display = "flex";
+    let intro = document.querySelector(".intro");
+    intro.style.opacity = "0";
+})
