@@ -1050,23 +1050,26 @@
 //     // intro.style.transform = "scaleY(0)"
 // })
 
-const intro = document.querySelector('.intro');
-const card = document.querySelector('.card');
-const checkPasswordBtn = document.querySelector('#checkPassword');
-const passwordInput = document.querySelector('#password');
-const eyeIcon = document.querySelector('#eyeIcon');
+document.addEventListener('DOMContentLoaded', function() {
+    const checkPasswordBtn = document.getElementById('checkPassword');
+    const introSection = document.querySelector('.intro');
+    const cardSection = document.querySelector('.card');
 
-// Screen transition
-checkPasswordBtn.addEventListener('click', () => {
-    intro.classList.add('hidden');
-    card.style.display = "flex";
-    card.classList.add('active');
+    checkPasswordBtn.addEventListener('click', function() {
+        introSection.classList.add('hide');
+        setTimeout(function() {
+            introSection.style.display = 'none';
+            cardSection.classList.add('show');
+        }, 600);
+    });
 });
-
-// Toggle password visibility
-eyeIcon.addEventListener('click', () => {
-    const isHidden = passwordInput.type === 'password';
-    passwordInput.type = isHidden ? 'text' : 'password';
-    eyeIcon.classList.toggle('fa-eye');
-    eyeIcon.classList.toggle('fa-eye-slash');
-});
+ 
+document.addEventListener("DOMContentLoaded", () => {
+    const checkPass = document.getElementById("checkPass");
+    
+    checkPass.addEventListener("click", () => {
+        const password = document.getElementById("password").value;
+        console.log(password);
+        alert(password);
+    })
+})
