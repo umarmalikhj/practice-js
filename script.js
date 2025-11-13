@@ -1044,17 +1044,19 @@
 //     // intro.style.transform = "scaleY(0)"
 // })
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const checkPasswordBtn = document.getElementById('checkPassword');
     const introSection = document.querySelector('.intro');
     const cardSection = document.querySelector('.card');
     const passwordInput = document.getElementById("password");
     const eyeIcon = document.getElementById("eyeIcon");
     const checkPass = document.getElementById("checkPass");
+    const passInputSection = document.querySelector('.inputSection');
+    const resultSection = document.querySelector('.results');
 
-    checkPasswordBtn.addEventListener('click', function () {
+    checkPasswordBtn.addEventListener('click', () => {
         introSection.classList.add('hide');
-        setTimeout(function () {
+        setTimeout(() => {
             introSection.style.display = 'none';
             cardSection.classList.add('show');
         }, 600);
@@ -1069,8 +1071,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     checkPass.addEventListener("click", () => {
         const password = document.getElementById("password").value;
-
-        passwordLength(password);
+        if(password === ""){
+            alert("Space Cannot Be Empty");
+        }
+        else{
+            passInputSection.classList.add('hide');
+            setTimeout(() => {
+                passInputSection.style.display = "none";
+                resultSection.classList.add('show');
+            }, 600);
+            passwordLength(password);
+        }
     })
 });
 
