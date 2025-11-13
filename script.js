@@ -1004,15 +1004,9 @@
 //     })
 // });
 
-// const passwordInput = document.getElementById("password");
-// const eyeIcon = document.getElementById("eyeIcon");
 
-// eyeIcon.addEventListener("click", () => {
-//     const isPassword = passwordInput.type === "password";
-//     passwordInput.type = isPassword ? "text" : "password";
-//     eyeIcon.classList.toggle("fa-eye");
-//     eyeIcon.classList.toggle("fa-eye-slash");
-// });
+
+// 
 
 
 // let pass = "Welcome120";
@@ -1050,26 +1044,72 @@
 //     // intro.style.transform = "scaleY(0)"
 // })
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const checkPasswordBtn = document.getElementById('checkPassword');
     const introSection = document.querySelector('.intro');
     const cardSection = document.querySelector('.card');
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.getElementById("eyeIcon");
+    const checkPass = document.getElementById("checkPass");
 
-    checkPasswordBtn.addEventListener('click', function() {
+    checkPasswordBtn.addEventListener('click', function () {
         introSection.classList.add('hide');
-        setTimeout(function() {
+        setTimeout(function () {
             introSection.style.display = 'none';
             cardSection.classList.add('show');
         }, 600);
     });
-});
- 
-document.addEventListener("DOMContentLoaded", () => {
-    const checkPass = document.getElementById("checkPass");
-    
+
+    eyeIcon.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        eyeIcon.classList.toggle("fa-eye");
+        eyeIcon.classList.toggle("fa-eye-slash");
+    });
+
     checkPass.addEventListener("click", () => {
         const password = document.getElementById("password").value;
-        console.log(password);
-        alert(password);
+
+        passwordLength(password);
     })
-})
+});
+
+passwordLength = (password) => {
+    let length = password.length;
+    let result;
+
+    if (length < 6) {
+        result = "bad";
+    }
+
+    else if (length < 10) {
+        result = "okay";
+    }
+
+    else if (length < 14) {
+        result = "strong";
+    }
+
+    else if (length >= 14) {
+        result = "veryStrong";
+    }
+
+    switch (result) {
+        case "bad":
+            console.log("bad");
+            break;
+
+        case "okay":
+            console.log("okay");
+            break;
+
+        case "strong":
+            console.log("strong");
+            break;
+
+        case "veryStrong":
+            console.log("Very Strong");
+            break;
+    }
+}
+
