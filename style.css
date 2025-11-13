@@ -24,9 +24,16 @@ body {
     align-items: center;
 }
 
+.intro.hide {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
 .intro h1 {
     font-size: 4em;
     color: #e8f6ff;
+    text-align: center;
 }
 
 .intro p {
@@ -56,7 +63,7 @@ body {
     transform: scale(1.05);
 }
 
-#checkPassword:active{
+#checkPassword:active {
     transform: scale(0.98);
     box-shadow: 0 0 15px rgba(0, 225, 255, 0.5);
 }
@@ -68,12 +75,18 @@ body {
     padding: 25px;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.card.show {
     display: flex;
-    justify-content: center;
+    opacity: 1;
 }
 
 .inputSection {
@@ -90,7 +103,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-#password{
+#password {
     padding: 12px 14px;
     border: none;
     outline: none;
@@ -104,11 +117,11 @@ body {
     padding-right: 48px;
 }
 
-.inputPassword{
+.inputPassword {
     position: relative;
 }
 
-.inputPassword i{
+.inputPassword i {
     position: absolute;
     right: 15px;
     top: 50%;
@@ -143,3 +156,6 @@ button[type="submit"]:active {
     transform: scale(0.98);
     box-shadow: 0 0 15px rgba(0, 225, 255, 0.5);
 }
+
+
+
