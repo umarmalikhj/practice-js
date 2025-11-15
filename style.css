@@ -167,4 +167,64 @@ button[type="submit"]:active {
     /* display: none; */
     /* opacity: 0; */
     transition: opacity 0.6s ease;
+    height: 100%;
+    color: white;
+}
+
+.checkList h4{
+    padding-top: 0.5em;
+    font-size: 1.5em;
+}
+
+.checkList > p{
+    font-size: 0.7em;
+    padding-bottom: 1em;
+}
+
+.item{
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    gap: 2.5%;
+    opacity: 0.7;
+    color: #d3d3d3;
+}
+
+.item i{
+    opacity: 0;
+}
+
+#characters.show{
+    opacity: 1;
+    transform: scale(1.1);
+    font-weight: 600;
+    color: white;
+}
+
+#lowerCase.show{
+    opacity: 1;
+    transform: scale(1.1);
+    font-weight: 600;
+    color: white;
+}
+
+#upperCase.show{
+    opacity: 1;
+    transform: scale(1.1);
+    font-weight: 600;
+    color: white;
+}
+
+#symbols.show{
+    opacity: 1;
+    transform: scale(1.1);
+    font-weight: 600;
+    color: white;
+}
+
+#numbers.show{
+    opacity: 1;
+    transform: scale(1.1);
+    font-weight: 600;
+    color: white;
 }
