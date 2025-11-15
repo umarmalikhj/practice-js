@@ -1054,35 +1054,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const passInputSection = document.querySelector('.inputSection');
     const resultSection = document.querySelector('.results');
 
-    checkPasswordBtn.addEventListener('click', () => {
-        introSection.classList.add('hide');
-        setTimeout(() => {
-            introSection.style.display = 'none';
-            cardSection.classList.add('show');
-        }, 600);
-    });
+    // checkPasswordBtn.addEventListener('click', () => {
+    //     introSection.classList.add('hide');
+    //     setTimeout(() => {
+    //         introSection.style.display = 'none';
+    //         cardSection.classList.add('show');
+    //     }, 600);
+    // });
 
-    eyeIcon.addEventListener("click", () => {
-        const isPassword = passwordInput.type === "password";
-        passwordInput.type = isPassword ? "text" : "password";
-        eyeIcon.classList.toggle("fa-eye");
-        eyeIcon.classList.toggle("fa-eye-slash");
-    });
+    // eyeIcon.addEventListener("click", () => {
+    //     const isPassword = passwordInput.type === "password";
+    //     passwordInput.type = isPassword ? "text" : "password";
+    //     eyeIcon.classList.toggle("fa-eye");
+    //     eyeIcon.classList.toggle("fa-eye-slash");
+    // });
 
-    checkPass.addEventListener("click", () => {
-        const password = document.getElementById("password").value;
-        if(password === ""){
-            alert("Space Cannot Be Empty");
-        }
-        else{
-            passInputSection.classList.add('hide');
-            setTimeout(() => {
-                passInputSection.style.display = "none";
-                resultSection.classList.add('show');
-            }, 600);
-            passwordLength(password);
-        }
-    })
+    // checkPass.addEventListener("click", () => {
+    //     const password = document.getElementById("password").value;
+    //     if(password === ""){
+    //         alert("Space Cannot Be Empty");
+    //     }
+    //     else{
+    //         passInputSection.classList.add('hide');
+    //         setTimeout(() => {
+    //             passInputSection.style.display = "none";
+    //             resultSection.classList.add('show');
+    //         }, 600);
+    //         passwordLength(password);
+    //     }
+    // })
 });
 
 passwordLength = (password) => {
