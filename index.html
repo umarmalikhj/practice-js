@@ -28,7 +28,33 @@
             <button type="submit" id="checkPass">Check Password</button>
         </div> -->
         <div class="results">
-            
+            <div class="passStrength">
+                <h5>Password Strength: <span id="pasStr">Medium</span></h5>
+            </div>
+            <div class="checkList">
+                <h4>Password Composition</h4>
+                <p>Make sure that your password is long enough and contains various types of characters.</p>
+                <div class="item">
+                    <i class="fa-regular fa-circle-check" id="characters"></i>
+                    <p id="characters">At least 12 characters</p>
+                </div>
+                <div class="item">
+                    <i class="fa-regular fa-circle-check" id="lowerCase"></i>
+                    <p id="lowerCase">Lowercase</p>
+                </div>
+                <div class="item">
+                    <i class="fa-regular fa-circle-check" id="upperCase"></i>
+                    <p id="upperCase">Uppercase</p>
+                </div>
+                <div class="item">
+                    <i class="fa-regular fa-circle-check" id="symbols"></i>
+                    <p id="symbols">Symbols (?#@…)</p>
+                </div>
+                <div class="item">
+                    <i class="fa-regular fa-circle-check" id="numbers"></i>
+                    <p id="numbers">Numbers</p>
+                </div>
+            </div>
         </div>
     </div>
 
