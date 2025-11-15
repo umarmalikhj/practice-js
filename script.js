@@ -1053,6 +1053,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkPass = document.getElementById("checkPass");
     const passInputSection = document.querySelector('.inputSection');
     const resultSection = document.querySelector('.results');
+    const passwordStr = document.getElementById("pasStr");
+    const characters = document.getElementById("characters");
+    const lowerCase = document.getElementById("lowerCase");
+    const upperCase = document.getElementById("upperCase");
+    const symbols = document.getElementById("symbols");
+    const numbers = document.getElementById("numbers");
 
     // checkPasswordBtn.addEventListener('click', () => {
     //     introSection.classList.add('hide');
@@ -1083,44 +1089,34 @@ document.addEventListener('DOMContentLoaded', () => {
     //         passwordLength(password);
     //     }
     // })
+
 });
 
 passwordLength = (password) => {
     let length = password.length;
-    let result;
 
-    if (length < 6) {
-        result = "bad";
+    if (length >= 12) {
+        // characters.classList.add("show");
+        console.log("num")
     }
 
-    else if (length < 10) {
-        result = "okay";
+    if (/[A-Z]/.test(password)) {
+        // upperCase.classList.add("show");
     }
 
-    else if (length < 14) {
-        result = "strong";
+    if (/[a-z]/.test(password)) {
+        // lowerCase.classList.add("show");
+        console.log("hum")
     }
 
-    else if (length >= 14) {
-        result = "veryStrong";
+    if (/[^a-zA-Z0-9]/.test(password)) {
+        // symbols.classList.add("show");
     }
 
-    switch (result) {
-        case "bad":
-            console.log("bad");
-            break;
-
-        case "okay":
-            console.log("okay");
-            break;
-
-        case "strong":
-            console.log("strong");
-            break;
-
-        case "veryStrong":
-            console.log("Very Strong");
-            break;
+    if (/[0-9]/.test(password)) {
+        // numbers.classList.add("show");
     }
 }
 
+password = "9w1112elcome";
+let res = passwordLength(password);
