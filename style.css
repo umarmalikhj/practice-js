@@ -79,8 +79,8 @@ body {
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    /* display: none;
-    opacity: 0; */
+    display: none;
+    opacity: 0;
     transition: opacity 0.6s ease;
 }
 
@@ -164,11 +164,17 @@ button[type="submit"]:active {
 }
 
 .results {
-    /* display: none; */
-    /* opacity: 0; */
+    display: none;
+    opacity: 0;
     transition: opacity 0.6s ease;
     height: 100%;
     color: white;
+}
+
+.results.show{
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
 }
 
 .checkList h4{
@@ -196,35 +202,51 @@ button[type="submit"]:active {
 
 #characters.show{
     opacity: 1;
-    transform: scale(1.1);
     font-weight: 600;
     color: white;
+}
+
+#characters.show i{
+    opacity: 1;
 }
 
 #lowerCase.show{
     opacity: 1;
-    transform: scale(1.1);
     font-weight: 600;
     color: white;
+}
+
+#lowerCase.show i{
+    opacity: 1;
 }
 
 #upperCase.show{
     opacity: 1;
-    transform: scale(1.1);
     font-weight: 600;
     color: white;
+}
+
+#upperCase.show i{
+    opacity: 1;
 }
 
 #symbols.show{
     opacity: 1;
-    transform: scale(1.1);
     font-weight: 600;
     color: white;
 }
 
+#symbols.show i{
+    opacity: 1;
+}
+
 #numbers.show{
     opacity: 1;
-    transform: scale(1.1);
     font-weight: 600;
     color: white;
+}
+
+
+#numbers.show i{
+    opacity: 1;
 }
