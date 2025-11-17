@@ -1060,63 +1060,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const symbols = document.getElementById("symbols");
     const numbers = document.getElementById("numbers");
 
-    // checkPasswordBtn.addEventListener('click', () => {
-    //     introSection.classList.add('hide');
-    //     setTimeout(() => {
-    //         introSection.style.display = 'none';
-    //         cardSection.classList.add('show');
-    //     }, 600);
-    // });
+    checkPasswordBtn.addEventListener('click', () => {
+        introSection.classList.add('hide');
+        setTimeout(() => {
+            introSection.style.display = 'none';
+            cardSection.classList.add('show');
+        }, 600);
+    });
 
-    // eyeIcon.addEventListener("click", () => {
-    //     const isPassword = passwordInput.type === "password";
-    //     passwordInput.type = isPassword ? "text" : "password";
-    //     eyeIcon.classList.toggle("fa-eye");
-    //     eyeIcon.classList.toggle("fa-eye-slash");
-    // });
+    eyeIcon.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        eyeIcon.classList.toggle("fa-eye");
+        eyeIcon.classList.toggle("fa-eye-slash");
+    });
 
-    // checkPass.addEventListener("click", () => {
-    //     const password = document.getElementById("password").value;
-    //     if(password === ""){
-    //         alert("Space Cannot Be Empty");
-    //     }
-    //     else{
-    //         passInputSection.classList.add('hide');
-    //         setTimeout(() => {
-    //             passInputSection.style.display = "none";
-    //             resultSection.classList.add('show');
-    //         }, 600);
-    //         passwordLength(password);
-    //     }
-    // })
+    checkPass.addEventListener("click", () => {
+        const password = document.getElementById("password").value;
+        if (password === "") {
+            alert("Space Cannot Be Empty");
+        }
+        else {
+            passInputSection.classList.add('hide');
+            setTimeout(() => {
+                passInputSection.style.display = "none";
+                resultSection.classList.add('show');
+            }, 600);
+
+            let length = password.length;
+
+            if (length >= 12) {
+                characters.classList.add("show");
+            }
+
+            if (/[A-Z]/.test(password)) {
+                upperCase.classList.add("show");
+            }
+
+            if (/[a-z]/.test(password)) {
+                lowerCase.classList.add("show");
+            }
+
+            if (/[^a-zA-Z0-9]/.test(password)) {
+                symbols.classList.add("show");
+            }
+
+            if (/[0-9]/.test(password)) {
+                numbers.classList.add("show");
+            }
+        }
+    })
 
 });
 
-passwordLength = (password) => {
-    let length = password.length;
-
-    if (length >= 12) {
-        // characters.classList.add("show");
-        console.log("num")
-    }
-
-    if (/[A-Z]/.test(password)) {
-        // upperCase.classList.add("show");
-    }
-
-    if (/[a-z]/.test(password)) {
-        // lowerCase.classList.add("show");
-        console.log("hum")
-    }
-
-    if (/[^a-zA-Z0-9]/.test(password)) {
-        // symbols.classList.add("show");
-    }
-
-    if (/[0-9]/.test(password)) {
-        // numbers.classList.add("show");
-    }
-}
-
-password = "9w1112elcome";
-let res = passwordLength(password);
