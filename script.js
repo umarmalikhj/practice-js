@@ -1147,3 +1147,13 @@ console.log(currentDate);
 console.log(currentMonth);
 console.log(currentYear);
 
+document.addEventListener("DOMContentLoaded", () => {
+    let checkAge = document.getElementById("checkAge");
+
+    checkAge.addEventListener("click", () => {
+        let birthDate = document.getElementById("birthDate").value;
+        console.log(birthDate);
+        let newDate = today.value - birthDate.value;
+        console.log(newDate)
+    });
+});
