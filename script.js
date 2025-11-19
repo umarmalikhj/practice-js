@@ -1138,3 +1138,12 @@
 // });
 
 
+let today = new Date();
+let currentYear = today.getFullYear();
+let currentMonth = today.getMonth() + 1;
+let currentDate = today.getDate();
+
+console.log(currentDate);
+console.log(currentMonth);
+console.log(currentYear);
+
