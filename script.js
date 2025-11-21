@@ -1137,13 +1137,12 @@
 //     }
 // });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     let checkAge = document.getElementById("checkAge");
 
     checkAge.addEventListener("click", () => {
         const birthDateString = document.getElementById("birthDate").value;
-        birthDay = new Date(birthDateString);
+        let birthDay = new Date(birthDateString);
 
         let birthDate = birthDay.getDate();
         let birthMonth = birthDay.getMonth() + 1;
@@ -1155,12 +1154,25 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentDate = today.getDate();
 
         let differenceDate = currentDate - birthDate;
-        let differenceMonth = currentMonth - birthMonth; 
+        let differenceMonth = currentMonth - birthMonth;
         let differenceYear = currentYear - birthYear;
 
-        console.log(differenceDate);
-        console.log(differenceMonth)
-        console.log(differenceYear)
+        if (differenceDate < 0) {
 
+            let previousMonth = currentMonth - 1;
+            let daysInPrevMonth = new Date(currentYear, previousMonth, 0).getDate();
+
+            differenceDate += daysInPrevMonth;
+            differenceMonth -= 1;
+        }
+        
+        if (differenceMonth < 0) {
+            differenceMonth += 12;
+            differenceYear -= 1;
+        }
+
+        console.log("Days:", differenceDate);
+        console.log("Months:", differenceMonth);
+        console.log("Years:", differenceYear);
     });
 });
