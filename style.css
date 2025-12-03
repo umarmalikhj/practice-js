@@ -12,6 +12,11 @@ body{
     align-items: center;
     height: 100vh;
     gap: 2%;
+    background-image: url(forest.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 .intro h1{
@@ -19,3 +24,16 @@ body{
     font-family: "Raleway", sans-serif;
 }
 
+.inputSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    height: 25vh;
+}
+
+#checkAge{
+    margin-top: 2em;
+    padding: 1.5em 3em;
+}
