@@ -12,11 +12,8 @@ body{
     align-items: center;
     height: 100vh;
     gap: 2%;
-    background-image: url(forest.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
 }
 
 .intro h1{
@@ -30,7 +27,13 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10%;
-    height: 25vh;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 #checkAge{
