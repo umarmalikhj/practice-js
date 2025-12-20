@@ -1,9 +1,9 @@
-console.log("Hello World :)");
+// console.log("Hello World :)");
 
-let name = 'Umar';
-let age = 22;
+// let name = 'Umar';
+// let age = 22;
 
-console.log(age, name);
+// console.log(age, name);
 
 for(let i = 1; i <= 5; i++){
     console.log(i);
