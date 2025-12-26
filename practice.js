@@ -107,24 +107,62 @@
 //     console.log("Adult");
 // }
 
-let num = Number(prompt("Enter The Number: "));
+// let num = Number(prompt("Enter The Number: "));
 
-if(isNaN(num)){
-    console.log("Invalid Number");
+// if(isNaN(num)){
+//     console.log("Invalid Number");
+// }
+
+// else if(num % 3 === 0 && num % 5 === 0){
+//     console.log("FizzBuzz");
+// }
+
+// else if(num % 3 === 0){
+//     console.log("Fizz");
+// }
+
+// else if(num % 5 === 0){
+//     console.log("Buzz");
+// }
+
+// else{
+//     console.log("None");
+// }
+
+// let username = "admin";
+// let password = "1234";
+// let isBlocked = false;
+
+// if(isBlocked){
+//     console.log("Account Blocked");
+// }
+
+// else if(username === "admin" && password === "1234"){
+//     console.log("Welcome Admin!");
+// }
+
+// else{
+//     console.log("Invalid Credentials");
+// }
+
+let year = 2028;
+
+if(isNaN(year) || year < 0){
+    console.log("Invalid Year")
 }
 
-else if(num % 3 === 0 && num % 5 === 0){
-    console.log("FizzBuzz");
+else if(year % 400 === 0){
+    console.log("Leap Year");
 }
 
-else if(num % 3 === 0){
-    console.log("Fizz");
+else if(year % 100 === 0){
+    console.log("Not A Leap Year");
 }
 
-else if(num % 5 === 0){
-    console.log("Buzz");
+else if(year % 4 === 0){
+    console.log("Leap Year");
 }
 
 else{
-    console.log("None");
+    console.log("Not A Leap Year")
 }
