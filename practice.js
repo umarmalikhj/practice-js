@@ -54,28 +54,35 @@
 //     console.log("Minor");
 // }
 
-const marks = Number(prompt("Enter The Marks"));
+// const marks = Number(prompt("Enter The Marks"));
 
-if(isNaN(marks) || marks < 0 || marks > 100){
-    console.log("Invalid Marks");
-}
+// if(isNaN(marks) || marks < 0 || marks > 100){
+//     console.log("Invalid Marks");
+// }
 
-else if (marks >= 85){
-    console.log("Distinction");
-}
+// else if (marks >= 85){
+//     console.log("Distinction");
+// }
 
-else if(marks >= 60){
-    console.log("First Class");
-}
+// else if(marks >= 60){
+//     console.log("First Class");
+// }
 
-else if(marks >= 50){
-    console.log("Second Class");
-}
+// else if(marks >= 50){
+//     console.log("Second Class");
+// }
 
-else if(marks >= 35){
-    console.log("Pass");
-}
+// else if(marks >= 35){
+//     console.log("Pass");
+// }
 
-else {
-    console.log("Fail");
+// else {
+//     console.log("Fail");
+// }
+
+let count = 5;
+
+while (count >= 1){
+    console.log("...")
+    count--;
 }
