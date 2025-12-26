@@ -80,9 +80,51 @@
 //     console.log("Fail");
 // }
 
-let count = 5;
+// let count = 5;
 
-while (count >= 1){
-    console.log("...")
-    count--;
+// while (count >= 1){
+//     console.log("...")
+//     count--;
+// }
+
+// Age Gate 
+
+// let age = Number(prompt("Enter Age: "));
+
+// if(isNaN(age) || age < 0 || age > 100){
+//     console.log("Invalid Age");
+// }
+
+// else if(age < 13){
+//     console.log("Child");
+// }
+
+// else if(age <= 19){
+//     console.log("Teen");
+// }
+
+// else{
+//     console.log("Adult");
+// }
+
+let num = Number(prompt("Enter The Number: "));
+
+if(isNaN(num)){
+    console.log("Invalid Number");
+}
+
+else if(num % 3 === 0 && num % 5 === 0){
+    console.log("FizzBuzz");
+}
+
+else if(num % 3 === 0){
+    console.log("Fizz");
+}
+
+else if(num % 5 === 0){
+    console.log("Buzz");
+}
+
+else{
+    console.log("None");
 }
