@@ -193,28 +193,49 @@
 //     console.log("Fail");
 // }
 
-const num = Number(prompt("Enter Number: "));
+// const num = Number(prompt("Enter Number: "));
 
-if (num > 0) {
-    console.log("Positive");
+// if (num > 0) {
+//     console.log("Positive");
+// }
+
+// else if (num < 0) {
+//     console.log("Negative");
+// }
+
+// else {
+//     console.log("Zero");
+// }
+
+// if (num % 2 === 0) {
+//     console.log("Even");
+// }
+
+// else {
+//     console.log("Odd");
+// }
+
+// if (num % 10 === 0) {
+//     console.log("Multiple Of 10");
+// }
+
+// for (let i=1; i<=10; i++){
+//     if (i >= 5){
+//         console.log(i, "Pass");
+//     }
+//     else{
+//         console.log(i, "Fail");
+//     }
+// }
+
+const nums = [3, 12, 7, 20, 9, 8, 15];
+
+let count = 0;
+
+for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+        count++;
+    }
 }
 
-else if (num < 0) {
-    console.log("Negative");
-}
-
-else {
-    console.log("Zero");
-}
-
-if (num % 2 === 0) {
-    console.log("Even");
-}
-
-else {
-    console.log("Odd");
-}
-
-if (num % 10 === 0) {
-    console.log("Multiple Of 10");
-}
+console.log(count);
