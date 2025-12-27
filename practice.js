@@ -145,24 +145,76 @@
 //     console.log("Invalid Credentials");
 // }
 
-let year = 2028;
+// let year = 2028;
 
-if(isNaN(year) || year < 0){
-    console.log("Invalid Year")
+// if(isNaN(year) || year < 0){
+//     console.log("Invalid Year")
+// }
+
+// else if(year % 400 === 0){
+//     console.log("Leap Year");
+// }
+
+// else if(year % 100 === 0){
+//     console.log("Not A Leap Year");
+// }
+
+// else if(year % 4 === 0){
+//     console.log("Leap Year");
+// }
+
+// else{
+//     console.log("Not A Leap Year")
+// }
+
+// let marks = Number(prompt("Enter Your Marks: "));
+
+// if (isNaN(marks) || marks < 0 || marks > 100){
+//     console.log("Invalid Marks");
+// }
+
+// else if (marks >= 90){
+//     console.log("A");
+// }
+
+// else if (marks >= 75){
+//     console.log("B");
+// }
+
+// else if (marks >= 60){
+//     console.log("C");
+// }
+
+// else if (marks >= 35){
+//     console.log("D");
+// }
+
+// else{
+//     console.log("Fail");
+// }
+
+const num = Number(prompt("Enter Number: "));
+
+if (num > 0) {
+    console.log("Positive");
 }
 
-else if(year % 400 === 0){
-    console.log("Leap Year");
+else if (num < 0) {
+    console.log("Negative");
 }
 
-else if(year % 100 === 0){
-    console.log("Not A Leap Year");
+else {
+    console.log("Zero");
 }
 
-else if(year % 4 === 0){
-    console.log("Leap Year");
+if (num % 2 === 0) {
+    console.log("Even");
 }
 
-else{
-    console.log("Not A Leap Year")
+else {
+    console.log("Odd");
+}
+
+if (num % 10 === 0) {
+    console.log("Multiple Of 10");
 }
