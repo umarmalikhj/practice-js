@@ -228,14 +228,26 @@
 //     }
 // }
 
-const nums = [3, 12, 7, 20, 9, 8, 15];
+// const nums = [3, 12, 7, 20, 9, 8, 15];
 
-let count = 0;
+// let count = 0;
 
-for (let i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 === 0) {
-        count++;
+// for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] % 2 === 0) {
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+// let sum = 0;
+// for (let i = 3; i <= 50; i=i+3) {
+//     sum += i;
+// }
+// console.log(sum);
+
+for (let i=0; i < 20; i++){
+    if (i<15 && i % 4 !==0){
+        console.log(i);
     }
 }
-
-console.log(count);
