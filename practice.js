@@ -246,8 +246,41 @@
 // }
 // console.log(sum);
 
-for (let i=0; i < 20; i++){
-    if (i<15 && i % 4 !==0){
-        console.log(i);
+// for (let i=0; i < 20; i++){
+//     if (i<15 && i % 4 !==0){
+//         console.log(i);
+//     }
+// }
+
+// const nums = [4, 11, 18, 7, 20, 3, 14];
+// let count = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if(nums[i] > 10 && nums[i] % 2 === 0){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+// let count = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//     if (i % 3 === 0) {
+//         continue;
+//     }
+//     if (i > 7) {
+//         break;
+//     }
+//     count++;
+// }
+
+// console.log(count);
+
+const nums = [2, 5, 12, 9, 16, 21, 18, 7];
+
+for (let i = 0; i < nums.length; i++){
+    if (nums[i] > 10 && nums[i] % 2 === 0 && nums[i] < 20){
+        console.log(nums[i]);
     }
 }
