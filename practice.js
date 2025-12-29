@@ -301,19 +301,43 @@
 //     if (numbers[i] > 50){
 //         break;
 //     }
-    
+
 //     else if (numbers[i] % 3 === 0){
 //         console.log(numbers[i]);
 //     }
 // }
 
-const nums = [12, 45, 67, 22, 39, 50, 41, 8];
-let count = 0;
+// const nums = [12, 45, 67, 22, 39, 50, 41, 8];
+// let count = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] < 50 && nums[i] % 2 !== 0){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+// const nums = [5, 10, 14, 20, 3];
+// let sum = 0;
+
+// for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] % 7 === 0) {
+//         break;
+//     }
+//     sum += nums[i];
+// }
+
+// console.log(sum);
+
+const nums = [6, 12, 14, 18, 20, 25, 30];
 
 for (let i = 0; i < nums.length; i++){
-    if (nums[i] < 50 && nums[i] % 2 !== 0){
-        count++;
+    if (nums[i] % 6 === 0){
+        continue;
+    }
+    
+    else if (nums[i] > 10 && nums[i] % 2 === 0){
+        console.log(nums[i]);
     }
 }
-
-console.log(count);
