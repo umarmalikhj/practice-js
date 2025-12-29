@@ -277,10 +277,43 @@
 
 // console.log(count);
 
-const nums = [2, 5, 12, 9, 16, 21, 18, 7];
+// const nums = [2, 5, 12, 9, 16, 21, 18, 7];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 10 && nums[i] % 2 === 0 && nums[i] < 20){
+//         console.log(nums[i]);
+//     }
+// }
+
+// const nums = [2, 5, 12, 9, 16, 21, 18, 7];
+// let count = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 10 && nums[i] % 2 !== 0){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+// const nums = [4, 10, 12, 25, 18, 30, 22, 55, 6, 40];
+
+// for (let i = 0; i < numbers.length; i++){
+//     if (numbers[i] > 50){
+//         break;
+//     }
+    
+//     else if (numbers[i] % 3 === 0){
+//         console.log(numbers[i]);
+//     }
+// }
+
+const nums = [12, 45, 67, 22, 39, 50, 41, 8];
+let count = 0;
 
 for (let i = 0; i < nums.length; i++){
-    if (nums[i] > 10 && nums[i] % 2 === 0 && nums[i] < 20){
-        console.log(nums[i]);
+    if (nums[i] < 50 && nums[i] % 2 !== 0){
+        count++;
     }
 }
+
+console.log(count);
