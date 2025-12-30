@@ -330,14 +330,74 @@
 
 // console.log(sum);
 
-const nums = [6, 12, 14, 18, 20, 25, 30];
+// const nums = [6, 12, 14, 18, 20, 25, 30];
 
-for (let i = 0; i < nums.length; i++){
-    if (nums[i] % 6 === 0){
-        continue;
-    }
-    
-    else if (nums[i] > 10 && nums[i] % 2 === 0){
-        console.log(nums[i]);
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 6 === 0){
+//         continue;
+//     }
+
+//     else if (nums[i] > 10 && nums[i] % 2 === 0){
+//         console.log(nums[i]);
+//     }
+// }
+
+// const nums = [12, 45, 7, 89, 34, 22];
+// let maxx = nums[0];
+
+// for (let i = 1; i < nums.length; i++){
+//     if (nums[i] > maxx){
+//         maxx = nums[i];
+//     }
+// }
+
+// console.log(maxx);
+
+// const nums = [3, 8, 15, 22, 9, 18, 5, 30];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 25){
+//         break;
+//     }
+
+//     else if (nums[i] % 5 === 0 && nums[i] % 3 === 0){
+//         continue;
+//     }
+
+//     else if (nums[i] % 3 === 0){
+//         console.log(nums[i]);
+//     }
+// }
+
+// const nums = [3, 10, 15, 8, 22, 7, 14];
+// let sum = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 2 === 0){
+//         sum += nums[i];
+//     }
+// }
+
+// console.log(sum);
+
+// const nums = [19, 4, 27, 6, 13, 2, 21];
+// let smallest = nums[0];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] < smallest){
+//         smallest = nums[i];
+//     }
+// }
+
+// console.log("Smallest: ", smallest);
+
+const nums = [12, 45, 7, 89, 23, 5];
+let largest = nums[0];
+
+for (let i = 1; i < nums.length; i++){
+    if (nums[i] > largest){
+        largest = nums[i];
     }
 }
+
+console.log("Largest = ", largest);
