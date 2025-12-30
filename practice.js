@@ -391,13 +391,38 @@
 
 // console.log("Smallest: ", smallest);
 
-const nums = [12, 45, 7, 89, 23, 5];
-let largest = nums[0];
+// const nums = [12, 45, 7, 89, 23, 5];
+// let largest = nums[0];
 
-for (let i = 1; i < nums.length; i++){
-    if (nums[i] > largest){
-        largest = nums[i];
-    }
+// for (let i = 1; i < nums.length; i++){
+//     if (nums[i] > largest){
+//         largest = nums[i];
+//     }
+// }
+
+// console.log("Largest = ", largest);
+
+// const nums = [3, 10, 15, 8, 22, 7, 14];
+// let oddCount = 0;
+// let evenCount = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 2 === 0){
+//         evenCount++;
+//     }
+//     else{
+//         oddCount++;
+//     }
+// }
+
+// console.log("Odd: ", oddCount);
+// console.log("Even: ", evenCount);
+
+const nums = [1, 2, 3, 4, 5];
+let numsReversed = [];
+
+for (let i = nums.length - 1; i >= 0; i--){
+    numsReversed.push(nums[i]);
 }
 
-console.log("Largest = ", largest);
+console.log(numsReversed);
