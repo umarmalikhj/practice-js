@@ -418,11 +418,78 @@
 // console.log("Odd: ", oddCount);
 // console.log("Even: ", evenCount);
 
-const nums = [1, 2, 3, 4, 5];
-let numsReversed = [];
+// const nums = [1, 2, 3, 4, 5];
+// let numsReversed = [];
 
-for (let i = nums.length - 1; i >= 0; i--){
-    numsReversed.push(nums[i]);
+// for (let i = nums.length - 1; i >= 0; i--){
+//     numsReversed.push(nums[i]);
+// }
+
+// console.log(numsReversed);
+
+// const nums = [2, 3, 5, 6, 10, 12, 15, 18, 20, 25, 30, 101, 50];
+// let count = 0;
+// let sum = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 100){
+//         break;
+//     }
+
+//     else if (nums[i] % 5 === 0){
+//         continue;
+//     }
+
+//     else if (nums[i] % 2 === 0 || nums[i] % 3 === 0){
+//         console.log(nums[i]);
+//         count++;
+//         sum += nums[i];
+//     }
+// }
+
+// console.log("Count: ", count);
+// console.log("Sum: ", sum);
+
+// const nums = [2, 3, 4, 5, 6, 7, 8, 11, 13, 16, 17, 19, 23, 29, 51, 31];
+// let count = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 50){
+//         break;
+//     }
+
+//     else if (nums[i] % 4 === 0){
+//         continue;
+//     }
+
+//     else if (isPrime(nums[i])){
+//         console.log(nums[i]);
+//         count++;
+//     }
+// }
+
+// console.log("Count: ", count);
+// let row = "";
+
+// for (let i = 1; i <= 5; i++){
+//     row = "";
+//     for (let j = 1 ; j <= i; j++){
+//         row += i;
+//     }
+//     console.log(row);
+// }
+
+const nums = [3, 6, 9, 10, 12, 15, 18, 20, 21];
+let count = 0;
+
+for (let i = 0; i < nums.length; i++){
+    if (nums[i] > 18){
+        break;
+    }
+
+    else if (nums[i] % 6 !== 0 && nums[i] % 3 === 0){
+        count++;
+    }
 }
 
-console.log(numsReversed);
+console.log("Count: " + count);
