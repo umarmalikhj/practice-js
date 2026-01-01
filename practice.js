@@ -543,14 +543,68 @@
 // console.log(largest);
 // console.log(secondLargest);
 
-let row = "";
-let num = 1;
+// let row = "";
+// let num = 1;
 
-for (let i = 1; i <= 5; i++){
-    row = "";
-    for (let j = 1; j <= i; j++){
-        row += num + "";
-        num++
+// for (let i = 1; i <= 5; i++){
+//     row = "";
+//     for (let j = 1; j <= i; j++){
+//         row += num + "";
+//         num++
+//     }
+//     console.log(row);
+// }
+
+// let row = "";
+
+// for (let i = 1; i <=5; i++){
+//     row = "";
+//     for (let j = 1; j <= i; j++){
+//         row += i + j - 1 + " ";
+//     }
+//     console.log(row);
+// }
+
+// let row = "";
+// let num = 1;
+
+// for (let i = 1; i <= 4; i++){
+//     row = "";
+//     for (let j = 1; j <= i; j++){
+//         row += num + " ";
+//         num++;
+//     }
+//     console.log(row);
+// }
+
+// const workMinutes = [45, 50, 0, 30, 60, 70, 0, 20, 25, 90];
+const workMinutes = [20, 30, 40, 0, 50, 60];
+
+let currentStreak = 0;
+let maxStreak = 0;
+let row = "";
+let totalMinutes = 0;
+
+for (let i = 0; i < workMinutes.length; i++) {
+    totalMinutes += workMinutes[i];
+    if (workMinutes[i] > 0){
+        row += workMinutes[i] + " ";
+        currentStreak++;
+        if (currentStreak > maxStreak){
+            maxStreak = currentStreak;
+        }
     }
-    console.log(row);
+
+    else if (workMinutes[i] === 0) {
+        console.log(row);
+        row = "";
+        currentStreak = 0;
+    }
+
+    // if (row !== ""){
+    //     console.log(row);
+    // }
 }
+
+console.log("Longest Streak: " + maxStreak);
+console.log("Total Minutes: " + totalMinutes);
