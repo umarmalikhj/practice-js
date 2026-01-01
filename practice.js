@@ -479,17 +479,78 @@
 //     console.log(row);
 // }
 
-const nums = [3, 6, 9, 10, 12, 15, 18, 20, 21];
-let count = 0;
+// const nums = [3, 6, 9, 10, 12, 15, 18, 20, 21];
+// let count = 0;
 
-for (let i = 0; i < nums.length; i++){
-    if (nums[i] > 18){
-        break;
-    }
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 18){
+//         break;
+//     }
 
-    else if (nums[i] % 6 !== 0 && nums[i] % 3 === 0){
-        count++;
+//     else if (nums[i] % 6 !== 0 && nums[i] % 3 === 0){
+//         count++;
+//     }
+// }
+
+// console.log("Count: " + count);
+
+// const nums = [2, 4, 5, 6, 7, 8, 10];
+// let sum = 0;
+
+// for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] % 2 === 0) {
+//         sum += nums[i];
+//     }
+//     else{
+//         continue;
+//     }
+// }
+
+// console.log(sum);
+
+// const nums = [2, 3, 5, 1, 2, 3, 4, 0, 10];
+// let current = 0;
+// let maxx = 0;
+
+// for (let i = 1; i < nums.length; i++){
+//     if (nums[i] < nums[i-1]){
+//         current = 0;
+//     }
+//     else{
+//         current++;
+//         maxx++;
+//     }
+// }
+
+// console.log(maxx);
+
+// const nums = [50, 89, 89, 46, 45, 89, 23, 5, 41, 8];
+
+// let largest = nums[0];
+// let secondLargest = nums[0];
+
+// for (let i = 1; i < nums.length; i++){
+//     if (nums[i] > secondLargest && nums[i] < largest){
+//         secondLargest = nums[i];
+//     }
+
+//     else if (nums[i] > largest){
+//         secondLargest = largest;
+//         largest = nums[i];
+//     }
+// }
+
+// console.log(largest);
+// console.log(secondLargest);
+
+let row = "";
+let num = 1;
+
+for (let i = 1; i <= 5; i++){
+    row = "";
+    for (let j = 1; j <= i; j++){
+        row += num + "";
+        num++
     }
+    console.log(row);
 }
-
-console.log("Count: " + count);
