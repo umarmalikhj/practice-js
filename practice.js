@@ -577,34 +577,62 @@
 //     console.log(row);
 // }
 
-// const workMinutes = [45, 50, 0, 30, 60, 70, 0, 20, 25, 90];
-const workMinutes = [20, 30, 40, 0, 50, 60];
+// // const workMinutes = [45, 50, 0, 30, 60, 70, 0, 20, 25, 90];
+// const workMinutes = [20, 30, 40, 0, 50, 60];
 
+// let currentStreak = 0;
+// let maxStreak = 0;
+// let row = "";
+// let totalMinutes = 0;
+
+// for (let i = 0; i < workMinutes.length; i++) {
+//     totalMinutes += workMinutes[i];
+//     if (workMinutes[i] > 0){
+//         row += workMinutes[i] + " ";
+//         currentStreak++;
+//         if (currentStreak > maxStreak){
+//             maxStreak = currentStreak;
+//         }
+//     }
+
+//     else if (workMinutes[i] === 0) {
+//         console.log(row);
+//         row = "";
+//         currentStreak = 0;
+//     }
+
+//     // if (row !== ""){
+//     //     console.log(row);
+//     // }
+// }
+
+// console.log("Longest Streak: " + maxStreak);
+// console.log("Total Minutes: " + totalMinutes);
+
+const workMinutes = [25, 40, 0, 50, 30, 20, 0, 60, 45];
+let totalSessions = 0;
+let maxxStreak = 0;
 let currentStreak = 0;
-let maxStreak = 0;
-let row = "";
-let totalMinutes = 0;
+let average = 0;
+let sum = 0;
+let count = 0;
 
-for (let i = 0; i < workMinutes.length; i++) {
-    totalMinutes += workMinutes[i];
+for (let i = 0; i < workMinutes.length; i++){
     if (workMinutes[i] > 0){
-        row += workMinutes[i] + " ";
+        totalSessions++;
+        sum += workMinutes[i];
         currentStreak++;
-        if (currentStreak > maxStreak){
-            maxStreak = currentStreak;
+        if (currentStreak > maxxStreak){
+            maxxStreak = currentStreak;
         }
     }
 
-    else if (workMinutes[i] === 0) {
-        console.log(row);
-        row = "";
+    else{
         currentStreak = 0;
     }
-
-    // if (row !== ""){
-    //     console.log(row);
-    // }
 }
 
-console.log("Longest Streak: " + maxStreak);
-console.log("Total Minutes: " + totalMinutes);
+average = sum / totalSessions;
+console.log("Total Sessions: " + totalSessions);
+console.log("Longest Streak: " + maxxStreak);
+console.log("Average Minutes: " + average);
