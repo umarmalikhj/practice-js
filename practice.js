@@ -609,18 +609,51 @@
 // console.log("Longest Streak: " + maxStreak);
 // console.log("Total Minutes: " + totalMinutes);
 
-const workMinutes = [25, 40, 0, 50, 30, 20, 0, 60, 45];
+// const workMinutes = [25, 40, 0, 50, 30, 20, 0, 60, 45];
+// let totalSessions = 0;
+// let maxxStreak = 0;
+// let currentStreak = 0;
+// let average = 0;
+// let sum = 0;
+// let count = 0;
+
+// for (let i = 0; i < workMinutes.length; i++){
+//     if (workMinutes[i] > 0){
+//         totalSessions++;
+//         sum += workMinutes[i];
+//         currentStreak++;
+//         if (currentStreak > maxxStreak){
+//             maxxStreak = currentStreak;
+//         }
+//     }
+
+//     else{
+//         currentStreak = 0;
+//     }
+// }
+
+// average = sum / totalSessions;
+// console.log("Total Sessions: " + totalSessions);
+// console.log("Longest Streak: " + maxxStreak);
+// console.log("Average Minutes: " + average);
+
+// for (let i = 2; i <= 10; i++){
+//     if (i % 2 === 0){
+//         console.log(i);
+//     }
+// }
+
+const workMinutes = [30, 0, 45, 50, 0, 60, 20, 0, 90];
 let totalSessions = 0;
+let totalMinutes = 0;
 let maxxStreak = 0;
 let currentStreak = 0;
 let average = 0;
-let sum = 0;
-let count = 0;
 
 for (let i = 0; i < workMinutes.length; i++){
-    if (workMinutes[i] > 0){
+    if (workMinutes[i] !== 0){
         totalSessions++;
-        sum += workMinutes[i];
+        totalMinutes += workMinutes[i];
         currentStreak++;
         if (currentStreak > maxxStreak){
             maxxStreak = currentStreak;
@@ -632,7 +665,8 @@ for (let i = 0; i < workMinutes.length; i++){
     }
 }
 
-average = sum / totalSessions;
-console.log("Total Sessions: " + totalSessions);
+average = totalMinutes/totalSessions;
+
+console.log("Total Productive Sessions: " + totalSessions);
 console.log("Longest Streak: " + maxxStreak);
 console.log("Average Minutes: " + average);
