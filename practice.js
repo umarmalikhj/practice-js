@@ -643,30 +643,50 @@
 //     }
 // }
 
-const workMinutes = [30, 0, 45, 50, 0, 60, 20, 0, 90];
-let totalSessions = 0;
-let totalMinutes = 0;
-let maxxStreak = 0;
-let currentStreak = 0;
-let average = 0;
+// const workMinutes = [30, 0, 45, 50, 0, 60, 20, 0, 90];
+// let totalSessions = 0;
+// let totalMinutes = 0;
+// let maxxStreak = 0;
+// let currentStreak = 0;
+// let average = 0;
 
-for (let i = 0; i < workMinutes.length; i++){
-    if (workMinutes[i] !== 0){
-        totalSessions++;
-        totalMinutes += workMinutes[i];
-        currentStreak++;
-        if (currentStreak > maxxStreak){
-            maxxStreak = currentStreak;
-        }
-    }
+// for (let i = 0; i < workMinutes.length; i++){
+//     if (workMinutes[i] !== 0){
+//         totalSessions++;
+//         totalMinutes += workMinutes[i];
+//         currentStreak++;
+//         if (currentStreak > maxxStreak){
+//             maxxStreak = currentStreak;
+//         }
+//     }
 
-    else{
-        currentStreak = 0;
-    }
-}
+//     else{
+//         currentStreak = 0;
+//     }
+// }
 
-average = totalMinutes/totalSessions;
+// average = totalMinutes/totalSessions;
 
-console.log("Total Productive Sessions: " + totalSessions);
-console.log("Longest Streak: " + maxxStreak);
-console.log("Average Minutes: " + average);
+// console.log("Total Productive Sessions: " + totalSessions);
+// console.log("Longest Streak: " + maxxStreak);
+// console.log("Average Minutes: " + average);
+
+// const workMinutes = [30, 40, 0, 50, 10, 20, 0, 60];
+// let maxStreak = 0;
+// let currentStreak = 0;
+
+// for (let i = 0; i < workMinutes.length; i++){
+//     if (workMinutes[i] !== 0){
+//         currentStreak += workMinutes[i];
+//         if (currentStreak > maxStreak){
+//             maxStreak = currentStreak;
+//         }
+//     }
+
+//     else{
+//         currentStreak = 0;
+//     }
+// }
+
+// console.log(maxStreak);
+
