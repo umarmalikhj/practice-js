@@ -735,34 +735,94 @@
 // console.log("Negative Numbers: " + negativeCount);
 // console.log("Zero's: " + zerosCount);
 
-console.log("Counting");
-for (let i = 1; i <= 20; i++){
-    console.log(i);
+// console.log("Counting");
+// for (let i = 1; i <= 20; i++){
+//     console.log(i);
+// }
+
+// console.log("Reversed");
+
+// for (let i = 20; i >= 1; i--){
+//     console.log(i);
+// }
+
+// console.log("Step Jump");
+
+// for (let i = 0; i <= 50; i += 5){
+//     console.log(i);
+// }
+
+// console.log("Even Numbers");
+
+// for (let i = 2; i <= 50; i += 2){
+//     console.log(i);
+// }
+
+// console.log("Sum Of Numbers");
+// let sum = 0;
+
+// for (let i = 1; i <= 100; i++){
+//     sum += i;
+// }
+
+// console.log(sum);
+
+// let arr = [4, 9, 16, 25, 36];
+// let count = 0;
+
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+//     if (arr[i] % 2 === 0){
+//         count++;
+//     }
+//     if (arr[i] > 20){
+//         console.log(arr[i]);
+//     }
+// }
+
+// console.log(count);
+
+// for (let i = 1; i <= 30; i++){
+//     if (i % 3 === 0 && i % 5 === 0){
+//         console.log("FizzBuzz");
+//     }
+
+//     else if (i % 3 === 0){
+//         console.log("Fizz");
+//     }
+
+//     else if (i % 5 === 0){
+//         console.log("Buzz");
+//     }
+//     else{
+//         console.log(i);
+//     }
+// }
+
+// let row = "";
+
+// for (let i = 1; i <= 5; i++){
+//     row = "";
+//     for( let j = 1; j <= i; j++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+// Arrays
+
+let fruits = ["apple", "banana", "mango", "orange"];
+
+for (let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
 }
 
-console.log("Reversed");
+console.log("First Element: " + fruits[0]);
+console.log("Last Element: " + fruits[fruits.length - 1]);
+console.log("Second Element: " + fruits[1]);
 
-for (let i = 20; i >= 1; i--){
-    console.log(i);
-}
+fruits[1] = "grapes";
+fruits.push("pinapple");
+fruits[0] = "kiwi";
 
-console.log("Step Jump");
-
-for (let i = 0; i <= 50; i += 5){
-    console.log(i);
-}
-
-console.log("Even Numbers");
-
-for (let i = 2; i <= 50; i += 2){
-    console.log(i);
-}
-
-console.log("Sum Of Numbers");
-let sum = 0;
-
-for (let i = 1; i <= 100; i++){
-    sum += i;
-}
-
-console.log(sum);
+console.log(fruits);
