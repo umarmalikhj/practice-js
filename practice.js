@@ -690,3 +690,24 @@
 
 // console.log(maxStreak);
 
+// const arr = [5, 8, 3, 6, 9, 2];
+// let count = 0;
+
+// for (let i = 1; i < arr.length; i++){
+//     if (arr[i] > arr[i - 1]){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+const arr = [1, 3, 2, 4, 1, 5, 3];
+let count = 0;
+
+for (let i = 1; i < arr.length - 1; i++){
+    if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]){
+        count++;
+    }
+}
+
+console.log(count);
