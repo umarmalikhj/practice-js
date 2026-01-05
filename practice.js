@@ -701,13 +701,68 @@
 
 // console.log(count);
 
-const arr = [1, 3, 2, 4, 1, 5, 3];
-let count = 0;
+// const arr = [1, 3, 2, 4, 1, 5, 3];
+// let count = 0;
 
-for (let i = 1; i < arr.length - 1; i++){
-    if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]){
-        count++;
-    }
+// for (let i = 1; i < arr.length - 1; i++){
+//     if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+// const data = [3, 0, -2, 7, -5, 10, -1];
+// let positiveCount = 0;
+// let negativeCount = 0;
+// let zerosCount = 0;
+
+// for (let i = 0; i < data.length; i++){
+//     if (data[i] === 0){
+//         zerosCount++;
+//     }
+
+//     else if (data[i] < 0){
+//         negativeCount++;
+//     }
+
+//     else if (data[i] > 0){
+//         positiveCount++;
+//     }
+// }
+
+// console.log("Positive Numbers: " + positiveCount);
+// console.log("Negative Numbers: " + negativeCount);
+// console.log("Zero's: " + zerosCount);
+
+console.log("Counting");
+for (let i = 1; i <= 20; i++){
+    console.log(i);
 }
 
-console.log(count);
+console.log("Reversed");
+
+for (let i = 20; i >= 1; i--){
+    console.log(i);
+}
+
+console.log("Step Jump");
+
+for (let i = 0; i <= 50; i += 5){
+    console.log(i);
+}
+
+console.log("Even Numbers");
+
+for (let i = 2; i <= 50; i += 2){
+    console.log(i);
+}
+
+console.log("Sum Of Numbers");
+let sum = 0;
+
+for (let i = 1; i <= 100; i++){
+    sum += i;
+}
+
+console.log(sum);
