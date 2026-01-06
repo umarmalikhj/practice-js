@@ -811,18 +811,99 @@
 
 // Arrays
 
-let fruits = ["apple", "banana", "mango", "orange"];
+// let fruits = ["apple", "banana", "mango", "orange"];
 
-for (let i = 0; i < fruits.length; i++){
-    console.log(fruits[i]);
+// for (let i = 0; i < fruits.length; i++){
+//     console.log(fruits[i]);
+// }
+
+// console.log("First Element: " + fruits[0]);
+// console.log("Last Element: " + fruits[fruits.length - 1]);
+// console.log("Second Element: " + fruits[1]);
+
+// fruits[1] = "grapes";
+// fruits.push("pinapple");
+// fruits[0] = "kiwi";
+
+// console.log(fruits);
+
+// let warmup = [1, 2, 3, 4, 5];
+// let sum = 0;
+
+// for (let i = 0; i < warmup.length; i++){
+//     sum += warmup[i];
+//     if (warmup[i] % 2 !== 0){
+//         console.log("Odd Number: " + warmup[i]);
+//     }
+// }
+
+// console.log("Total Sum: " + sum);
+
+// console.log("Reverse Order")
+// for (let j = warmup.length - 1; j >= 0; j--){
+//     console.log[j];
+// }
+
+// let numbers = [100, 1, 50, 2]
+// let largest = numbers[0];
+// let smallest = numbers[0];
+
+// for (let i = 1; i < numbers.length; i++){
+//     if (numbers[i] > largest){
+//         largest = numbers[i];
+//     }
+//     if (numbers[i] < smallest){
+//             smallest = numbers[i];
+//     }
+// }
+
+// console.log("Largest: " + largest);
+// console.log("Smallest: " + smallest);
+
+// let items = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// let appleCount = 0;
+// let bananaCount = 0;
+// let orangeCount = 0;
+
+// for (let i = 0; i < items.length; i++){
+//     if (items[i] === "apple"){
+//         appleCount++;
+//     }
+
+//     else if (items[i] === "banana"){
+//         bananaCount++;
+//     }
+
+//     else if (items[i] === "orange"){
+//         orangeCount++;
+//     }
+// }
+
+// console.log("Apple: " + appleCount);
+// console.log("Banana: " + bananaCount);
+// console.log("Orange: " + orangeCount);
+
+// let items = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// let count = {};
+
+// for (let i = 0; i < items.length; i++){
+//     let item = items[i];
+//     if (count[item]){
+//         count[item]++;
+//     }
+
+//     else{
+//         count[item] = 1;
+//     }
+// }
+
+// console.log(count);
+
+let arr = [10, 20, 30, 40, 50];
+let newArr = [];
+
+for (let i = arr.length - 1; i >= 0; i--){
+    newArr.push(arr[i]);
 }
 
-console.log("First Element: " + fruits[0]);
-console.log("Last Element: " + fruits[fruits.length - 1]);
-console.log("Second Element: " + fruits[1]);
-
-fruits[1] = "grapes";
-fruits.push("pinapple");
-fruits[0] = "kiwi";
-
-console.log(fruits);
+console.log(newArr);
