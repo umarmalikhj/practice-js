@@ -899,11 +899,20 @@
 
 // console.log(count);
 
-let arr = [10, 20, 30, 40, 50];
-let newArr = [];
+// let arr = [10, 20, 30, 40, 50];
+// let newArr = [];
 
-for (let i = arr.length - 1; i >= 0; i--){
-    newArr.push(arr[i]);
-}
+// for (let i = arr.length - 1; i >= 0; i--){
+//     newArr.push(arr[i]);
+// }
 
-console.log(newArr);
+// console.log(newArr);
+
+// let nums = [1, 2, 3, 2, 4, 1, 5];
+// let newNums = [];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i])
+// }
+
+// console.log(nums);
