@@ -938,13 +938,64 @@
 //     }
 // }
 
-let nums = [2, 4, 6, 8];
-let count = 0;
+// let nums = [2, 4, 6, 8];
+// let count = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 2 === 0){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+// let nums = [2, 4, 6, 8];
+// let sum = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     sum += nums[i];
+// }
+
+// console.log(sum);
+
+// let nums = [7, 3, 9, 2, 6];
+// let largest = nums[0];
+
+// for (let i = 1; i < nums.length; i++){
+//     if (nums[i] > largest){
+//         largest = nums[i];
+//     }
+// }
+
+// console.log(largest);
+
+// let nums = [7, 3, 9, 2, 6];
+// let smallest = nums[0];
+
+// for (let i = 1; i < nums.length; i++){
+//     if (nums[i] < smallest){
+//         smallest = nums[i];
+//     }
+// }
+
+// console.log("Smallest: " + smallest);
+
+// let nums = [1, 2, 3, 4, 5];
+// let newNums = [];
+
+// for (let i = nums.length - 1; i >= 0 ; i--){
+//     newNums.push(nums[i]);
+// }
+
+// console.log(newNums);
+
+let nums = [2, 8, 4, 10, 3, 7];
+let newNums = [];
 
 for (let i = 0; i < nums.length; i++){
-    if (nums[i] % 2 === 0){
-        count++;
+    if (nums[i] > 5){
+        newNums.push(nums[i]);
     }
 }
 
-console.log(count);
+console.log(newNums);
