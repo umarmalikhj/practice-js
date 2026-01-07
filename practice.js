@@ -1047,20 +1047,48 @@
 //     }
 // }
 
-let nums = [2, 4, 6, 8, 10];
-let exist = false;
+// let nums = [2, 4, 6, 8, 10];
+// let exist = false;
 
-for (let i = 0; i < nums.length; i++){
-    if (nums[i] === 7){
-        exist = true;
-        break;
-    }
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] === 7){
+//         exist = true;
+//         break;
+//     }
+// }
+
+// if (exist){
+//     console.log("It Exists");
+// }
+
+// else{
+//     console.log("It Doesn't Exists");
+// }
+
+// let nums = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < nums.length; i++){
+//     let temp = nums[0];
+//     nums[0] = nums[nums.length - 1];
+//     nums[nums.length - 1] = temp;
+//     temp = nums[1];
+//     nums[1] = nums[nums.length - 2];
+//     nums[nums.length - 2] = temp;
+// }
+
+// console.log(nums);
+
+let nums = [1, 2, 3, 4, 5];
+let start = 0;
+let end = nums.length - 1;
+
+while (start < end){
+    let temp = start;
+    start = end;
+    end = temp;
+
+    start++;
+    end--;
 }
 
-if (exist){
-    console.log("It Exists");
-}
-
-else{
-    console.log("It Doesn't Exists");
-}
+console.log(nums);
