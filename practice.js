@@ -903,16 +903,48 @@
 // let newArr = [];
 
 // for (let i = arr.length - 1; i >= 0; i--){
-//     newArr.push(arr[i]);
-// }
-
+    //     newArr.push(arr[i]);
+    // }
+    
+    // let nums = [1, 2, 3, 2, 4, 1, 5];
+    // let newNums = [];
+    
+    // for (let i = 0; i < nums.length; i++){
+    //     if (nums[i])
+    // }
+    
+    // console.log(nums);
 // console.log(newArr);
 
-// let nums = [1, 2, 3, 2, 4, 1, 5];
-// let newNums = [];
+// let arr = [0,1,2,4,5];
+// console.log(arr);
+// arr[3] = 3;
+// arr.push(3);
+// console.log(arr)
+// arr.pop();
+// console.log(arr);
+
+// let nums = [2, 4, 6, 8];
 
 // for (let i = 0; i < nums.length; i++){
-//     if (nums[i])
+//     console.log(nums[i]);
 // }
 
-// console.log(nums);
+// let nums = [2, 4, 6, 8];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 2 === 0){
+//         console.log(nums[i]);
+//     }
+// }
+
+let nums = [2, 4, 6, 8];
+let count = 0;
+
+for (let i = 0; i < nums.length; i++){
+    if (nums[i] % 2 === 0){
+        count++;
+    }
+}
+
+console.log(count);
