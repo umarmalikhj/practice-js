@@ -989,13 +989,78 @@
 
 // console.log(newNums);
 
-let nums = [2, 8, 4, 10, 3, 7];
-let newNums = [];
+// let nums = [2, 8, 4, 10, 3, 7];
+// let newNums = [];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 5){
+//         newNums.push(nums[i]);
+//     }
+// }
+
+// console.log(newNums);
+
+// let nums = [1, 2, 1, 3, 2, 1];
+// let count = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] === 1){
+//         count++;
+//     }
+// }
+
+// console.log("Count of 1: " + count);
+
+// let nums = [1, 2, 1, 3, 2, 1];
+// let count = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] === 2){
+//         count++;
+//     }
+// }
+
+// console.log("Count of 2: " + count);
+
+// let nums = [1, 2, 3, 4, 5, 6];
+// let oddCount = 0;
+// let evenCount = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 2 === 0){
+//         evenCount++;
+//     }
+//     else{
+//         oddCount++;
+//     }
+// }
+
+// console.log("Even Numbers: " + evenCount);
+// console.log("Odd Numbers: " + oddCount);
+
+// let nums = [1, 3, 5, 2, 8, 4];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] > 4){
+//         console.log("First > 4: " + nums[i]);
+//         break;
+//     }
+// }
+
+let nums = [2, 4, 6, 8, 10];
+let exist = false;
 
 for (let i = 0; i < nums.length; i++){
-    if (nums[i] > 5){
-        newNums.push(nums[i]);
+    if (nums[i] === 7){
+        exist = true;
+        break;
     }
 }
 
-console.log(newNums);
+if (exist){
+    console.log("It Exists");
+}
+
+else{
+    console.log("It Doesn't Exists");
+}
