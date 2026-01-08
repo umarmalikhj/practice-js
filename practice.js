@@ -1107,23 +1107,23 @@
 // console.log("Sum: " + sum);
 // console.log("Largest: " + largest);
 
-let nums = [1, 2, 2, 3, 4, 4, 5];
-let unique = [];
+// let nums = [1, 2, 2, 3, 4, 4, 5];
+// let unique = [];
 
-for (let i = 0; i < nums.length; i++) {
-    let current = nums[i];
-    let found = false;
+// for (let i = 0; i < nums.length; i++) {
+//     let current = nums[i];
+//     let found = false;
 
-    for (let j = 0; j < unique.length; j++) {
-        if (unique[j] === current) {
-            found = true;
-            break;
-        }
-    }
+//     for (let j = 0; j < unique.length; j++) {
+//         if (unique[j] === current) {
+//             found = true;
+//             break;
+//         }
+//     }
 
-    if (!found) {
-        unique.push(current);
-    }
-}
+//     if (!found) {
+//         unique.push(current);
+//     }
+// }
 
-console.log(unique); // [1, 2, 3, 4, 5]
+// console.log(unique); // [1, 2, 3, 4, 5]
