@@ -1093,16 +1093,37 @@
 
 // console.log(nums);
 
-let nums = [3, 6, 1, 9, 2];
-let sum = 0;
-let largest = nums[0];
+// let nums = [3, 6, 1, 9, 2];
+// let sum = 0;
+// let largest = nums[0];
 
-for (let i = 0; i < nums.length; i++){
-    sum += nums[i];
-    if (nums[i] > largest){
-        largest = nums[i];
+// for (let i = 0; i < nums.length; i++){
+//     sum += nums[i];
+//     if (nums[i] > largest){
+//         largest = nums[i];
+//     }
+// }
+
+// console.log("Sum: " + sum);
+// console.log("Largest: " + largest);
+
+let nums = [1, 2, 2, 3, 4, 4, 5];
+let unique = [];
+
+for (let i = 0; i < nums.length; i++) {
+    let current = nums[i];
+    let found = false;
+
+    for (let j = 0; j < unique.length; j++) {
+        if (unique[j] === current) {
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        unique.push(current);
     }
 }
 
-console.log("Sum: " + sum);
-console.log("Largest: " + largest);
+console.log(unique); // [1, 2, 3, 4, 5]
