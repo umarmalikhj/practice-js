@@ -1078,17 +1078,31 @@
 
 // console.log(nums);
 
-let nums = [1, 2, 3, 4, 5];
-let start = 0;
-let end = nums.length - 1;
+// let nums = [1, 2, 3, 4, 5];
+// let start = 0;
+// let end = nums.length - 1;
 
-while (start < end){
-    let temp = start;
-    start = end;
-    end = temp;
+// while (start < end){
+//     let temp = start;
+//     start = end;
+//     end = temp;
 
-    start++;
-    end--;
+//     start++;
+//     end--;
+// }
+
+// console.log(nums);
+
+let nums = [3, 6, 1, 9, 2];
+let sum = 0;
+let largest = nums[0];
+
+for (let i = 0; i < nums.length; i++){
+    sum += nums[i];
+    if (nums[i] > largest){
+        largest = nums[i];
+    }
 }
 
-console.log(nums);
+console.log("Sum: " + sum);
+console.log("Largest: " + largest);
