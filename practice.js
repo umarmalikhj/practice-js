@@ -903,17 +903,17 @@
 // let newArr = [];
 
 // for (let i = arr.length - 1; i >= 0; i--){
-    //     newArr.push(arr[i]);
-    // }
-    
-    // let nums = [1, 2, 3, 2, 4, 1, 5];
-    // let newNums = [];
-    
-    // for (let i = 0; i < nums.length; i++){
-    //     if (nums[i])
-    // }
-    
-    // console.log(nums);
+//     newArr.push(arr[i]);
+// }
+
+// let nums = [1, 2, 3, 2, 4, 1, 5];
+// let newNums = [];
+
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i])
+// }
+
+// console.log(nums);
 // console.log(newArr);
 
 // let arr = [0,1,2,4,5];
@@ -1146,3 +1146,44 @@
 
 // console.log(unique);
 
+// let a = [1, 2, 3, 4];
+// let b = [3, 4, 5, 6];
+// let common = [];
+// let isFound = false;
+
+// for (let i = 0; i < a.length; i++){
+//     isFound = false;
+//     for (let j = 0; j < b.length; j++){
+//         if (a[i] === b[j]){
+//             isFound = true;
+//             break;
+//         }
+//     }
+
+//     if (isFound){
+//         common.push(a[i]);
+//     }
+// }
+
+// console.log(common);
+let nums = [3, 1, 3, 2, 3];
+
+let count = 0;
+
+for (let i = 0; i < nums.length; i++) {
+    count = 0;
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[i] === nums[j]) {
+            if (nums[i + 1] === nums[i]) {
+                continue;
+            }
+            else {
+                count++;
+            }
+        }
+    }
+    if(count > 1){
+        console.log("Number " + nums[i] + " appears " + count + " Times ");
+    }
+
+}
