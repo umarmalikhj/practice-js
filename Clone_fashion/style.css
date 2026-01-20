@@ -43,6 +43,7 @@
 .shopping-container {
     background-color: #eef2f6;
     color: #1f2f44;
+    padding-bottom: 3em;
 }
 
 .banner{
@@ -85,4 +86,8 @@ th{
 td{
     border: 1px solid black;
     padding: 8px 10px;
+}
+
+.shopping-info{
+    width: 90vw;
 }
