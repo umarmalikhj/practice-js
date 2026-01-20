@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color:  #395a7f;
+}
+
+.heading a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #f4f3ee;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.img img{
+    height: 60px;
+}
+
+.cardhead{
+    padding-top: 1em;
+    text-align: center;
+    font-weight: 550;
+}
