@@ -71,3 +71,7 @@ body{
 .txt-blue{
     color: var(--accent-color);
 }
+
+.cta button{
+    padding: 1em 1.5em;
+}
