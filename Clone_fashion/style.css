@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #395a7f;
+}
+
+.heading a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #f4f3ee;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.img img {
+    height: 60px;
+}
+
+.cardhead {
+    padding-top: 1em;
+    text-align: center;
+    font-weight: 550;
+}
+
+.shopping-container {
+    background-color: #eef2f6;
+    color: #1f2f44;
+    padding-bottom: 3em;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+}
+
+.banner img{
+    height: 55vh;
+    width: 90vw;
+}
+
+.sales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sales h3{
+    font-size: 1.75em;
+    margin: 1em 0;
+}
+
+.sales table {
+    width: 90vw;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+th{
+    border: 1px solid black;
+    background-color: #395a7f;
+    padding: 15px 10px;
+    color: #f4f3ee;
+}
+
+td{
+    border: 1px solid black;
+    padding: 8px 10px;
+}
+
+.shopping-info{
+    padding: 2em 4.2em;
+    letter-spacing: 1px;
+}
+
+.shopping-info h1{
+    padding-bottom: 1em;
+}
+
+.shopping-info h3{
+    padding: 0.5em 0 0.75em 0;
+}
+
