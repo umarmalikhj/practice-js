@@ -118,8 +118,8 @@ body {
 }
 
 .card {
-    width: 280px;
-    height: 325px;
+    width: 25%;
+    height: 100%;
     padding: 22px;
     border-radius: 18px;
     text-align: center;
@@ -170,4 +170,59 @@ body {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
     background: rgba(255, 255, 255, 0.18);
+}
+
+.membership-plans {
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.memb-head {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.memb-head h1 {
+    font-family: var(--primary-font);
+    font-size: 5em;
+}
+
+.memb-cards {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.testimonials{
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.test-head{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.test-head h1 {
+    font-family: var(--primary-font);
+    font-size: 5em;
+}
+
+.test-cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
