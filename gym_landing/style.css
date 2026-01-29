@@ -144,18 +144,6 @@ body {
   font-weight: 900;
 }
 
-@keyframes slideUnderline {
-
-    0%,
-    100% {
-        left: -100%;
-    }
-
-    50% {
-        left: 0%;
-    }
-}
-
 .cta button {
     padding: 1em 2em;
     font-size: 1em;
