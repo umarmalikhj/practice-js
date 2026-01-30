@@ -20,8 +20,9 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 10%;
     font-family: var(--primary-font);
     background-color: var(--primary-color);
     margin: 1.5vh 0;
@@ -29,7 +30,7 @@ body {
 
 .nav-logo {
     color: white;
-    font-size: 2.2vw;
+    font-size: 2.5vw;
 }
 
 .nav-logo span {
@@ -120,7 +121,7 @@ body {
 }
 
 .hero-head {
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,15 +211,15 @@ body {
 }
 
 .choose-us {
-    height: 70vh;
+    min-height: 70vh;
 }
 
 .membership-plans {
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .testimonials {
-    height: 50vh;
+    min-height: 50vh;
 }
 
 /* Card Styling */
@@ -305,5 +306,20 @@ footer a {
         display: none;
     }
 
+    .nav-menu i{
+        display: block;
+    }
 
+    .card{
+        width: 60%;
+        margin-bottom: 1.25em;
+    }
+
+    .section-head{
+        margin: 1em 0;
+    }
+
+    .section-cards{
+        flex-direction: column;
+    }
 }
