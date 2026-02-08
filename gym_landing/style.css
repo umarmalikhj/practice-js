@@ -20,7 +20,8 @@ body {
 
 .navbar {
     display: flex;
-    justify-content:space-evenly ;
+    justify-content: center;
+    gap: 10%;
     align-items: center;
     font-family: var(--primary-font);
     background-color: var(--primary-color);
@@ -37,8 +38,9 @@ body {
 }
 
 .nav-links {
+    width: fit-content;
     display: flex;
-    gap: 1.5em;
+    gap: 2.5em;
     justify-content: space-between;
 }
 
@@ -298,7 +300,7 @@ footer a {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .navbar {
         justify-content: space-between;
         margin-right: 1.5em;
@@ -347,10 +349,14 @@ footer a {
     }
     
     .section-head h1{
-        font-size: 7vh;
+        font-size: 3.25rem;
     }
 
     .section-cards{
         flex-direction: column;
     }
+}
+
+@media (max-width: 992px){
+    
 }
