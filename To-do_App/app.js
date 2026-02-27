@@ -4,11 +4,11 @@ const taskList = document.getElementById('taskList');
 
 addTask.addEventListener("click", () => {
     task = input.value.trim();
-    if (!task){
+    if (!task) {
         return;
     }
 
-    else{
+    else {
         const li = document.createElement('li');
         li.textContent = task;
         taskList.appendChild(li);

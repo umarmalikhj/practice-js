@@ -1166,24 +1166,24 @@
 // }
 
 // console.log(common);
-let nums = [3, 1, 3, 2, 3];
+// let nums = [3, 1, 3, 2, 3];
 
-let count = 0;
+// let count = 0;
 
-for (let i = 0; i < nums.length; i++) {
-    count = 0;
-    for (let j = 0; j < nums.length; j++) {
-        if (nums[i] === nums[j]) {
-            if (nums[i + 1] === nums[i]) {
-                continue;
-            }
-            else {
-                count++;
-            }
-        }
-    }
-    if(count > 1){
-        console.log("Number " + nums[i] + " appears " + count + " Times ");
-    }
+// for (let i = 0; i < nums.length; i++) {
+//     count = 0;
+//     for (let j = 0; j < nums.length; j++) {
+//         if (nums[i] === nums[j]) {
+//             if (nums[i + 1] === nums[i]) {
+//                 continue;
+//             }
+//             else {
+//                 count++;
+//             }
+//         }
+//     }
+//     if(count > 1){
+//         console.log("Number " + nums[i] + " appears " + count + " Times ");
+//     }
 
-}
+// }
