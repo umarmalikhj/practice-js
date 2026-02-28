@@ -1207,9 +1207,17 @@
 
 // console.log("Today's Second Task Is: " + todaysTasks[1]);
 
-const person = {
-    name: "Umar Malik HJ",
-    age: 22
+// const person = {
+//     name: "Umar Malik HJ",
+//     age: 22
+// }
+
+// console.log(person);
+
+const name = "Umar Malik HJ";
+
+function greet(name){
+    console.log("Hello! " + name);
 }
 
-console.log(person);
+greet(name);
