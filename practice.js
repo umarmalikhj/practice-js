@@ -1187,3 +1187,29 @@
 //     }
 
 // }
+
+// const myName = "Umar Malik";
+
+// console.log(myName);
+
+// let myAge = 17;
+// myAge += 5;
+// console.log(myAge);
+
+
+// Array
+
+// let todaysTasks = [
+//     "Reading Book",
+//     "Cycling For 30 Mins",
+//     "Eating On Time"
+// ];
+
+// console.log("Today's Second Task Is: " + todaysTasks[1]);
+
+const person = {
+    name: "Umar Malik HJ",
+    age: 22
+}
+
+console.log(person);
