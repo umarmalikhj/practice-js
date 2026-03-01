@@ -1214,10 +1214,25 @@
 
 // console.log(person);
 
-const name = "Umar Malik HJ";
 
-function greet(name){
-    console.log("Hello! " + name);
+// const name = "Umar Malik HJ";
+
+// function greet(name){
+//     console.log("Hello! " + name);
+// }
+
+// greet(name);
+
+let score = 75;
+
+if (score => 90){
+    console.log("Excellent");
 }
 
-greet(name);
+else if (score => 70){
+    console.log("Good");
+}
+
+else {
+    console.log("Need To Improve");
+}
