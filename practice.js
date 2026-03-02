@@ -1223,16 +1223,40 @@
 
 // greet(name);
 
-let score = 75;
+// let score = 75;
 
-if (score => 90){
-    console.log("Excellent");
-}
+// if (score >= 90){
+//     console.log("Excellent");
+// }
 
-else if (score => 70){
-    console.log("Good");
-}
+// else if (score >= 70){
+//     console.log("Good");
+// }
 
-else {
-    console.log("Need To Improve");
-}
+// else {
+//     console.log("Need To Improve");
+// }
+
+
+// let arr = ["JS", "HTML", "CSS"];
+
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+// const add = (a , b) => a + b;
+// console.log(add(10,20));
+
+// function checkAge(age){
+//     if (age >= 18){
+//         console.log("Adult");
+//     }
+
+//     else {
+//         console.log("Minor");
+//     }
+// }
+// let age = 18;
+// checkAge(age);
+
+// document.getElementById("demo").textContent = "Hello DOM";
