@@ -1261,13 +1261,15 @@
 
 // document.getElementById("demo").textContent = "Hello DOM";
 
-let button = document.getElementById("addBtn");
-let container = document.getElementById("container");
+// let button = document.getElementById("addBtn");
+// let container = document.getElementById("container");
 
 
-button.addEventListener("click", () => {
-    const p = document.createElement("p");
-    p.textContent = ("Hey Don't BS Me!");
-    container.append(p);
-});
+// button.addEventListener("click", () => {
+//     const p = document.createElement("p");
+//     p.textContent = ("Hey Don't BS Me!");
+//     container.append(p);
+// });
 
+
+let count = document.querySelectorAll("li");
