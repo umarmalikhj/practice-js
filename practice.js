@@ -1272,10 +1272,18 @@
 // });
 
 
+// let count = document.querySelectorAll("li");
+
+// for (let i = 0; i < count.length; i++){
+//     count[i].addEventListener("click" , () => {
+//         count[i].remove();
+//     })
+// }
+
 let count = document.querySelectorAll("li");
 
 for (let i = 0; i < count.length; i++){
-    count[i].addEventListener("click" , () => {
-        count[i].remove();
+    count[i].addEventListener("click", () => {
+        count[i].classList.toggle("completed");
     })
 }
