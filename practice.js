@@ -1293,7 +1293,9 @@ const addBtn = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
 
 addBtn.addEventListener("click", () => {
-    let task = document.createElement("li");
-    task.innerText = input;
-    taskList.appendChild("li");
+    let task = input.value;
+    let taskItem = document.createElement("li");
+    taskItem = task;
+    taskList.append(taskItem);
+    input.value = ' ';
 })
