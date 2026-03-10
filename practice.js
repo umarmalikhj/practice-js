@@ -1280,10 +1280,20 @@
 //     })
 // }
 
-let count = document.querySelectorAll("li");
+// let count = document.querySelectorAll("li");
 
-for (let i = 0; i < count.length; i++){
-    count[i].addEventListener("click", () => {
-        count[i].classList.toggle("completed");
-    })
-}
+// for (let i = 0; i < count.length; i++){
+//     count[i].addEventListener("click", () => {
+//         count[i].classList.toggle("completed");
+//     })
+// }
+
+const input = document.getElementById("taskInput");
+const addBtn = document.getElementById("addTask");
+const taskList = document.getElementById("taskList");
+
+addBtn.addEventListener("click", () => {
+    let task = document.createElement("li");
+    task.innerText = input;
+    taskList.appendChild("li");
+})
