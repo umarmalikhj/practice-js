@@ -1295,7 +1295,7 @@ const taskList = document.getElementById("taskList");
 addBtn.addEventListener("click", () => {
     let task = input.value;
     let taskItem = document.createElement("li");
-    taskItem = task;
+    taskItem.textContent = task;
     taskList.append(taskItem);
     input.value = ' ';
 })
