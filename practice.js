@@ -1292,10 +1292,22 @@ const input = document.getElementById("taskInput");
 const addBtn = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
 
-addBtn.addEventListener("click", () => {
-    let task = input.value;
-    let taskItem = document.createElement("li");
-    taskItem.textContent = task;
-    taskList.append(taskItem);
-    input.value = ' ';
-})
+const finalInput = input.value.trim();
+
+if (finalInput) {
+    addBtn.addEventListener("click", () => {
+        let task = input.value;
+        let taskItem = document.createElement("li");
+        taskItem.textContent = task;
+        taskList.append(taskItem);
+        input.value = "";
+
+        taskItem.addEventListener("click", () => {
+            taskItem.classList.toggle("completed");
+        })
+    })
+}
+
+
+
+
