@@ -1288,26 +1288,84 @@
 //     })
 // }
 
-const input = document.getElementById("taskInput");
-const addBtn = document.getElementById("addTask");
-const taskList = document.getElementById("taskList");
+// const input = document.getElementById("taskInput");
+// const addBtn = document.getElementById("addTask");
+// const taskList = document.getElementById("taskList");
 
-const finalInput = input.value.trim();
+// const finalInput = input.value.trim();
 
-if (finalInput) {
-    addBtn.addEventListener("click", () => {
-        let task = input.value;
-        let taskItem = document.createElement("li");
-        taskItem.textContent = task;
-        taskList.append(taskItem);
-        input.value = "";
+// if (finalInput) {
+//     addBtn.addEventListener("click", () => {
+//         let task = input.value;
+//         let taskItem = document.createElement("li");
+//         taskItem.textContent = task;
+//         taskList.append(taskItem);
+//         input.value = "";
 
-        taskItem.addEventListener("click", () => {
-            taskItem.classList.toggle("completed");
-        })
-    })
+//         taskItem.addEventListener("click", () => {
+//             taskItem.classList.toggle("completed");
+//         })
+//     })
+// }
+
+// let skills = ["HTML", "CSS", "JavaScript", "React"];
+
+// console.log("First Skill: " + skills[0]);
+// console.log("Last Skill: " + skills[skills.length - 1]);
+
+// let Total = [10, 20, 30];
+// let sum = 0;
+
+// for (let i = 0; i < Total.length; i++){
+//     sum += Total[i];
+// }
+
+// console.log("Total = " + sum);
+
+// let person = {
+//     name: "Umar",
+//     age: 22,
+//     city: "Bangalore",
+//     profession: "Developer"
+// }
+
+// console.log(person.name + " is a " + person.profession + " from " + person.city);
+
+// function multiply (a , b){
+//     let sum = a * b;
+//     return sum;
+// }
+
+// console.log(multiply(6,7));
+
+// function marks(a){
+//     if (a >= 90){
+//         return "Excellent";
+//     }
+
+//     else if (a >= 70){
+//         return "Good";
+//     }
+    
+//     else {
+//         return "Needs Improvement";
+//     }
+// }
+
+// console.log(marks(95));
+
+marks = [95, 72, 60, 88, 45];
+
+for (let i = 0; i < marks.length; i++){
+    if (marks[i] >= 90){
+        console.log(marks[i] + " = Excellent");
+    }
+
+    else if (marks[i] >= 70){
+        console.log(marks[i] + " = Good");
+    }
+
+    else{
+        console.log(marks[i] + " = Needs Improvement");
+    }
 }
-
-
-
-
