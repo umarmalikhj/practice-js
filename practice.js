@@ -1387,13 +1387,19 @@
 
 // console.log("Largest = " + largest)
 
-let nums = [4, 7, 10, 15, 20, 33];
-let evenCount = 0;
+// let nums = [4, 7, 10, 15, 20, 33];
+// let evenCount = 0;
 
-for (let i = 0; i < nums.length; i++){
-    if (nums[i] % 2 === 0){
-        evenCount++;
-    }
+// for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 2 === 0){
+//         evenCount++;
+//     }
+// }
+
+// console.log("Even Numbers = " + evenCount);
+
+let arr = ["HTML", "CSS", "JS"];
+
+for (let i = arr.length - 1 ; i > -1 ; i--){
+    console.log(arr[i]);
 }
-
-console.log("Even Numbers = " + evenCount);
