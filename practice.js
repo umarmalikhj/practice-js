@@ -1354,18 +1354,46 @@
 
 // console.log(marks(95));
 
-marks = [95, 72, 60, 88, 45];
+// marks = [95, 72, 60, 88, 45];
 
-for (let i = 0; i < marks.length; i++){
-    if (marks[i] >= 90){
-        console.log(marks[i] + " = Excellent");
-    }
+// for (let i = 0; i < marks.length; i++){
+//     if (marks[i] >= 90){
+//         console.log(marks[i] + " = Excellent");
+//     }
 
-    else if (marks[i] >= 70){
-        console.log(marks[i] + " = Good");
-    }
+//     else if (marks[i] >= 70){
+//         console.log(marks[i] + " = Good");
+//     }
 
-    else{
-        console.log(marks[i] + " = Needs Improvement");
+//     else{
+//         console.log(marks[i] + " = Needs Improvement");
+//     }
+// }
+
+// let tasks = ["Study JS", "Go to Gym", "Read Quran", "Build Project"];
+
+// for (let i = 0; i < tasks.length; i++){
+//     console.log("Task " + (i + 1) + ": " + tasks[i]);
+// }
+
+// let nums = [12, 45, 7, 89, 23];
+// let largest = 0;
+
+// for (let i = 0; i < nums.length; i++){
+//     if (largest < nums[i]){
+//         largest = nums[i];
+//     }
+// }
+
+// console.log("Largest = " + largest)
+
+let nums = [4, 7, 10, 15, 20, 33];
+let evenCount = 0;
+
+for (let i = 0; i < nums.length; i++){
+    if (nums[i] % 2 === 0){
+        evenCount++;
     }
 }
+
+console.log("Even Numbers = " + evenCount);
