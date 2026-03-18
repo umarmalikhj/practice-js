@@ -1346,7 +1346,7 @@
 //     else if (a >= 70){
 //         return "Good";
 //     }
-    
+
 //     else {
 //         return "Needs Improvement";
 //     }
@@ -1398,8 +1398,57 @@
 
 // console.log("Even Numbers = " + evenCount);
 
-let arr = ["HTML", "CSS", "JS"];
+// let arr = ["HTML", "CSS", "JS"];
 
-for (let i = arr.length - 1 ; i > -1 ; i--){
-    console.log(arr[i]);
-}
+// for (let i = arr.length - 1 ; i > -1 ; i--){
+//     console.log(arr[i]);
+// }
+
+// let word = "JavaScript";
+// let length = 0;
+
+// for (let i = 0; i < word.length; i++){
+//     length += 1;
+// }
+
+// console.log("Length = " + length);
+
+// if (length > 8){
+//     console.log("Long Word");
+// }
+
+// else{
+//     console.log("Short Word");
+// }
+
+// function total(numbers){
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++){
+//         sum += numbers[i];
+//     }
+//     return sum;
+// }
+
+// console.log("Total = " + total([5, 10, 15, 20])); 
+
+// Todo App
+
+let input = document.getElementById("taskInput");
+let addTask = document.getElementById("addTask");
+let taskList = document.getElementById("taskList");
+let deleteTasks = document.getElementById("deleteTasks");
+
+addTask.addEventListener("click", () => {
+    let taskItem = document.createElement("li");
+    taskItem.textContent = input.value;
+    taskList.appendChild(taskItem);
+    input.value = "";
+
+    taskItem.addEventListener("click", () => {
+        taskItem.classList.toggle("completed");
+    });
+});
+
+deleteTasks.addEventListener("click", () => {
+    taskList.innerHTML = "";
+})
