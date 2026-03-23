@@ -1431,24 +1431,45 @@
 
 // console.log("Total = " + total([5, 10, 15, 20])); 
 
-// Todo App
+// // Todo App
 
-let input = document.getElementById("taskInput");
-let addTask = document.getElementById("addTask");
-let taskList = document.getElementById("taskList");
-let deleteTasks = document.getElementById("deleteTasks");
+// let input = document.getElementById("taskInput");
+// let addTask = document.getElementById("addTask");
+// let taskList = document.getElementById("taskList");
+// let deleteTasks = document.getElementById("deleteTasks");
 
-addTask.addEventListener("click", () => {
-    let taskItem = document.createElement("li");
-    taskItem.textContent = input.value;
-    taskList.appendChild(taskItem);
-    input.value = "";
+// addTask.addEventListener("click", () => {
+//     let taskItem = document.createElement("li");
+//     taskItem.textContent = input.value;
+//     taskList.appendChild(taskItem);
+//     input.value = "";
 
-    taskItem.addEventListener("click", () => {
-        taskItem.classList.toggle("completed");
-    });
-});
+//     taskItem.addEventListener("click", () => {
+//         taskItem.classList.toggle("completed");
+//     });
+// });
 
-deleteTasks.addEventListener("click", () => {
-    taskList.innerHTML = "";
-})
+// deleteTasks.addEventListener("click", () => {
+//     taskList.innerHTML = "";
+// });
+
+// let tasks = [];
+// let taskItem = {
+//     text : input.value
+// }
+
+// taskItem.push(taskItem);
+
+// const yourName = "Umar Malik";
+// let yourAge = 22;
+// let isLearningJS = true;
+
+// console.log(`Name: ${yourName}`);
+// console.log(`Age: ${yourAge}`);
+// console.log(`Learning JS?: ${isLearningJS}`);
+
+// function introduce(name, sub){
+//     console.log(`Hi, I am ${name} and I am learning ${sub}`);
+// }
+
+// introduce("Umar", "JS");
