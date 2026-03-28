@@ -1473,3 +1473,45 @@
 // }
 
 // introduce("Umar", "JS");
+
+// let btn = document.getElementById("clickme");
+// let clickCount = 0;
+
+// btn.addEventListener("click", () => {
+//     clickCount += 1;
+//     console.log("I Clicked It");
+// })
+
+// console.log(clickCount);
+
+// function greater(a, b){
+//     if (a > b){
+//         return a;
+//     }
+
+//     else{
+//         return b;
+//     }
+// }
+
+// let a = greater(5, 10);
+// console.log(a);
+
+// function evenOdd(a){
+//     if (a % 2 === 0){
+//         return "even";
+//     }
+
+//     else {
+//         return "odd";
+//     }
+// }
+
+
+
+function square(a){
+    return square = a * a;
+}
+
+let a = square(8);
+console.log(a);
