@@ -1507,11 +1507,25 @@
 //     }
 // }
 
+// function square(a){
+//     return square = a * a;
+// }
 
+// let a = square(8);
+// console.log(a);
 
-function square(a){
-    return square = a * a;
+let languages = ["Html", "Css", "JavaScript", "Bootstrap", "Tailwind"];
+
+console.log(`Array - Before Pushing: ${languages}`);
+
+languages.push("Typescript");
+console.log(`Array - After Pushing: ${languages}`);
+
+languages.pop();
+console.log(`Array - After Deleting Last Item: ${languages}`);
+
+for (let i = 0; i < languages.length; i++){
+    if(languages[i].length > 4){
+        console.log(languages[i]);
+    }
 }
-
-let a = square(8);
-console.log(a);
