@@ -1530,25 +1530,47 @@
 //     }
 // }
 
-let person = {
-    name : "Umar Malik HJ", 
-    age : 22, 
-    city : "Bangalore"
+// let person = {
+//     name : "Umar Malik HJ", 
+//     age : 22, 
+//     city : "Bangalore"
+// }
+
+// console.log(person);
+
+// person.age = 23;
+
+// console.log(person);
+
+// person.skill = "Web Development";
+
+// console.log(person);
+
+
+// console.log("Printing Values:");
+// console.log(`Name: ${person.name}`);
+// console.log(`Age: ${person.age}`);
+// console.log(`City: ${person.city}`);
+// console.log(`Skill: ${person.skill}`);
+
+function checkNumberType(num){
+    if (num == 0){
+        return "0";
+    }
+
+    else if (num < 0){
+        return "Negative";
+    }
+
+    else if (num >= 1){
+        return "Positive";
+    }
+
+    else {
+        return "Invalid Request";
+    }
 }
 
-console.log(person);
+let x = checkNumberType(-2);
+console.log(x);
 
-person.age = 23;
-
-console.log(person);
-
-person.skill = "Web Development";
-
-console.log(person);
-
-
-console.log("Printing Values:");
-console.log(`Name: ${person.name}`);
-console.log(`Age: ${person.age}`);
-console.log(`City: ${person.city}`);
-console.log(`Skill: ${person.skill}`);
