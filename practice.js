@@ -1553,24 +1553,41 @@
 // console.log(`City: ${person.city}`);
 // console.log(`Skill: ${person.skill}`);
 
-function checkNumberType(num){
-    if (num == 0){
-        return "0";
-    }
+// function checkNumberType(num){
+//     if (num == 0){
+//         return "0";
+//     }
 
-    else if (num < 0){
-        return "Negative";
-    }
+//     else if (num < 0){
+//         return "Negative";
+//     }
 
-    else if (num >= 1){
-        return "Positive";
-    }
+//     else if (num >= 1){
+//         return "Positive";
+//     }
 
-    else {
-        return "Invalid Request";
-    }
-}
+//     else {
+//         return "Invalid Request";
+//     }
+// }
 
-let x = checkNumberType(-2);
-console.log(x);
+// let x = checkNumberType(-2);
+// console.log(x);
+
+// function gradeSystem(grade){
+//     if (grade >= 90){
+//         return "A";
+//     }
+
+//     else if (grade >= 70){
+//         return "B";
+//     }
+
+//     else {
+//         return "C";
+//     }
+// }
+
+// let x = gradeSystem(90);
+// console.log(x);
 
