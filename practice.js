@@ -1603,10 +1603,36 @@
 //         console.log(i);
 //     }
 // }
-let sum = 0;
+// let sum = 0;
+// for (let i = 0; i <= 10; i++){
+//     sum += i;
+// }
+// console.log(sum);
 
-for (let i = 0; i <= 10; i++){
-    sum += i;
-}
+let btn = document.getElementById("clickme");
+let para = document.getElementById("para");
+let reset = document.getElementById("reset");
 
-console.log(sum);
+let count = 0;
+
+btn.addEventListener("click", () => {
+    count += 1;
+
+    if (count == 1) {
+        para.innerText = "Clicked Once";
+    }
+
+    else if (count == 2) {
+        para.innerText = "Clicked Twice";
+    }
+
+    else {
+        para.innerText = `Clicked ${count} Times`;
+    }
+});
+
+reset.addEventListener("click", () => {
+    count = 0;
+    para.innerText = "Click The Button!!!";
+})
+
