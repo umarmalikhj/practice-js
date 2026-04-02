@@ -1609,30 +1609,36 @@
 // }
 // console.log(sum);
 
-let btn = document.getElementById("clickme");
-let para = document.getElementById("para");
-let reset = document.getElementById("reset");
+// let btn = document.getElementById("clickme");
+// let para = document.getElementById("para");
+// let reset = document.getElementById("reset");
 
-let count = 0;
+// let count = 0;
 
-btn.addEventListener("click", () => {
-    count += 1;
+// btn.addEventListener("click", () => {
+//     count += 1;
 
-    if (count == 1) {
-        para.innerText = "Clicked Once";
-    }
+//     if (count == 1) {
+//         para.innerText = "Clicked Once";
+//     }
 
-    else if (count == 2) {
-        para.innerText = "Clicked Twice";
-    }
+//     else if (count == 2) {
+//         para.innerText = "Clicked Twice";
+//     }
 
-    else {
-        para.innerText = `Clicked ${count} Times`;
-    }
-});
+//     else {
+//         para.innerText = `Clicked ${count} Times`;
+//     }
+// });
 
-reset.addEventListener("click", () => {
-    count = 0;
-    para.innerText = "Click The Button!!!";
+// reset.addEventListener("click", () => {
+//     count = 0;
+//     para.innerText = "Click The Button!!!";
+// })
+
+let text = document.getElementById("text").value;
+let add = document.getElementById("add");
+
+add.addEventListener("click", () => {
+    console.log(text);
 })
-
