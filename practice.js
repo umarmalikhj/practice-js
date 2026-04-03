@@ -1644,6 +1644,6 @@ let taskList = document.getElementById("taskList");
 
 add.addEventListener("click", () => {
     let newTask = document.createElement("li");
-    newTask = text.value;
+    newTask.textContent = text.value;
     taskList.append(newTask);
 })
