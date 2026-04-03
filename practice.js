@@ -1,5 +1,7 @@
 // console.log("Hello World :)");
 
+// const { createElement } = require("react");
+
 // let name = 'Umar';
 // let age = 22;
 
@@ -1636,9 +1638,12 @@
 //     para.innerText = "Click The Button!!!";
 // })
 
-let text = document.getElementById("text").value;
+let text = document.getElementById("text");
 let add = document.getElementById("add");
+let taskList = document.getElementById("taskList");
 
 add.addEventListener("click", () => {
-    console.log(text);
+    let newTask = document.createElement("li");
+    newTask = text.value;
+    taskList.append(newTask);
 })
