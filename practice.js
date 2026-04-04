@@ -1638,12 +1638,21 @@
 //     para.innerText = "Click The Button!!!";
 // })
 
-let text = document.getElementById("text");
-let add = document.getElementById("add");
-let taskList = document.getElementById("taskList");
+let input = document.getElementById("text");
+let addBtn = document.getElementById("add");
+let taskList = document.getElementById("tasklist");
+let tasks = [];
 
-add.addEventListener("click", () => {
-    let newTask = document.createElement("li");
-    newTask.textContent = text.value;
-    taskList.append(newTask);
+addBtn.addEventListener("click", () => {
+    tasks.push(input.value);
+    taskList.innerHTML = "";
+    for (let i = 0; i < tasks.length; i++){
+        let newTask = document.createElement("li");
+        newTask.textContent = tasks[i];
+        taskList.append(newTask);
+        let deleteBtn = document.createElement("button");
+        deleteBtn.innerHTML = "Delete";
+        newTask.append(deleteBtn);
+    }
+    input.value = "";
 })
