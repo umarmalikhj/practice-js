@@ -4,10 +4,17 @@ let taskList = document.getElementById("tasklist");
 let tasks = [];
 
 addBtn.addEventListener("click", () => {
-    tasks.push(input.value);
-    taskList.innerHTML = "";
-    renderUI();
-    input.value = "";
+    let inp = input.value.trim();
+    if (inp.length > 0) {
+        tasks.push(inp);
+        renderUI();
+        input.value = "";
+    }
+
+    else{
+        alert("Error! Empty Cannot be Logged!!!");
+    }
+
 })
 
 function renderUI() {
