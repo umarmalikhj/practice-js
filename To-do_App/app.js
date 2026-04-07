@@ -14,8 +14,13 @@ addBtn.addEventListener("click", () => {
     else{
         alert("Error! Empty Cannot be Logged!!!");
     }
+});
 
-})
+input.addEventListener("keydown", function(event){
+    if (event.key === "Enter"){
+        addBtn.click();
+    }
+});
 
 function renderUI() {
     taskList.innerHTML = "";
@@ -23,6 +28,10 @@ function renderUI() {
         let newTask = document.createElement("li");
         newTask.textContent = tasks[i];
         taskList.append(newTask);
+        newTask.addEventListener("click", () => {
+            newTask.classList.toggle("completed");
+        })
+
         let deleteBtn = document.createElement("button");
         deleteBtn.innerHTML = "Delete";
         newTask.append(deleteBtn);
