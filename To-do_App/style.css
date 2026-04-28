@@ -7,15 +7,62 @@
 :root{
     --head-font: "Barriecito", system-ui;
     --body-font: "Poppins", sans-serif;
+    --page-background: #181823;
+    --content-background: #25263d;
+    --disabled-text-color: #5c5e76;
 }
 
-.box {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
+body{
     height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--page-background);
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 30em;
+    justify-content: start;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.heading{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.heading h1{
+    font-family: var(--head-font);
+    text-transform: uppercase;
+    font-size: 2.75em;
+}
+
+.input{
+    height: 2em;
+    background-color: var(--content-background);
+    width: 100%;
+}
+
+.input input{
+    border: none;
+    background: none;
+    height: 1.5em;
+}
+
+input:focus{
+    outline: none;
+}
+
+#add{
+    display: none;
 }
 
 

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --heading-font: "Roboto", sans-serif;
+    --primary-font: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    margin: 2rem;
+    width: 50rem;
+    background-color: aqua;
+    border-radius: 15px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#head{
+    margin: 1rem 0 1.25rem 0;
+    font-family: var(--heading-font);
+}
+
+#head h1{
+    font-size: 2.5rem;
+}
+
+#head p{
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-main{
+    width: 100%;
+}
+
+#taskInput{
+    width: calc(100% - 12rem);
+    height: 2.25rem;
+}
