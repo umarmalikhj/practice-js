@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HJ's 24-Week Plan</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080810;
+            --bg2: #0e0e1a;
+            --bg3: #14142a;
+            --border: #1e1e3a;
+            --border2: #2a2a50;
+            --text: #e8e8ff;
+            --muted: #6060a0;
+            --green: #00ffaa;
+            --green-dim: #00ffaa44;
+            --green-bg: #001a0f;
+            --blue: #4488ff;
+            --blue-dim: #4488ff33;
+            --blue-bg: #000d1f;
+            --purple: #aa66ff;
+            --purple-dim: #aa66ff33;
+            --amber: #ffcc00;
+            --amber-dim: #ffcc0033;
+            --red: #ff4466;
+            --red-dim: #ff446633;
+            --teal: #00ddcc;
+            --teal-dim: #00ddcc33;
+            --coral: #ff6633;
+            --coral-dim: #ff663333;
+            --glow-green: 0 0 20px #00ffaa55, 0 0 40px #00ffaa22;
+            --glow-blue: 0 0 20px #4488ff55, 0 0 40px #4488ff22;
+            --glow-purple: 0 0 20px #aa66ff55, 0 0 40px #aa66ff22;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Syne', sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 20%, #4488ff08 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, #aa66ff08 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0
+        }
+
+        /* SCANLINES */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, #ffffff03 2px, #ffffff03 4px);
+            pointer-events: none;
+            z-index: 1000
+        }
+
+        /* HERO */
+        .hero {
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, #4488ff15 0%, transparent 70%);
+            pointer-events: none
+        }
+
+        .hero-eyebrow {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            color: var(--blue);
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            opacity: 0.8
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+            line-height: 1.1
+        }
+
+        .hero h1 .accent {
+            background: linear-gradient(135deg, var(--green), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 13px;
+            font-family: 'Space Mono', monospace
+        }
+
+        /* QUOTE BANNER */
+        .quote-banner {
+            margin: 1.5rem 2rem;
+            background: linear-gradient(135deg, var(--bg2), var(--bg3));
+            border: 1px solid var(--border2);
+            border-left: 3px solid var(--green);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            position: relative;
+            overflow: hidden
+        }
+
+        .quote-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 0% 50%, var(--green-dim) 0%, transparent 60%);
+            pointer-events: none
+        }
+
+        .quote-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--green);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+            opacity: 0.8
+        }
+
+        .quote-text {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.5
+        }
+
+        .quote-sub {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 0.3rem
+        }
+
+        /* STREAK */
+        .streak-bar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg2)
+        }
+
+        .streak-display {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .streak-fire {
+            font-size: 1.6rem;
+            filter: drop-shadow(0 0 8px #ff6633)
+        }
+
+        .streak-num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--coral);
+            text-shadow: 0 0 20px var(--coral)
+        }
+
+        .streak-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            line-height: 1.3
+        }
+
+        .streak-label span {
+            display: block;
+            font-size: 13px;
+            color: var(--text);
+            font-weight: 600
+        }
+
+        .streak-dots {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-left: auto
+        }
+
+        .streak-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border2);
+            border: 1px solid var(--border2);
+            transition: all 0.3s
+        }
+
+        .streak-dot.active {
+            background: var(--coral);
+            border-color: var(--coral);
+            box-shadow: 0 0 8px var(--coral)
+        }
+
+        .streak-dot.today {
+            background: var(--green);
+            border-color: var(--green);
+            box-shadow: 0 0 12px var(--green);
+            animation: pulse 2s infinite
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 8px var(--green)
+            }
+
+            50% {
+                box-shadow: 0 0 20px var(--green), 0 0 40px var(--green)
+            }
+        }
+
+        /* STATS */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .stat {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s
+        }
+
+        .stat:hover {
+            border-color: var(--border2);
+            transform: translateY(-2px)
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.3s
+        }
+
+        .stat:nth-child(1)::before {
+            background: radial-gradient(ellipse at 50% 0%, var(--green-dim), transparent)
+        }
+
+        .stat:nth-child(2)::before {
+            background: radial-gradient(ellipse at 50% 0%, var(--blue-dim), transparent)
+        }
+
+        .stat:nth-child(3)::before {
+            background: radial-gradient(ellipse at 50% 0%, var(--purple-dim), transparent)
+        }
+
+        .stat:nth-child(4)::before {
+            background: radial-gradient(ellipse at 50% 0%, var(--coral-dim), transparent)
+        }
+
+        .stat:hover::before {
+            opacity: 1
+        }
+
+        .stat-num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'Space Mono', monospace
+        }
+
+        .stat:nth-child(1) .stat-num {
+            color: var(--green);
+            text-shadow: var(--glow-green)
+        }
+
+        .stat:nth-child(2) .stat-num {
+            color: var(--blue);
+            text-shadow: var(--glow-blue)
+        }
+
+        .stat:nth-child(3) .stat-num {
+            color: var(--purple);
+            text-shadow: var(--glow-purple)
+        }
+
+        .stat:nth-child(4) .stat-num {
+            color: var(--coral)
+        }
+
+        .stat-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em
+        }
+
+        /* OVERALL BAR */
+        .overall-bar-wrap {
+            padding: 0 2rem 1.5rem;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .overall-bar-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .bar {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--green), var(--blue));
+            box-shadow: 0 0 12px var(--green);
+            transition: width 0.6s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .bar-shine {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent);
+            border-radius: 4px
+        }
+
+        /* PHASES */
+        .phases {
+            padding: 1.5rem 2rem 6rem;
+            max-width: 900px;
+            margin: 0 auto
+        }
+
+        .phase-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin: 2.5rem 0 1rem;
+            padding-left: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .phase-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border2), transparent)
+        }
+
+        /* WEEK CARD */
+        .week-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            position: relative
+        }
+
+        .week-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            border-radius: 16px 0 0 16px;
+            background: var(--accent-color, var(--green));
+            opacity: 0;
+            transition: opacity 0.3s
+        }
+
+        .week-card:hover::before {
+            opacity: 1
+        }
+
+        .week-card:hover {
+            border-color: var(--border2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4)
+        }
+
+        .week-card.locked {
+            opacity: 0.5;
+            pointer-events: none
+        }
+
+        .week-card.locked .week-header {
+            cursor: not-allowed
+        }
+
+        .week-card.unlocked-anim {
+            animation: unlockFlash 0.8s ease
+        }
+
+        @keyframes unlockFlash {
+            0% {
+                box-shadow: 0 0 0 0 var(--green);
+            }
+
+            50% {
+                box-shadow: 0 0 40px 8px var(--green-dim);
+            }
+
+            100% {
+                box-shadow: none
+            }
+        }
+
+        /* LOCK BADGE */
+        .lock-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            background: var(--bg3);
+            border: 1px solid var(--border2);
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 8px
+        }
+
+        .lock-badge.cooldown {
+            color: var(--amber);
+            border-color: var(--amber-dim)
+        }
+
+        .cooldown-timer {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--amber);
+            margin-left: 6px
+        }
+
+        .week-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            cursor: pointer;
+            user-select: none
+        }
+
+        .week-header:hover {
+            background: var(--bg3)
+        }
+
+        .week-num {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            letter-spacing: 0.05em
+        }
+
+        .week-title {
+            font-size: 14px;
+            font-weight: 600;
+            flex: 1;
+            letter-spacing: -0.01em
+        }
+
+        .week-count {
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: var(--muted);
+            white-space: nowrap
+        }
+
+        .chevron {
+            font-size: 11px;
+            color: var(--muted);
+            transition: transform 0.3s cubic-bezier(.4, 0, .2, 1);
+            flex-shrink: 0
+        }
+
+        .chevron.open {
+            transform: rotate(180deg)
+        }
+
+        .mini-bar {
+            height: 2px;
+            background: var(--border);
+            margin: 0 18px
+        }
+
+        .mini-bar-fill {
+            height: 100%;
+            border-radius: 1px;
+            transition: width 0.4s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        /* WEEK BODY */
+        .week-body {
+            display: none;
+            padding: 4px 18px 18px
+        }
+
+        .week-body.open {
+            display: block
+        }
+
+        /* SECTION LABELS */
+        .section-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 14px 0 8px
+        }
+
+        .section-label.learning {
+            color: var(--blue);
+            background: var(--blue-bg);
+            border: 1px solid var(--blue-dim)
+        }
+
+        .section-label.parallel {
+            color: var(--teal);
+            background: var(--teal-bg, #0a2420);
+            border: 1px solid var(--teal-dim)
+        }
+
+        /* TASKS */
+        .task-list {
+            list-style: none
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s
+        }
+
+        .task-item:last-child {
+            border-bottom: none
+        }
+
+        .task-item:hover {
+            background: transparent
+        }
+
+        .task-checkbox-wrap {
+            position: relative;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px
+        }
+
+        .task-checkbox-wrap input[type=checkbox] {
+            position: absolute;
+            opacity: 0;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            z-index: 2;
+            margin: 0
+        }
+
+        .custom-check {
+            width: 18px;
+            height: 18px;
+            border-radius: 5px;
+            border: 2px solid var(--border2);
+            background: var(--bg3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            pointer-events: none
+        }
+
+        .task-checkbox-wrap input:checked~.custom-check {
+            background: var(--accent, var(--green));
+            border-color: var(--accent, var(--green));
+            box-shadow: 0 0 10px var(--accent, var(--green))
+        }
+
+        .custom-check svg {
+            opacity: 0;
+            transition: opacity 0.15s
+        }
+
+        .task-checkbox-wrap input:checked~.custom-check svg {
+            opacity: 1
+        }
+
+        .task-content {
+            flex: 1
+        }
+
+        .task-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4
+        }
+
+        .task-desc {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 3px;
+            line-height: 1.5;
+            font-family: 'Space Mono', monospace
+        }
+
+        .task-item.done .task-title {
+            text-decoration: line-through;
+            color: var(--muted)
+        }
+
+        .task-item.done .task-desc {
+            opacity: 0.4
+        }
+
+        .task-item.done .custom-check {
+            opacity: 0.7
+        }
+
+        /* COMPLETE BADGE */
+        .week-complete-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--green);
+            background: var(--green-bg);
+            border: 1px solid var(--green-dim);
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-left: 8px;
+            box-shadow: 0 0 10px var(--green-dim)
+        }
+
+        /* COOLDOWN BANNER */
+        .cooldown-banner {
+            background: linear-gradient(135deg, #1a1500, #0a0a00);
+            border: 1px solid var(--amber-dim);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: var(--amber)
+        }
+
+        .cooldown-banner .icon {
+            font-size: 1.2rem
+        }
+
+        /* UNLOCK BANNER */
+        .unlock-banner {
+            background: linear-gradient(135deg, #001a10, #001a10);
+            border: 1px solid var(--green-dim);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: var(--green)
+        }
+
+        /* CONFETTI */
+        #confetti-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--bg3);
+            border: 1px solid var(--border2);
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            z-index: 9998;
+            transition: transform 0.4s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5)
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0)
+        }
+
+        .toast.green {
+            border-color: var(--green-dim);
+            color: var(--green)
+        }
+
+        .toast.amber {
+            border-color: var(--amber-dim);
+            color: var(--amber)
+        }
+
+        .toast.red {
+            border-color: var(--red-dim);
+            color: var(--red)
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:600px) {
+            .hero {
+                padding: 2rem 1rem 1.5rem
+            }
+
+            .hero h1 {
+                font-size: 1.6rem
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1rem;
+                gap: 8px
+            }
+
+            .phases {
+                padding: 1rem 1rem 5rem
+            }
+
+            .overall-bar-wrap {
+                padding: 0 1rem 1rem
+            }
+
+            .streak-bar {
+                padding: 1rem
+            }
+
+            .streak-dots {
+                display: none
+            }
+
+            .quote-banner {
+                margin: 1rem
+            }
+        }
+
+        /* GLOW ANIMATIONS */
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                opacity: 0.6
+            }
+
+            50% {
+                opacity: 1
+            }
+        }
+
+        .stat-num {
+            animation: glow-pulse 3s ease-in-out infinite
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="hero">
+        <div class="hero-eyebrow">// system: friday v2.0 — upgraded</div>
+        <h1>HJ's <span class="accent">24-Week</span> Dev Tracker</h1>
+        <p>Execute. Grind. Ship. No excuses.</p>
+    </div>
+
+    <div class="quote-banner" id="quote-banner">
+        <div class="quote-label">// friday.quote — day <span id="quote-day">0</span></div>
+        <div class="quote-text" id="quote-text">Loading today's wisdom...</div>
+        <div class="quote-sub">— FRIDAY</div>
+    </div>
+
+    <div class="streak-bar">
+        <div class="streak-display">
+            <div class="streak-fire">🔥</div>
+            <div class="streak-num" id="streak-num">0</div>
+            <div class="streak-label">
+                <span>Day Streak</span>
+                <span id="streak-sub" style="font-size:11px">Check in daily to keep it going</span>
+            </div>
+        </div>
+        <div class="streak-dots" id="streak-dots"></div>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-num" id="s-done">0</div>
+            <div class="stat-label">Tasks Done</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num" id="s-weeks">0</div>
+            <div class="stat-label">Weeks Active</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num" id="s-pct">0%</div>
+            <div class="stat-label">Complete</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num" id="s-locked">0</div>
+            <div class="stat-label">Weeks Locked</div>
+        </div>
+    </div>
+
+    <div class="overall-bar-wrap">
+        <div class="overall-bar-label">
+            <span>Overall Progress</span>
+            <span id="overall-pct-label"
+                style="font-family:'Space Mono',monospace;font-size:11px;color:var(--muted)">0%</span>
+        </div>
+        <div class="bar">
+            <div class="bar-fill" id="overall-bar" style="width:0%"></div>
+            <div class="bar-shine"></div>
+        </div>
+    </div>
+
+    <div class="phases" id="root"></div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ─── QUOTES ───────────────────────────────────────────────────────────────
+        const FRIDAY_QUOTES = [
+            "Coffee is optional. Shipping code is not. Get. Moving.",
+            "You know what's worse than a bug? Not writing code because you're 'not ready'. Open the editor.",
+            "Reminder: your future self is either thanking you or cursing you right now. Make the right call.",
+            "If you skip today, I won't judge you. I'll just update your 'Days Wasted' counter. No pressure.",
+            "H. I've calculated a 0% chance of success if you don't start. The math is brutal. So is failure.",
+            "Every senior dev you admire was once googling 'how to center a div'. Start. Stay.",
+            "The code doesn't care about your feelings. Neither does the deadline. Let's go.",
+            "Plot twist: the imposter syndrome doesn't go away. You just get better at coding anyway.",
+            "Today's tasks won't do themselves. Believe me, I tried delegating. It didn't work.",
+            "You're not behind. You're exactly where consistent effort leads from here. Start now.",
+            "Three things never lie: your GitHub contributions, your commit history, and me. Ship something.",
+            "Error 404: Excuses not found. Reason: I deleted them. You're welcome.",
+            "Every checkbox you tick today is a future interviewer saying 'we'd like to offer you...'",
+            "Small reminder: sleeping on knowledge is fine. Sleeping on ACTION is expensive.",
+            "I don't do pep talks. I do facts. Fact: You haven't opened VS Code yet. Fix that.",
+            "Weak weeks don't compound. Strong weeks do. Which one is this?",
+            "You're not just learning to code. You're engineering a different life. Act like it.",
+            "Recruiter scrolling LinkedIn right now: your profile either stops them or doesn't. Work on it.",
+            "Fun fact: the best time to start was 6 months ago. The second best time is the next 5 seconds.",
+            "If debugging is the process of removing bugs, then coding is the process of putting them in. Enjoy.",
+            "Your GitHub profile is either a green garden or a desert. Water it daily.",
+            "I've seen your determination. Now the codebase needs to see it too.",
+            "Day by day. Week by week. That's how 24 weeks becomes a career.",
+        ];
+
+        // ─── DATA ──────────────────────────────────────────────────────────────────
+        const phases = [
+            {
+                label: "Phase 1 — HTML & CSS Foundation", color: "#00ffaa", bg: "#001a0f",
+                weeks: [
+                    {
+                        w: 1, title: "HTML & CSS Revision", tasks: [
+                            { title: "Master HTML semantic structure", desc: "Learn and practice semantic tags: header, nav, main, section, article, aside, footer. Understand why semantic HTML matters for SEO and accessibility." },
+                            { title: "CSS selectors & box model deep dive", desc: "Understand every selector type — class, id, attribute, pseudo-class (:hover, :first-child), pseudo-element (::before, ::after). Master the box model." },
+                            { title: "Flexbox from scratch", desc: "Learn flex-direction, justify-content, align-items, flex-wrap, flex-grow, flex-shrink, gap. Build 3 different layouts using only flexbox." },
+                            { title: "CSS Grid from scratch", desc: "Learn grid-template-columns, grid-template-rows, grid-column, grid-row, gap. Build a magazine-style layout. Understand when to use Grid vs Flexbox." },
+                            { title: "Responsive design basics", desc: "Learn media queries — @media (max-width: 768px). Understand mobile-first vs desktop-first. Practice making a 3-column layout collapse to 1 column on mobile." },
+                            { title: "Set up VS Code and GitHub account", desc: "Install VS Code. Install extensions: Live Server, Prettier, Auto Rename Tag. Create GitHub account. Learn git init, git add, git commit, git push." },
+                        ], parallel: [
+                            { title: "Create base project structure", desc: "Create a clean project folder with index.html and style.css. Set up a proper HTML boilerplate. This is your foundation — treat it like a real project." },
+                            { title: "Build semantic layout skeleton", desc: "Create a full page structure using semantic tags. Do NOT use div everywhere. Structure the page like a real website even if it's empty." },
+                            { title: "Build navigation using Flexbox", desc: "Create a horizontal navbar using Flexbox. Align logo on left and links on right. Add hover effects using pseudo-classes." },
+                            { title: "Create multi-section layout using Grid", desc: "Build at least 3 sections using CSS Grid. Practice grid-template-columns and gap." },
+                            { title: "Make layout responsive", desc: "Use media queries to make layout mobile-friendly. Test using Chrome DevTools." },
+                            { title: "Push base layout to GitHub", desc: "Initialize Git repository. Commit your project properly with message 'feat: base layout setup'. Push to GitHub." },
+                        ]
+                    },
+                    {
+                        w: 2, title: "Dad's Shop Website — Complete", tasks: [
+                            { title: "Plan the website structure on paper first", desc: "Before writing a single line of code, sketch the layout on paper. Decide: How many pages? What sections? Planning before coding is a professional habit." },
+                            { title: "Build the header and navigation", desc: "Create a sticky navbar with the shop name and nav links. Use Flexbox for the layout. Make it collapse properly on mobile." },
+                            { title: "Build the hero section", desc: "Create a full-width hero with a headline, subtext, and a call-to-action button. Practice using background images or gradients. Make it responsive." },
+                            { title: "Build the services and about sections", desc: "Create a services grid showing what the shop sells. Build an about section with some text about the shop's history. Use CSS Grid or Flexbox." },
+                            { title: "Build the contact section and footer", desc: "Create a contact section with phone, address, and email. Build a clean footer. Style everything consistently." },
+                            { title: "Make fully responsive and push to GitHub", desc: "Test on mobile using Chrome DevTools. Fix any layout issues. Push the complete project with a proper README." },
+                        ], parallel: [
+                            { title: "Convert base layout into real website", desc: "Take your Week 1 structure and turn it into a real business website." },
+                            { title: "Build hero section with CTA", desc: "Create a strong hero section with heading, subtext, and a call-to-action button." },
+                            { title: "Build services section using Grid", desc: "Create a grid layout showing services/products with consistent spacing." },
+                            { title: "Add about section with real content", desc: "Write a small description about the business. Focus on layout and readability." },
+                            { title: "Build contact section and footer", desc: "Add contact details like phone, address, email. Build a simple footer." },
+                            { title: "Polish UI and improve responsiveness", desc: "Improve colors, spacing, font sizes. Make the site look like a real business website." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 2 — JavaScript Foundations", color: "#4488ff", bg: "#000d1f",
+                weeks: [
+                    {
+                        w: 3, title: "JS Basics — Variables, Loops, Functions", tasks: [
+                            { title: "Variables, data types and operators", desc: "Understand var vs let vs const. Learn all data types: string, number, boolean, null, undefined, object, array. Practice all operators." },
+                            { title: "Conditionals — if, else, switch", desc: "Write if/else statements. Learn ternary operator. Learn switch statements. Practice: write a program that takes a score and returns a grade." },
+                            { title: "Loops — for, while, forEach", desc: "Learn for loops, while loops, and do-while. Understand break and continue. Practice FizzBuzz." },
+                            { title: "Functions — declaration, expression, arrow", desc: "Understand function types. Learn parameters, return values, scope. Write 5 small utility functions." },
+                            { title: "Build a number guessing game", desc: "Build a complete number guessing game in the browser. Generate random number 1-100. Give feedback: too high, too low, correct. Push to GitHub." },
+                        ], parallel: [
+                            { title: "Add JavaScript to existing project", desc: "Link a script.js file. Use console.log to verify connection between HTML and JS." },
+                            { title: "Add interactive button behavior", desc: "Create buttons that respond to clicks. Use addEventListener instead of inline JS." },
+                            { title: "Use conditionals for UI changes", desc: "Implement if/else logic to change UI based on conditions." },
+                            { title: "Use loops to render content", desc: "Create an array of items and use a loop to display them dynamically in HTML." },
+                            { title: "Create reusable functions", desc: "Write small utility functions. Use them instead of repeating code." },
+                            { title: "Push JS-enhanced version to GitHub", desc: "Commit your changes with meaningful message 'feat: add JS interactivity'. Push." },
+                        ]
+                    },
+                    {
+                        w: 4, title: "Arrays, Objects & Calculator Project", tasks: [
+                            { title: "Arrays — creation, access, methods", desc: "Learn array creation, indexing, length. Master array methods: push, pop, shift, unshift, splice, slice, indexOf, includes, join, reverse, sort." },
+                            { title: "Objects — creation, access, methods", desc: "Learn object literal syntax. Understand dot notation vs bracket notation. Learn to add, update, delete properties." },
+                            { title: "Combining arrays and objects", desc: "Practice working with arrays of objects. Create an array of 5 product objects. Write functions to filter by category and sort by price." },
+                            { title: "Build a calculator", desc: "Build a fully working calculator with HTML buttons and CSS styling. Handle edge cases: dividing by zero, decimal points, clearing. Push to GitHub." },
+                            { title: "3 total projects on GitHub — verify", desc: "Check your GitHub: number guessing game, dad's shop website, and calculator should all be there with READMEs." },
+                        ], parallel: [
+                            { title: "Refactor static content into objects", desc: "Convert your existing content into JavaScript objects. Store structured data instead of hardcoded HTML." },
+                            { title: "Render UI using arrays of objects", desc: "Loop through arrays of objects and dynamically generate HTML." },
+                            { title: "Add filtering or sorting feature", desc: "Implement a simple filter or sort functionality." },
+                            { title: "Improve UI logic using JavaScript", desc: "Add dynamic behavior like toggling sections, showing/hiding elements." },
+                            { title: "Optimize and clean your code", desc: "Remove repeated code. Use functions and proper structure. Improve naming." },
+                            { title: "Push structured and optimized version", desc: "Commit refactored code. Push to GitHub and review changes." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 3 — JavaScript Intermediate", color: "#4488ff", bg: "#000d1f",
+                weeks: [
+                    {
+                        w: 5, title: "DOM Manipulation & Event Listeners", tasks: [
+                            { title: "Understanding the DOM", desc: "Learn what the Document Object Model is. Practice using document.querySelector, querySelectorAll, getElementById. Console.log DOM elements." },
+                            { title: "Manipulating DOM elements", desc: "Learn to change text, styles, classes. Create and append new elements: createElement, appendChild." },
+                            { title: "Event listeners in depth", desc: "Learn addEventListener for: click, keydown, input, submit. Understand event.target, event.preventDefault." },
+                            { title: "Build a to-do list app", desc: "Build a complete to-do list app. Features: add tasks, mark complete, delete, show count. Use DOM manipulation — no frameworks. Push to GitHub." },
+                            { title: "Push to GitHub with detailed README", desc: "Write a README explaining what the app does, how to use it, and what you learned. Add a screenshot." },
+                        ], parallel: [
+                            { title: "Convert static UI into interactive DOM structure", desc: "Control elements using JavaScript. Select elements using querySelector." },
+                            { title: "Add dynamic content updates", desc: "Use JavaScript to change text, styles, and content dynamically." },
+                            { title: "Implement event-driven interactions", desc: "Add event listeners for clicks, inputs, and hovers." },
+                            { title: "Build a reusable UI component (modal or dropdown)", desc: "Create a modal popup or dropdown menu using pure JavaScript." },
+                            { title: "Add task-based feature (mini to-do or input system)", desc: "Add a small interactive feature like a to-do input or form." },
+                            { title: "Push DOM-interactive version to GitHub", desc: "Commit all DOM-related changes with message 'feat: add DOM interactivity'." },
+                        ]
+                    },
+                    {
+                        w: 6, title: "ES6+ & Local Storage", tasks: [
+                            { title: "Arrow functions and template literals", desc: "Understand arrow function syntax. Master template literals. Rewrite your previous functions using arrow syntax." },
+                            { title: "Destructuring and spread operator", desc: "Learn array and object destructuring. Learn spread operator and rest parameters. Practice in small exercises." },
+                            { title: "Local Storage — saving data in browser", desc: "Learn localStorage.setItem, getItem, removeItem. Understand JSON.stringify and JSON.parse to store objects." },
+                            { title: "Add local storage to to-do list app", desc: "Update your to-do list app to save tasks to localStorage. When the page reloads, tasks should still be there." },
+                            { title: "Push updated app to GitHub", desc: "Push the updated to-do list app with localStorage. Update the README to mention the persistence feature." },
+                        ], parallel: [
+                            { title: "Convert dynamic features to persistent state", desc: "Store interactive feature data in localStorage instead of temporary variables." },
+                            { title: "Save user data to localStorage", desc: "Use localStorage.setItem and JSON.stringify to store arrays/objects." },
+                            { title: "Load data on page refresh", desc: "Use localStorage.getItem and JSON.parse to load saved data when page reloads." },
+                            { title: "Update UI when data changes", desc: "Whenever user adds/removes/updates something, update both UI and localStorage." },
+                            { title: "Handle delete and update actions", desc: "Allow users to delete or modify stored data. Reflect changes instantly." },
+                            { title: "Push persistent app version", desc: "Commit with message 'feat: add localStorage persistence'. Push and test reload behavior." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 4 — JavaScript Advanced Basics", color: "#aa66ff", bg: "#1a0d33",
+                weeks: [
+                    {
+                        w: 7, title: "Promises, Async/Await & Fetch API", tasks: [
+                            { title: "Understanding asynchronous JavaScript", desc: "Learn why JavaScript is asynchronous. Understand the event loop. Learn callbacks and why callback hell is a problem. Understand why Promises were invented." },
+                            { title: "Promises — then, catch, finally", desc: "Learn to create a Promise. Learn .then() for success, .catch() for errors, .finally() for cleanup. Practice with simple examples." },
+                            { title: "Async/Await — the clean way", desc: "Learn how async/await is syntactic sugar over Promises. Use await to pause execution. Wrap in try/catch. Rewrite Promise examples using async/await." },
+                            { title: "Fetch API — calling real APIs", desc: "Learn the Fetch API. Understand HTTP requests — GET, POST, headers. Practice with a free public API like JSONPlaceholder." },
+                            { title: "Start building the weather app", desc: "Start your weather app project. Build the HTML/CSS structure. Get an API key from OpenWeatherMap. Write the fetch call. Display city, temperature, description." },
+                        ], parallel: [
+                            { title: "Integrate external API into project", desc: "Choose an API. Use fetch() to get data and verify it in console before displaying." },
+                            { title: "Display API data in UI", desc: "Render fetched data dynamically into your existing layout." },
+                            { title: "Handle loading state", desc: "Show a loading message or spinner while data is being fetched." },
+                            { title: "Handle API errors gracefully", desc: "Use try/catch or .catch to show user-friendly error messages." },
+                            { title: "Add search functionality using API", desc: "Allow user to input something (like city name) and fetch data based on that input." },
+                            { title: "Push API-integrated version", desc: "Commit with message 'feat: integrate API data'. Push and test edge cases." },
+                        ]
+                    },
+                    {
+                        w: 8, title: "Weather App Complete & Array Methods", tasks: [
+                            { title: "Complete the weather app with full features", desc: "Add features: search by city, temperature in Celsius, humidity and wind speed, weather icon, handle errors. Make it look good." },
+                            { title: "Master map, filter, reduce", desc: "Map: transform each element. Filter: keep only elements matching condition. Reduce: boil array to single value. Practice on arrays of numbers and objects." },
+                            { title: "Error handling — try, catch, throw", desc: "Learn try/catch/finally for sync and async code. Learn throw new Error(). Add proper error handling to your weather app." },
+                            { title: "Push final weather app to GitHub", desc: "Write a clear README with screenshot and instructions for getting an API key." },
+                            { title: "Verify: 5 projects on GitHub", desc: "Count your GitHub repos: shop website, guessing game, calculator, to-do list, weather app. At least 5 real projects." },
+                        ], parallel: [
+                            { title: "Enhance UI with better API presentation", desc: "Improve how API data is displayed. Add proper layout, spacing, and structure." },
+                            { title: "Add filtering and sorting", desc: "Allow users to filter or sort API data." },
+                            { title: "Improve error and edge case handling", desc: "Handle cases like empty results, wrong input, or network failure." },
+                            { title: "Add dynamic visuals or icons", desc: "Enhance UI using icons, emojis, or images based on API data." },
+                            { title: "Optimize performance and structure", desc: "Refactor code. Separate concerns. Avoid repeated fetch calls." },
+                            { title: "Push final API project", desc: "Commit with message 'feat: complete API project'. Solid portfolio piece." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 5 — React Basics", color: "#ff6633", bg: "#2a1305",
+                weeks: [
+                    {
+                        w: 9, title: "React Fundamentals", tasks: [
+                            { title: "Understand what React is and why it exists", desc: "Learn the problem React solves. Understand the Virtual DOM. Learn what JSX is. Understand component-based architecture." },
+                            { title: "Components and Props", desc: "Learn to create functional components. Understand props — passing data from parent to child. Create a Card component that accepts props." },
+                            { title: "useState — managing local state", desc: "Learn the useState hook. Understand that changing state triggers a re-render. Build a counter with increment, decrement, and reset." },
+                            { title: "useEffect — side effects", desc: "Learn the useEffect hook and when to use it. Understand the dependency array. Use useEffect to fetch data when a component mounts." },
+                            { title: "Set up first React project with Vite", desc: "Install Node.js. Use Vite to create React project. Understand the folder structure. Run the dev server with npm run dev." },
+                        ], parallel: [
+                            { title: "Set up React project using Vite", desc: "Initialize a React app. Understand folder structure. Clean unnecessary boilerplate." },
+                            { title: "Break UI into components", desc: "Convert your existing UI into reusable React components (Navbar, Card, Section)." },
+                            { title: "Pass data using props", desc: "Send data from parent to child components. Replace hardcoded values with props." },
+                            { title: "Implement useState for dynamic UI", desc: "Use useState to manage component data." },
+                            { title: "Rebuild a feature in React", desc: "Take one feature and rebuild it fully using React." },
+                            { title: "Push React base project", desc: "Commit with message 'feat: React base setup'. Push to GitHub." },
+                        ]
+                    },
+                    {
+                        w: 10, title: "Portfolio Website Rebuilt in React", tasks: [
+                            { title: "React Router — multiple pages", desc: "Install React Router. Learn BrowserRouter, Routes, Route, Link, NavLink. Create multiple pages: Home, About, Projects, Contact." },
+                            { title: "Build the Home and About pages", desc: "Create a professional Home page. Build an About page with your background — include your business experience." },
+                            { title: "Build the Projects page", desc: "Create a Projects page with reusable ProjectCard components. Map over a projects array to render them." },
+                            { title: "Build the Contact page and deploy on Vercel", desc: "Create a Contact page. Deploy your React portfolio on Vercel. Your portfolio is now live." },
+                            { title: "Push to GitHub and verify live URL works", desc: "Push all code. Open your Vercel URL on your phone. This is the link you'll put on your resume." },
+                        ], parallel: [
+                            { title: "Implement multi-page navigation", desc: "Use React Router to create multiple pages." },
+                            { title: "Build Home and About pages", desc: "Create clean and professional pages with proper layout and content." },
+                            { title: "Build Projects page dynamically", desc: "Render your projects using an array of objects and map(). Reusable component." },
+                            { title: "Build Contact page", desc: "Add contact details and simple form layout." },
+                            { title: "Make portfolio responsive and polished", desc: "Ensure mobile responsiveness. Improve spacing, typography, and visuals." },
+                            { title: "Deploy portfolio on Vercel", desc: "Deploy your React app. Test on mobile. This is your public portfolio." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 6 — React Intermediate", color: "#ff6633", bg: "#2a1305",
+                weeks: [
+                    {
+                        w: 11, title: "Context API & Custom Hooks", tasks: [
+                            { title: "Context API — global state management", desc: "Learn why prop drilling is a problem. Understand Context API: createContext, Provider, useContext. Create a theme context for dark/light mode toggle." },
+                            { title: "Custom hooks — reusable logic", desc: "Learn that custom hooks are just functions that use other hooks. Create: useFetch, useLocalStorage, useDebounce." },
+                            { title: "API calls inside React with loading states", desc: "Learn to properly manage API calls in React: loading state, success state, error state. Handle all three cleanly." },
+                            { title: "Tailwind CSS basics", desc: "Install Tailwind CSS. Learn utility-first CSS. Practice common classes. Restyle one of your existing components." },
+                            { title: "Start e-commerce product listing UI", desc: "Build a product listing page. Plan: display grid of cards, filter by category, sort by price, search by name. Use FakeStoreAPI." },
+                        ], parallel: [
+                            { title: "Refactor state into Context API", desc: "Move prop-drilled data into global Context. Wrap your app with Provider." },
+                            { title: "Create reusable custom hooks", desc: "Extract repeated logic into custom hooks like useFetch or useLocalStorage." },
+                            { title: "Implement API calls with loading and error states", desc: "Fetch data inside React. Manage three states: loading, success, error." },
+                            { title: "Improve component structure and separation", desc: "Break large components into smaller reusable ones." },
+                            { title: "Integrate Tailwind CSS for styling", desc: "Install Tailwind and refactor at least one section using utility classes." },
+                            { title: "Push improved React architecture", desc: "Commit with message 'refactor: add context and custom hooks'." },
+                        ]
+                    },
+                    {
+                        w: 12, title: "E-commerce UI Complete", tasks: [
+                            { title: "Complete filtering and sorting features", desc: "Implement category filter buttons. Add a price sort dropdown. Use useState for all filter state." },
+                            { title: "Add search functionality", desc: "Add a search input that filters products by name. Use useDebounce custom hook. Show 'no results' message." },
+                            { title: "Add a cart feature", desc: "Build a simple cart: add to cart, cart icon showing count, cart page with total price. Use Context API to share cart state." },
+                            { title: "Make fully responsive with Tailwind", desc: "Use Tailwind responsive prefixes: sm:, md:, lg:. Test on Chrome DevTools for multiple screen sizes." },
+                            { title: "Deploy on Vercel and push to GitHub", desc: "Deploy the complete e-commerce UI. Write a README with screenshots. 6+ projects — genuinely impressive." },
+                        ], parallel: [
+                            { title: "Build product listing UI using API", desc: "Fetch product data and display it in a grid layout. Reusable card component." },
+                            { title: "Implement category filtering", desc: "Add buttons/dropdown to filter products. Use state to manage active filters." },
+                            { title: "Add search functionality with debounce", desc: "Create a search input that filters as user types. Use debounce logic." },
+                            { title: "Build cart system using Context API", desc: "Allow users to add/remove items from cart. Store cart globally." },
+                            { title: "Create cart page with total calculation", desc: "Display selected items and calculate total price dynamically." },
+                            { title: "Deploy complete React e-commerce UI", desc: "Deploy on Vercel. This becomes a major portfolio project." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 7 — Node.js & Express (Backend)", color: "#00ffaa", bg: "#001a0f",
+                weeks: [
+                    {
+                        w: 13, title: "Node.js & Express Fundamentals", tasks: [
+                            { title: "Understand what backend development is", desc: "Learn the difference between frontend and backend. Understand the client-server model. Learn why we need a backend: databases, auth, business logic." },
+                            { title: "Node.js core concepts", desc: "Understand that Node.js is JavaScript running on a server. Learn the module system: require, module.exports. Create a simple HTTP server." },
+                            { title: "Express.js — routes and middleware", desc: "Install Express. Create a basic server. Learn routing: app.get, app.post, app.put, app.delete. Understand middleware." },
+                            { title: "REST API design principles", desc: "Understand RESTful API conventions. Learn HTTP status codes: 200, 201, 400, 404, 500. Learn params, query strings, and request body." },
+                            { title: "Build a simple REST API for a to-do list", desc: "Build a to-do API with GET, POST, PUT, DELETE endpoints. Store data in memory. Test using Postman." },
+                        ], parallel: [
+                            { title: "Set up Node.js backend project", desc: "Initialize a Node project. Create a basic server file and structure folders." },
+                            { title: "Create Express server and routes", desc: "Install Express and create basic routes. Return simple JSON responses." },
+                            { title: "Design REST API structure", desc: "Plan endpoints logically. Follow REST naming conventions." },
+                            { title: "Implement CRUD operations in memory", desc: "Use an array to simulate database. Add create, read, update, delete." },
+                            { title: "Test API using Postman or Thunder Client", desc: "Send requests to all endpoints and verify responses." },
+                            { title: "Push backend base project", desc: "Commit with 'feat: basic Express API'. Push." },
+                        ]
+                    },
+                    {
+                        w: 14, title: "REST API Complete & Testing", tasks: [
+                            { title: "Add proper error handling to your API", desc: "Add validation — check if required fields are missing. Return proper error messages. Add global error handling middleware." },
+                            { title: "Learn Postman or Thunder Client", desc: "Test all your API endpoints. Save your API calls as a collection. This is how real developers test APIs." },
+                            { title: "Learn CORS — why it matters", desc: "Understand CORS. Install cors package. Add CORS middleware. Try connecting your React frontend to your Express backend." },
+                            { title: "Connect React frontend to Express backend", desc: "Run Express on port 5000 and React on port 5173. Make a fetch call from React. Display backend data in your React frontend." },
+                            { title: "Push to GitHub with clear documentation", desc: "Write a README explaining: what the API does, how to run it, all available endpoints with examples." },
+                        ], parallel: [
+                            { title: "Add validation and error handling", desc: "Validate incoming data. Return proper error messages and status codes." },
+                            { title: "Implement middleware", desc: "Create middleware functions for logging, validation, or error handling." },
+                            { title: "Enable CORS and connect frontend", desc: "Install and configure CORS. Connect your React frontend to backend." },
+                            { title: "Refactor API into clean structure", desc: "Separate routes, controllers, and logic into different files." },
+                            { title: "Test full frontend-backend flow", desc: "Perform actions from frontend and verify backend processes them correctly." },
+                            { title: "Push connected full-stack base", desc: "Commit with 'feat: connect frontend and backend'." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 8 — MongoDB & Full Stack", color: "#00ffaa", bg: "#001a0f",
+                weeks: [
+                    {
+                        w: 15, title: "MongoDB & Full Stack Connection", tasks: [
+                            { title: "MongoDB basics — documents and collections", desc: "Understand MongoDB stores data as JSON-like documents. Learn: database, collection, document, field. Create a free MongoDB Atlas account. Use MongoDB Compass." },
+                            { title: "Mongoose — elegant MongoDB for Node", desc: "Install Mongoose. Learn to connect to MongoDB Atlas. Create a Schema and Model. Learn CRUD with Mongoose." },
+                            { title: "Replace in-memory array with MongoDB", desc: "Update your to-do API to use MongoDB instead of the in-memory array. Test all endpoints — data should persist after restarting." },
+                            { title: "Build full stack to-do app — all three layers", desc: "Connect everything: React frontend → Express backend → MongoDB database. All three layers working together." },
+                            { title: "Add authentication basics — JWT", desc: "Learn what JSON Web Tokens are. Add user registration and login endpoints. Hash passwords with bcrypt. Add protected routes." },
+                        ], parallel: [
+                            { title: "Set up MongoDB Atlas and connect", desc: "Create a MongoDB Atlas cluster. Connect your backend using Mongoose." },
+                            { title: "Create schema and models", desc: "Define schemas for your data. Create models using Mongoose." },
+                            { title: "Replace in-memory data with database", desc: "Refactor your API to use MongoDB instead of arrays." },
+                            { title: "Test database persistence", desc: "Add data, restart server, and verify data still exists." },
+                            { title: "Update frontend to use real backend", desc: "Ensure your React app communicates with backend endpoints using MongoDB." },
+                            { title: "Push database-integrated project", desc: "Commit with 'feat: integrate MongoDB'." },
+                        ]
+                    },
+                    {
+                        w: 16, title: "Full Stack App Deployed Live", tasks: [
+                            { title: "Add environment variables for security", desc: "Learn .env files and the dotenv package. Move sensitive data to environment variables. Add .env to .gitignore." },
+                            { title: "Deploy backend on Render (free)", desc: "Create a free account on Render.com. Connect your GitHub backend repo. Add environment variables. Deploy the Express API." },
+                            { title: "Deploy frontend on Vercel with live API", desc: "Update your React app's API URLs to point to the live Render backend. Add environment variable in Vercel. Deploy." },
+                            { title: "Test everything live from your phone", desc: "Open your Vercel URL on your phone. Register a new account. Add some todos. Refresh — they should still be there." },
+                            { title: "Push everything to GitHub — clean and documented", desc: "Make sure frontend and backend are in separate repos with detailed READMEs with live URLs and screenshots." },
+                        ], parallel: [
+                            { title: "Implement user registration system", desc: "Create endpoint for user signup. Store user data in database. Validate inputs." },
+                            { title: "Add login system with JWT", desc: "Implement login endpoint. Verify credentials and generate JWT token." },
+                            { title: "Secure passwords using bcrypt", desc: "Hash passwords before storing in database. Never store plain text passwords." },
+                            { title: "Protect routes using authentication middleware", desc: "Create middleware to verify JWT token. Restrict access based on authentication." },
+                            { title: "Deploy backend and frontend", desc: "Deploy backend on Render and frontend on Vercel. Connect both." },
+                            { title: "Test full stack app live", desc: "Register user, login, perform actions, refresh — everything should persist." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 9 — DSA Basics", color: "#ffcc00", bg: "#2a1f05",
+                weeks: [
+                    {
+                        w: 17, title: "Arrays, Strings & Big O Notation", tasks: [
+                            { title: "Big O Notation — understand time complexity", desc: "Learn what Big O means. Understand: O(1), O(n), O(n²), O(log n). Learn to identify time complexity of code." },
+                            { title: "Array problems on LeetCode — 2 per day", desc: "Create a LeetCode account. Start with easy array problems: Two Sum, Best Time to Buy and Sell Stock, Contains Duplicate, Maximum Subarray." },
+                            { title: "String problems on LeetCode — 2 per day", desc: "Solve easy string problems: Valid Palindrome, Reverse String, Valid Anagram, First Unique Character." },
+                            { title: "Learn basic sorting algorithms", desc: "Implement Bubble Sort, Selection Sort, and Insertion Sort from scratch. Understand their time complexities." },
+                            { title: "Practice explaining your solutions out loud", desc: "After solving a problem, explain your solution out loud. Say what approach you used, why, its time and space complexity." },
+                        ], parallel: [
+                            { title: "Apply DSA logic inside your project", desc: "Re-implement search, filtering, sorting using optimized logic instead of naive loops." },
+                            { title: "Optimize search and filter performance", desc: "Refactor any filtering or searching features using efficient methods." },
+                            { title: "Refactor repeated logic into reusable functions", desc: "Identify duplicate logic and extract them into reusable utility functions." },
+                            { title: "Handle edge cases properly", desc: "Test your app with unexpected inputs. Ensure your logic doesn't break." },
+                            { title: "Improve code readability and structure", desc: "Rename variables properly, organize functions logically, remove unnecessary code." },
+                            { title: "Push optimized version", desc: "Commit with 'refactor: optimize logic and performance'." },
+                        ]
+                    },
+                    {
+                        w: 18, title: "Linked Lists & Consistent Practice", tasks: [
+                            { title: "Understand linked lists conceptually", desc: "Learn what a linked list is — nodes with data and a next pointer. Understand singly vs doubly linked list. Draw diagrams on paper first." },
+                            { title: "Implement a linked list from scratch", desc: "Build a LinkedList class with Node class. Implement: append, prepend, delete, print." },
+                            { title: "Solve 2 LeetCode easy problems daily", desc: "Aim for 14+ problems solved this week. Start using the 'blind 75' list — the standard must-solve list for interviews." },
+                            { title: "Review and redo your hardest problems", desc: "Go back to any problem that took more than 45 minutes. Solve it again from scratch without looking at your previous solution." },
+                            { title: "14 or more LeetCode problems solved this week", desc: "Count your total submissions. Aim for 14 minimum — 2 per day. Consistency here matters more than difficulty." },
+                        ], parallel: [
+                            { title: "Implement custom data structure in project", desc: "Use concepts like stacks, queues, or linked lists in a small feature." },
+                            { title: "Refactor data handling logic", desc: "Improve how your app stores and processes data internally." },
+                            { title: "Improve state handling logic", desc: "Refactor how data flows through your app. Make updates predictable." },
+                            { title: "Revisit older features and improve them", desc: "Go back to features from earlier weeks and rewrite with better logic." },
+                            { title: "Explain your implementation out loud", desc: "Practice explaining your logic step-by-step as if in an interview." },
+                            { title: "Push improved structure version", desc: "Commit with 'refactor: improve data structures and logic'." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 10 — AWS Cloud Basics", color: "#00ddcc", bg: "#0a2420",
+                weeks: [
+                    {
+                        w: 19, title: "Cloud Fundamentals & AWS Core Services", tasks: [
+                            { title: "Understand cloud computing fundamentals", desc: "Learn what cloud computing is. Understand IaaS, PaaS, SaaS. Understand public, private, hybrid deployment models." },
+                            { title: "Create free AWS account and explore console", desc: "Sign up for AWS free tier. Explore the Management Console. Understand regions and availability zones. Set up billing alerts." },
+                            { title: "EC2 — virtual servers in the cloud", desc: "Understand what EC2 is. Launch a free tier EC2 instance (t2.micro). Connect via SSH. Install Node.js. Run your Express API." },
+                            { title: "S3 — file storage in the cloud", desc: "Understand what S3 is. Create an S3 bucket. Upload some files. Host a static HTML page on S3." },
+                            { title: "Lambda basics — serverless functions", desc: "Understand serverless computing. Create a simple Lambda function. Test it in the AWS console. Understand Lambda vs EC2." },
+                        ], parallel: [
+                            { title: "Create AWS account and explore console", desc: "Set up AWS free tier account. Understand dashboard, regions, and services. Do not skip billing alerts." },
+                            { title: "Deploy simple backend on EC2", desc: "Launch EC2 instance, connect via SSH, install Node.js, run your backend." },
+                            { title: "Host static files using S3", desc: "Upload a static build of your frontend to S3 and enable static website hosting." },
+                            { title: "Understand deployment flow", desc: "Learn how frontend and backend connect when deployed on cloud infrastructure." },
+                            { title: "Document AWS setup process", desc: "Write steps in README for future reference." },
+                            { title: "Push AWS integration notes", desc: "Commit with 'docs: AWS setup and deployment'." },
+                        ]
+                    },
+                    {
+                        w: 20, title: "Deploy on AWS & AWS Fundamentals", tasks: [
+                            { title: "Deploy your React app on S3 + CloudFront", desc: "Build your React app: npm run build. Upload the build folder to S3. Configure for static website hosting. Set up CloudFront." },
+                            { title: "Learn IAM — users and permissions", desc: "Understand IAM. Learn users, groups, roles, and policies. Create an IAM user with limited permissions. Principle of least privilege." },
+                            { title: "Understand AWS pricing basics", desc: "Learn how AWS charges for EC2, S3, Lambda, CloudFront. Use the AWS pricing calculator. Set up a billing alarm at $5." },
+                            { title: "Earn AWS Cloud Practitioner exam knowledge", desc: "Study the free AWS Skill Builder course. Know your stuff on cloud concepts, core services, security, pricing." },
+                            { title: "Document everything you built on AWS on GitHub", desc: "Create a GitHub repo documenting your AWS learning. Add AWS to your resume skills section." },
+                        ], parallel: [
+                            { title: "Deploy React app using S3", desc: "Build your React app and host it on S3 bucket." },
+                            { title: "Configure CloudFront for CDN", desc: "Set up CloudFront to serve your app globally with better performance." },
+                            { title: "Set up IAM roles and permissions", desc: "Create IAM users with limited permissions. Avoid using root account." },
+                            { title: "Understand cost management", desc: "Set billing alerts and understand how AWS pricing works." },
+                            { title: "Test deployed application thoroughly", desc: "Open your app on different devices and networks." },
+                            { title: "Push final AWS deployment setup", desc: "Commit with 'feat: deploy app on AWS'." },
+                        ]
+                    },
+                ]
+            },
+            {
+                label: "Phase 11 — Job Preparation", color: "#ff4466", bg: "#2a0d0d",
+                weeks: [
+                    {
+                        w: 21, title: "GitHub & LinkedIn Polish", tasks: [
+                            { title: "Make your GitHub profile outstanding", desc: "Add a profile README. Include: who you are, your tech stack, current projects, contact links. Add a professional profile picture." },
+                            { title: "Pin your 4-6 best projects", desc: "Pin your best repos. Each should have: a clear name, good description, and proper topic tags." },
+                            { title: "Write a great README for every project", desc: "Every project needs: title and description, live demo link, screenshots, tech stack, how to run locally, and features list." },
+                            { title: "Build your LinkedIn profile", desc: "Create LinkedIn. Professional photo. Headline: 'Full Stack Web Developer | React | Node.js | AWS'. Connect with 50+ people in tech." },
+                            { title: "Add business experience prominently on LinkedIn", desc: "Add your role at your dad's shop. Description: 'Contributed to scaling family business from 10-20L to 2.5-3CR annual turnover.'" },
+                        ], parallel: [
+                            { title: "Polish GitHub profile", desc: "Add profile README, proper bio, and clean up repositories." },
+                            { title: "Pin best projects", desc: "Select 4-6 strong projects and pin them with proper description and README." },
+                            { title: "Improve project READMEs", desc: "Add clear descriptions, screenshots, tech stack, and setup instructions." },
+                            { title: "Create LinkedIn profile", desc: "Add professional photo, headline, and summary." },
+                            { title: "Add real experience", desc: "Include your business experience and development journey." },
+                            { title: "Push final portfolio updates", desc: "Commit with 'chore: improve portfolio and profiles'." },
+                        ]
+                    },
+                    {
+                        w: 22, title: "Resume & Portfolio Final Polish", tasks: [
+                            { title: "Build a one-page clean resume", desc: "Use an ATS-friendly template. Sections: Contact, Summary, Skills, Projects, Experience, Education. ONE page maximum. Save as PDF." },
+                            { title: "Write a powerful resume summary", desc: "Write 2-3 sentences: 'Full stack web developer with hands-on experience in React, Node.js, MongoDB and AWS. Built and deployed multiple production-ready applications.'" },
+                            { title: "List projects with impact statements", desc: "For each project: name with live link, tech used, 1-2 bullet points describing what it does. Specific is memorable." },
+                            { title: "Polish your portfolio website", desc: "Make sure it loads fast, it's mobile-friendly, projects are clearly listed with live links, about section is professional." },
+                            { title: "Get feedback on resume and portfolio", desc: "Share on LinkedIn or r/cscareerquestions for feedback. Join a dev Discord and ask for portfolio reviews." },
+                        ], parallel: [
+                            { title: "Create one-page resume", desc: "Build a clean, ATS-friendly resume with proper sections and formatting." },
+                            { title: "Write strong summary section", desc: "Highlight your skills, projects, and business experience clearly." },
+                            { title: "Add project descriptions with impact", desc: "Write meaningful bullet points for each project." },
+                            { title: "Polish portfolio website", desc: "Ensure your portfolio is fast, responsive, and visually clean." },
+                            { title: "Add live links and GitHub links", desc: "Make sure all projects have working live demos and repository links." },
+                            { title: "Push final resume and portfolio", desc: "Commit with 'feat: finalize resume and portfolio'." },
+                        ]
+                    },
+                    {
+                        w: 23, title: "Interview Preparation", tasks: [
+                            { title: "Practice answering common HR questions", desc: "Prepare and practice out loud: Tell me about yourself, Why do you want this role, What's your biggest strength and weakness. Record yourself." },
+                            { title: "Practice explaining every project", desc: "For each project: what it does, why you built it, what tech you used, the biggest challenge. Practice until you can explain each in 2-3 minutes." },
+                            { title: "DSA interview practice — 3 problems daily", desc: "Increase LeetCode to 3 problems daily. Focus on easy and medium. Time yourself. Practice the explain-while-solving technique." },
+                            { title: "Learn basic system design concepts", desc: "Learn: what is a CDN, caching, load balancing, database index, horizontal vs vertical scaling. One article per concept is enough." },
+                            { title: "Do 5 mock interviews", desc: "Use Pramp.com or ask a friend. Or record yourself doing a full mock interview: 5 min intro, 20 min coding, 10 min project questions." },
+                        ], parallel: [
+                            { title: "Practice HR questions out loud", desc: "Prepare answers for common questions. Speak clearly and confidently." },
+                            { title: "Explain your projects clearly", desc: "Practice explaining each project in 2-3 minutes with clarity." },
+                            { title: "Solve DSA problems under time limit", desc: "Solve problems while timing yourself. Focus on speed and clarity." },
+                            { title: "Practice thinking out loud", desc: "Explain your thought process while solving. Key for interviews." },
+                            { title: "Do mock interviews", desc: "Simulate real interviews with friends or record yourself." },
+                            { title: "Track weak areas and improve", desc: "Identify weak spots and work on them actively." },
+                        ]
+                    },
+                    {
+                        w: 24, title: "Apply, Interview & Land the Offer", tasks: [
+                            { title: "Apply to minimum 5 jobs per day", desc: "Apply on: LinkedIn Jobs, Naukri.com, Indeed India, Instahyre, AngelList. Target: junior web dev, junior React dev, junior full stack roles in Bangalore." },
+                            { title: "Track every application in a spreadsheet", desc: "Google Sheet: Company, Role, Date Applied, Status, Follow-up Date, Notes. Following up after 1 week is professional." },
+                            { title: "Negotiate your salary — don't undersell yourself", desc: "When you get an offer, don't immediately accept. Research Bangalore fresher developer salaries. Target 35-45k minimum." },
+                            { title: "Prepare for technical interview rounds", desc: "Technical rounds: coding challenge (LeetCode style), project walkthrough, basic JS/React concept quiz." },
+                            { title: "You did it — celebrate and reflect 🎉", desc: "24 weeks of 4:30am grind while running a shop. Whether the offer comes in week 24 or week 28 — you are a developer now. FRIDAY is proud of you. 😏💙" },
+                        ], parallel: [
+                            { title: "Apply to jobs daily", desc: "Apply to at least 5 relevant roles daily across platforms." },
+                            { title: "Track applications", desc: "Maintain a spreadsheet to track applications and follow-ups." },
+                            { title: "Prepare for technical rounds", desc: "Revise key concepts and practice coding problems." },
+                            { title: "Attend interviews seriously", desc: "Treat every interview as real. Learn from each experience." },
+                            { title: "Negotiate offers confidently", desc: "Research salary range and negotiate professionally." },
+                            { title: "Reflect and improve", desc: "Analyze your journey and improve continuously." },
+                        ]
+                    },
+                ]
+            },
+        ];
+
+        // ─── STORAGE KEY ───────────────────────────────────────────────────────────
+        const KEY = "h_tracker_v3";
+        let state = {};
+        try { const s = localStorage.getItem(KEY); if (s) state = JSON.parse(s); } catch (e) { }
+        function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { } }
+
+        // ─── IDs ───────────────────────────────────────────────────────────────────
+        const taskId = (w, i) => `w${w}_t${i}`;
+        const parallelId = (w, i) => `p_w${w}_t${i}`;
+        const openId = w => `open_w${w}`;
+        const weekCompletedKey = w => `week_completed_ts_${w}`;
+        const COOLDOWN_MS = 3 * 24 * 60 * 60 * 1000; // 3 days
+        const STREAK_KEY = "streak_data_v2";
+
+        // ─── STREAK ────────────────────────────────────────────────────────────────
+        function getStreakData() {
+            try { const s = localStorage.getItem(STREAK_KEY); return s ? JSON.parse(s) : { streak: 0, lastActive: null, activeDays: [] }; }
+            catch (e) { return { streak: 0, lastActive: null, activeDays: [] }; }
+        }
+        function saveStreakData(d) { try { localStorage.setItem(STREAK_KEY, JSON.stringify(d)); } catch (e) { } }
+
+        function checkAndUpdateStreak(taskChecked) {
+            const d = getStreakData();
+            const now = Date.now();
+            const today = new Date().toDateString();
+            if (taskChecked) {
+                if (d.lastActive !== today) {
+                    const yesterday = new Date(now - 86400000).toDateString();
+                    if (d.lastActive === yesterday) { d.streak++; }
+                    else if (d.lastActive === null) { d.streak = 1; }
+                    else { d.streak = 1; }
+                    d.lastActive = today;
+                    if (!d.activeDays.includes(today)) d.activeDays.push(today);
+                    // keep last 30 days only
+                    const cutoff = new Date(now - 30 * 86400000).toDateString();
+                    d.activeDays = d.activeDays.filter(day => new Date(day) >= new Date(cutoff));
+                }
+            }
+            saveStreakData(d);
+            renderStreak(d);
+        }
+
+        function renderStreak(d) {
+            document.getElementById('streak-num').textContent = d.streak;
+            const sub = d.streak === 0 ? 'Check a task off to start your streak!' :
+                d.streak === 1 ? 'Day 1. The hardest step. Done.' :
+                    d.streak < 7 ? `${d.streak} days. Don't break the chain.` :
+                        d.streak < 14 ? `${d.streak} days. You're actually doing this.` :
+                            `${d.streak} days. FRIDAY is genuinely impressed. 😤`;
+            document.getElementById('streak-sub').textContent = sub;
+            // dots — last 14 days
+            const dotsEl = document.getElementById('streak-dots');
+            dotsEl.innerHTML = '';
+            const today = new Date().toDateString();
+            for (let i = 13; i >= 0; i--) {
+                const day = new Date(Date.now() - i * 86400000).toDateString();
+                const dot = document.createElement('div');
+                dot.className = 'streak-dot' + (d.activeDays.includes(day) ? ' active' : '') + (day === today ? ' today' : '');
+                dot.title = day;
+                dotsEl.appendChild(dot);
+            }
+        }
+
+        // ─── QUOTES ────────────────────────────────────────────────────────────────
+        function renderQuote() {
+            const startDate = new Date('2025-01-01').getTime();
+            const dayNum = Math.floor((Date.now() - startDate) / 86400000) % FRIDAY_QUOTES.length;
+            document.getElementById('quote-day').textContent = dayNum + 1;
+            document.getElementById('quote-text').textContent = FRIDAY_QUOTES[dayNum % FRIDAY_QUOTES.length];
+        }
+
+        // ─── WEEK LOCKING ──────────────────────────────────────────────────────────
+        function isWeekUnlocked(weekIndex) {
+            if (weekIndex === 0) return true;
+            const prevWeek = getAllWeeks()[weekIndex - 1];
+            const completedTs = state[weekCompletedKey(prevWeek.w)];
+            if (!completedTs) return false;
+            return (Date.now() - completedTs) >= COOLDOWN_MS;
+        }
+
+        function isInCooldown(weekIndex) {
+            if (weekIndex === 0) return false;
+            const prevWeek = getAllWeeks()[weekIndex - 1];
+            const completedTs = state[weekCompletedKey(prevWeek.w)];
+            if (!completedTs) return false;
+            return (Date.now() - completedTs) < COOLDOWN_MS;
+        }
+
+        function getCooldownRemaining(weekIndex) {
+            const prevWeek = getAllWeeks()[weekIndex - 1];
+            const completedTs = state[weekCompletedKey(prevWeek.w)];
+            if (!completedTs) return 0;
+            return Math.max(0, COOLDOWN_MS - (Date.now() - completedTs));
+        }
+
+        function formatTimeRemaining(ms) {
+            const h = Math.floor(ms / 3600000);
+            const m = Math.floor((ms % 3600000) / 60000);
+            if (h >= 24) { const d = Math.floor(h / 24); return `${d}d ${h % 24}h left`; }
+            return `${h}h ${m}m left`;
+        }
+
+        function getAllWeeks() {
+            const weeks = [];
+            phases.forEach(ph => ph.weeks.forEach(wk => weeks.push(wk)));
+            return weeks;
+        }
+
+        function isWeekFullyComplete(wk) {
+            const allTasks = [...wk.tasks, ...(wk.parallel || [])];
+            return allTasks.every((_, i) => {
+                const mainDone = i < wk.tasks.length ? state[taskId(wk.w, i)] : true;
+                const parDone = i < (wk.parallel || []).length ? state[parallelId(wk.w, i)] : true;
+                return mainDone && parDone;
+            });
+        }
+
+        function checkWeekCompletion(wNum) {
+            const allWeeks = getAllWeeks();
+            const wk = allWeeks.find(w => w.w === wNum);
+            if (!wk) return;
+            const mainDone = wk.tasks.every((_, i) => state[taskId(wNum, i)]);
+            const parDone = (wk.parallel || []).every((_, i) => state[parallelId(wNum, i)]);
+            const allDone = mainDone && parDone;
+            if (allDone && !state[weekCompletedKey(wNum)]) {
+                state[weekCompletedKey(wNum)] = Date.now();
+                save();
+                launchConfetti();
+                showToast(`🎉 Week ${wNum} complete! Next week unlocks in 3 days.`, 'green');
+                setTimeout(() => render(), 500);
+            }
+        }
+
+        // ─── CONFETTI ─────────────────────────────────────────────────────────────
+        function launchConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            const pieces = [];
+            const colors = ['#00ffaa', '#4488ff', '#aa66ff', '#ff6633', '#ffcc00', '#ff4466', '#00ddcc'];
+            for (let i = 0; i < 180; i++) {
+                pieces.push({
+                    x: Math.random() * canvas.width, y: -10 - Math.random() * 200,
+                    w: 6 + Math.random() * 8, h: 4 + Math.random() * 6,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    rotation: Math.random() * 360, rotSpeed: (Math.random() - 0.5) * 8,
+                    vx: (Math.random() - 0.5) * 4, vy: 2 + Math.random() * 4,
+                    alpha: 1, life: 1
+                });
+            }
+            let frame;
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = false;
+                pieces.forEach(p => {
+                    if (p.alpha <= 0) return;
+                    alive = true;
+                    p.x += p.vx; p.y += p.vy; p.rotation += p.rotSpeed; p.vy += 0.05;
+                    if (p.y > canvas.height * 0.7) p.alpha -= 0.02;
+                    ctx.save(); ctx.globalAlpha = p.alpha;
+                    ctx.translate(p.x, p.y); ctx.rotate(p.rotation * Math.PI / 180);
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                    ctx.restore();
+                });
+                if (alive) frame = requestAnimationFrame(draw);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+            draw();
+            setTimeout(() => { cancelAnimationFrame(frame); ctx.clearRect(0, 0, canvas.width, canvas.height); }, 5000);
+        }
+
+        // ─── TOAST ─────────────────────────────────────────────────────────────────
+        let toastTimer;
+        function showToast(msg, type = 'green') {
+            const el = document.getElementById('toast');
+            el.textContent = msg;
+            el.className = `toast show ${type}`;
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => el.classList.remove('show'), 3500);
+        }
+
+        // ─── STATS ─────────────────────────────────────────────────────────────────
+        function updateStats() {
+            let total = 0, done = 0, weeksStarted = 0, locked = 0;
+            const allWeeks = getAllWeeks();
+            allWeeks.forEach((wk, i) => {
+                const isUnlocked = isWeekUnlocked(i);
+                if (!isUnlocked) locked++;
+                wk.tasks.forEach((_, j) => { total++; if (state[taskId(wk.w, j)]) done++; });
+                (wk.parallel || []).forEach((_, j) => { total++; if (state[parallelId(wk.w, j)]) done++; });
+                const wd = wk.tasks.filter((_, j) => state[taskId(wk.w, j)]).length;
+                if (wd > 0) weeksStarted++;
+            });
+            document.getElementById('s-done').textContent = done;
+            document.getElementById('s-weeks').textContent = weeksStarted;
+            const pct = total ? Math.round(done / total * 100) : 0;
+            document.getElementById('s-pct').textContent = pct + '%';
+            document.getElementById('s-locked').textContent = locked;
+            document.getElementById('overall-bar').style.width = pct + '%';
+            document.getElementById('overall-pct-label').textContent = pct + '%';
+        }
+
+        // ─── RENDER WEEK ────────────────────────────────────────────────────────────
+        function renderWeek(wk, phaseColor, phaseBg, weekIndex) {
+            const mainDone = wk.tasks.filter((_, i) => state[taskId(wk.w, i)]).length;
+            const mainTotal = wk.tasks.length;
+            const parDone = (wk.parallel || []).filter((_, i) => state[parallelId(wk.w, i)]).length;
+            const parTotal = (wk.parallel || []).length;
+            const totalDone = mainDone + parDone;
+            const totalTotal = mainTotal + parTotal;
+            const pct = Math.round(totalDone / totalTotal * 100);
+            const isOpen = !!state[openId(wk.w)];
+            const allDone = totalDone === totalTotal;
+            const unlocked = isWeekUnlocked(weekIndex);
+            const cooldown = isInCooldown(weekIndex);
+
+            const card = document.createElement('div');
+            card.className = 'week-card' + ((!unlocked && !cooldown && weekIndex > 0) ? ' locked' : '');
+            card.id = `card-w${wk.w}`;
+            card.style.setProperty('--accent-color', phaseColor);
+
+            let lockBadgeHtml = '';
+            let cooldownHtml = '';
+            if (!unlocked && weekIndex > 0) {
+                if (cooldown) {
+                    const rem = getCooldownRemaining(weekIndex);
+                    lockBadgeHtml = `<span class="lock-badge cooldown">⏳ cooldown — <span class="cooldown-timer" data-week="${weekIndex}">${formatTimeRemaining(rem)}</span></span>`;
+                    cooldownHtml = `<div class="cooldown-banner"><span class="icon">⏳</span><span>Cooldown active — this week unlocks in <strong><span data-week="${weekIndex}">${formatTimeRemaining(rem)}</span></strong>. No bulk-ticking allowed. Build the habit properly.</span></div>`;
+                } else {
+                    lockBadgeHtml = `<span class="lock-badge">🔒 complete week ${wk.w - 1} first</span>`;
+                }
+            }
+
+            card.innerHTML = `
+    <div class="week-header" onclick="toggleWeek(${wk.w},${weekIndex})">
+      <span class="week-num" style="background:${phaseBg};color:${phaseColor};border:1px solid ${phaseColor}44">W${wk.w}</span>
+      <span class="week-title">${wk.title}${allDone ? '<span class="week-complete-badge">✓ Done</span>' : ''}${lockBadgeHtml}</span>
+      <span class="week-count" style="font-family:'Space Mono',monospace">${totalDone}/${totalTotal}</span>
+      <span class="chevron ${isOpen ? 'open' : ''}">▼</span>
+    </div>
+    <div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%;background:linear-gradient(90deg,${phaseColor},${phaseColor}99)"></div></div>
+    <div class="week-body ${isOpen ? 'open' : ''}" id="body-w${wk.w}">
+      ${cooldownHtml}
+      <div class="section-label learning">📚 Learning Tasks</div>
+      <ul class="task-list">
+        ${wk.tasks.map((task, i) => {
+                const id = taskId(wk.w, i);
+                const checked = !!state[id];
+                return `<li class="task-item${checked ? ' done' : ''}" id="li-${id}">
+            <div class="task-checkbox-wrap">
+              <input type="checkbox" id="${id}"${checked ? ' checked' : ''} onchange="toggleTask('${id}','main',${wk.w})">
+              <div class="custom-check" style="${checked ? `background:${phaseColor};border-color:${phaseColor};box-shadow:0 0 10px ${phaseColor}` : ``}">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L4 7L9 1" stroke="${checked ? '#000' : '#fff'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="task-content"><div class="task-title">${task.title}</div><div class="task-desc">${task.desc}</div></div>
+          </li>`;
+            }).join('')}
+      </ul>
+      ${wk.parallel ? `
+      <div class="section-label parallel">⚡ Parallel Build</div>
+      <ul class="task-list">
+        ${wk.parallel.map((task, i) => {
+                const id = parallelId(wk.w, i);
+                const checked = !!state[id];
+                return `<li class="task-item${checked ? ' done' : ''}" id="li-${id}">
+            <div class="task-checkbox-wrap">
+              <input type="checkbox" id="${id}"${checked ? ' checked' : ''} onchange="toggleTask('${id}','parallel',${wk.w})">
+              <div class="custom-check" style="${checked ? `background:#00ddcc;border-color:#00ddcc;box-shadow:0 0 10px #00ddcc` : ``}">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L4 7L9 1" stroke="${checked ? '#000' : '#fff'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="task-content"><div class="task-title">${task.title}</div><div class="task-desc">${task.desc}</div></div>
+          </li>`;
+            }).join('')}
+      </ul>`: ''
+                }
+    </div>`;
+            return card;
+        }
+
+        // ─── RENDER ────────────────────────────────────────────────────────────────
+        function render() {
+            const root = document.getElementById('root');
+            root.innerHTML = '';
+            let weekIndex = 0;
+            phases.forEach(ph => {
+                const label = document.createElement('div');
+                label.className = 'phase-label';
+                label.style.color = ph.color;
+                label.textContent = ph.label;
+                root.appendChild(label);
+                ph.weeks.forEach(wk => {
+                    root.appendChild(renderWeek(wk, ph.color, ph.bg, weekIndex));
+                    weekIndex++;
+                });
+            });
+            updateStats();
+        }
+
+        // ─── TOGGLE WEEK ───────────────────────────────────────────────────────────
+        window.toggleWeek = function (w, weekIndex) {
+            const unlocked = isWeekUnlocked(weekIndex);
+            const cooldown = isInCooldown(weekIndex);
+            if (!unlocked && !cooldown && weekIndex > 0) {
+                showToast(`🔒 Complete Week ${w - 1} first to unlock this week.`, 'amber');
+                return;
+            }
+            state[openId(w)] = !state[openId(w)];
+            save();
+            const body = document.getElementById(`body-w${w}`);
+            const card = document.getElementById(`card-w${w}`);
+            const chevron = card.querySelector('.chevron');
+            body.classList.toggle('open');
+            chevron.classList.toggle('open');
+        };
+
+        // ─── TOGGLE TASK ───────────────────────────────────────────────────────────
+        window.toggleTask = function (id, type, wNum) {
+            // Find week index
+            const allWeeks = getAllWeeks();
+            const weekIndex = allWeeks.findIndex(w => w.w === wNum);
+            const unlocked = isWeekUnlocked(weekIndex);
+            const cooldown = isInCooldown(weekIndex);
+
+            if (!unlocked && !cooldown && weekIndex > 0) {
+                showToast(`🔒 Unlock Week ${wNum} first.`, 'amber');
+                // uncheck it back
+                document.getElementById(id).checked = !!state[id];
+                return;
+            }
+            if (cooldown) {
+                showToast(`⏳ Cooldown active! ${formatTimeRemaining(getCooldownRemaining(weekIndex))} remaining.`, 'amber');
+                document.getElementById(id).checked = !!state[id];
+                return;
+            }
+
+            state[id] = !state[id];
+            save();
+
+            const li = document.getElementById(`li-${id}`);
+            if (state[id]) li.classList.add('done');
+            else li.classList.remove('done');
+
+            // update custom check color
+            const wk = allWeeks[weekIndex];
+            const ph = phases.find(p => p.weeks.find(w => w.w === wNum));
+            const phColor = ph ? ph.color : 'var(--green)';
+            const checkbox = li.querySelector('.custom-check');
+            if (state[id] && type === 'main') {
+                checkbox.style.cssText = `background:${phColor};border-color:${phColor};box-shadow:0 0 10px ${phColor}`;
+                checkbox.querySelector('path').setAttribute('stroke', '#000');
+            } else if (state[id] && type === 'parallel') {
+                checkbox.style.cssText = `background:#00ddcc;border-color:#00ddcc;box-shadow:0 0 10px #00ddcc`;
+                checkbox.querySelector('path').setAttribute('stroke', '#000');
+            } else {
+                checkbox.style.cssText = '';
+                checkbox.querySelector('path').setAttribute('stroke', '#fff');
+            }
+
+            // update mini bar
+            const mainDone = wk.tasks.filter((_, i) => state[taskId(wk.w, i)]).length;
+            const parDone = (wk.parallel || []).filter((_, i) => state[parallelId(wk.w, i)]).length;
+            const totalDone = mainDone + parDone;
+            const totalTotal = wk.tasks.length + (wk.parallel || []).length;
+            const pct = Math.round(totalDone / totalTotal * 100);
+            const card = document.getElementById(`card-w${wNum}`);
+            card.querySelector('.week-count').textContent = `${totalDone}/${totalTotal}`;
+            card.querySelector('.mini-bar-fill').style.width = pct + '%';
+
+            // completion badge
+            const titleEl = card.querySelector('.week-title');
+            const existing = titleEl.querySelector('.week-complete-badge');
+            if (totalDone === totalTotal && !existing) {
+                titleEl.insertAdjacentHTML('beforeend', '<span class="week-complete-badge">✓ Done</span>');
+            } else if (totalDone < totalTotal && existing) {
+                existing.remove();
+                delete state[weekCompletedKey(wNum)];
+                save();
+            }
+
+            // streak
+            if (state[id]) checkAndUpdateStreak(true);
+
+            checkWeekCompletion(wNum);
+            updateStats();
+        };
+
+        // ─── COOLDOWN LIVE TIMER ────────────────────────────────────────────────────
+        function updateCooldownTimers() {
+            const allWeeks = getAllWeeks();
+            document.querySelectorAll('[data-week]').forEach(el => {
+                const weekIndex = parseInt(el.getAttribute('data-week'));
+                const rem = getCooldownRemaining(weekIndex);
+                if (rem > 0) { el.textContent = formatTimeRemaining(rem); }
+                else {
+                    // cooldown just expired — re-render
+                    render();
+                }
+            });
+        }
+
+        // ─── INIT ───────────────────────────────────────────────────────────────────
+        renderQuote();
+        const streakData = getStreakData();
+        renderStreak(streakData);
+        render();
+        setInterval(updateCooldownTimers, 60000);
+
+        // resize confetti canvas
+        window.addEventListener('resize', () => {
+            const c = document.getElementById('confetti-canvas');
+            c.width = window.innerWidth; c.height = window.innerHeight;
+        });
+    </script>
+</body>
+
+</html>
