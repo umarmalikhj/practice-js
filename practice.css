@@ -2,8 +2,8 @@
     --background-color: #0a0a0a;
     --accent-color: #0080ff;
     --text-color: #e0e0e0;
-    --head-font: 'Courier New', monospace;
-    --body-font: 'Roboto', sans-serif;
+    --head-font: "Oswald", sans-serif;
+    --body-font: "Roboto Condensed", sans-serif;
 }
 
 body{
@@ -17,18 +17,26 @@ body{
 }
 
 .navbar{
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    right: auto;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
     height: 5rem;
-    background-color: var(--background-color);
+    width: 60vw;
+    background: none;
+    border: 2px solid white;
+    border-radius: 5rem;
     color: var(--text-color);
     font-family: var(--head-font);
+    padding: 0 1rem 0 4rem;
 }
 
 .leftNav h1{
-    width: 11rem;
     text-align: center;
 }
 
@@ -36,10 +44,14 @@ body{
     color: var(--accent-color);
 }
 
-.navItems{
-    width: 50vw;
+.centerNav{
+    flex: 1;
     display: flex;
-    flex-wrap: wrap;
+}
+
+.navItems{
+    display: flex;
+    flex: 1;
     justify-content: space-evenly;
     position: relative;
 }
@@ -49,28 +61,8 @@ body{
     position: relative;
 }
 
-#item1{
-    color: var(--accent-color);
-}
-
-#item1::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-color);
-    transition: width 0.3s;
-}
-
-#item1:hover::after {
-    width: 100%;
-}
-
 #contact{
     height: 3rem;
-    width: 11rem;
     border-radius: 25px;
     background-color: var(--accent-color);
     border: none;
@@ -81,6 +73,7 @@ body{
     font-family: var(--head-font);
     font-size: 1em;
     font-weight: 200;
+    color: var(--text-color);
 }
 
 #contact i{
@@ -88,3 +81,35 @@ body{
     font-size: 1.75em;
 }
 
+/* Hero Section */
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-family: var(--head-font);
+    text-align: center;
+}
+
+.heroHead{
+    font-size: 3.5rem;
+}
+
+.heroHead span{
+    color: var(--accent-color);
+}
+
+.heroSub h3{
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--accent-color);
+}
+
+.heroSub p{
+    font-family: var(--body-font);
+    opacity: 0.5;
+}
