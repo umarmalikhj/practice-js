@@ -114,9 +114,10 @@ body{
 /* About Section */
 
 .about{
-    height: 50vh;
+    height: 70vh;
     color: var(--text-color);
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 0 10vw;
     font-family: var(--body-font);
@@ -155,4 +156,34 @@ body{
 .aboutSocial i{
     font-size: 1.5em;
     margin-right: 0.25em;
+}
+
+/* Projects Section */
+
+.projects{
+    color: var(--text-color);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: var(--body-font);
+    gap: 3rem;
+}
+
+.projectHead h1{
+    font-size: 4em;
+    font-family: var(--head-font);
+}
+
+.projectSub{
+    display: flex;
+    gap: 2rem;
+}
+
+.projectCard{
+    width: 20rem;
+    min-height: 15rem;
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
 }
