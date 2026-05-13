@@ -16,6 +16,10 @@ body{
     box-sizing: border-box;
 }
 
+.blue{
+    color: var(--accent-color);
+}
+
 .navbar{
     position: absolute;
     top: 1rem;
@@ -38,10 +42,6 @@ body{
 
 .leftNav h1{
     text-align: center;
-}
-
-.leftNav span{
-    color: var(--accent-color);
 }
 
 .centerNav{
@@ -99,10 +99,6 @@ body{
     font-size: 3.5rem;
 }
 
-.heroHead span{
-    color: var(--accent-color);
-}
-
 .heroSub h3{
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
@@ -113,4 +109,50 @@ body{
 .heroSub p{
     font-family: var(--body-font);
     opacity: 0.5;
+}
+
+/* About Section */
+
+.about{
+    height: 50vh;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding: 0 10vw;
+    font-family: var(--body-font);
+}
+
+.aboutHead{
+    font-family: var(--head-font);
+}
+
+.aboutHead h1{
+    font-size: 4em;
+    margin-bottom: 0.15em;
+}
+
+.aboutSub p{
+    font-size: 1em;
+}
+
+.aboutInfo{
+    display: flex;
+    margin: 2em 0;
+}
+
+.aboutCard{
+    margin-right: 5em;
+}
+
+.aboutCard h1{
+    font-size: 4em;
+}
+
+.aboutCard p{
+    font-size: 1em;
+}
+
+.aboutSocial i{
+    font-size: 1.5em;
+    margin-right: 0.25em;
 }
