@@ -1665,3 +1665,19 @@
 //         })
 //     }
 // }
+
+let isDevious = true;
+
+setInterval(() => {
+    const swap = document.getElementById("swap");
+
+    if(isDevious){
+        swap.textContent = "ious";
+        isDevious = false;
+    }
+
+    else{
+        swap.textContent = "eloper";
+        isDevious = true;
+    }
+}, 4000);
