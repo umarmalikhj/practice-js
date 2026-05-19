@@ -1,5 +1,7 @@
 // console.log("Hello World :)");
 
+// const { use } = require("react");
+
 // const { createElement } = require("react");
 
 // let name = 'Umar';
@@ -1666,18 +1668,37 @@
 //     }
 // }
 
-let isDevious = true;
+// let isDevious = true;
 
-setInterval(() => {
-    const swap = document.getElementById("swap");
+// setInterval(() => {
+//     const swap = document.getElementById("swap");
 
-    if(isDevious){
-        swap.textContent = "ious";
-        isDevious = false;
-    }
+//     if(isDevious){
+//         swap.textContent = "ious";
+//         isDevious = false;
+//     }
 
-    else{
-        swap.textContent = "eloper";
-        isDevious = true;
-    }
-}, 4000);
+//     else{
+//         swap.textContent = "eloper";
+//         isDevious = true;
+//     }
+// }, 4000);
+
+let Name = localStorage.getItem("name");
+
+if (Name === null){
+    const username = prompt("Enter Username");
+
+    localStorage.setItem("name", username);
+    location.reload();
+}
+
+let Head = document.getElementById("firstname");
+Head.innerText = "Welcome " + Name;
+
+const resetBtn = document.getElementById("reset");
+
+resetBtn.addEventListener("click", () => {
+    localStorage.clear();
+    location.reload();
+})
